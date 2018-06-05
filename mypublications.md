@@ -1,4 +1,4 @@
-<div style="text-align: right"> ### Publications
+ ### Publications <div style="text-align: right">
 
 > Journal Publications
 
