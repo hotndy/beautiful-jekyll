@@ -1,5 +1,5 @@
 ## Publications  
-### Journal Publications  
+> Journal Publications  
 #### preprint  
 * Jie Chen, Junhui Hou, and Lap-Pui. Chau, Light Field Denoising via Anisotropic Parallax Analysis in a CNN Framework, under review in IEEE Signal Processing Letters (IEEE SPL).  
 * Jie Chen,  Cheen-Hau. Tan, Junhui Hou, Lap-Pui. Chau, and He Li, Robust Video Content Alignment and Compensation for Clear Vision Through the Rain, under review in IEEE Transactions on Pattern Analysis and Machine Intelligence (IEEE TPAMI).  
@@ -13,4 +13,4 @@
 * J. Chen and L. P. Chau, Light Field Compressed Sensing Over a Disparity-Aware Dictionary, IEEE Transactions on Circuits and Systems for Video Technology (IEEE TCSVT), vol. 27, no. 4, pp. 855-865, 2017.  
 * J. Chen and L. P. Chau, Multiscale Dictionary Learning via Cross-Scale Cooperative Learning and Atom Clustering for Visual Signal Processing, IEEE Transactions on Circuits and Systems for Video Technology (IEEE TCSVT), vol. 25, no. 9, pp. 1457-1468, 2015.  
 * J. Chen and L. P. Chau, A Rain Pixel Recovery Algorithm for Videos With Highly Dynamic Scenes, IEEE Transactions on Image Processing (IEEE TIP), vol. 23, no. 3, pp. 1097-1104, 2014.  
-### Conference Publications  
+> Conference Publications  
