@@ -3,7 +3,7 @@
 > Journal Publications
 
 <p style="text-align: center;">My name is Inigo Montoya. I have the following qualities:</p>
-<p align="center">My name is Inigo Montoya. I have the following qualities:</p>
+<p align="center">### Publications</p>
 
 - I rock a great mustache
 - I'm extremely loyal to my family
