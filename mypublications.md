@@ -1,3 +1,6 @@
+---
+title: Publications
+---
 ## Journal Publications  
 
 #### _pre-print_  
