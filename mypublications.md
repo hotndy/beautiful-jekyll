@@ -1,6 +1,6 @@
 # Publications  
-### Journal Publications  
-#### _preprint_  
+## Journal Publications  
+### _preprint_  
 * **Jie Chen**, Junhui Hou, and Lap-Pui. Chau, Light Field Denoising via Anisotropic Parallax Analysis in a CNN Framework, under review in IEEE Signal Processing Letters (IEEE SPL).  
 * **Jie Chen**,  Cheen-Hau. Tan, Junhui Hou, Lap-Pui. Chau, and He Li, Robust Video Content Alignment and Compensation for Clear Vision Through the Rain, under review in IEEE Transactions on Pattern Analysis and Machine Intelligence (IEEE TPAMI).  
 * Henry W. F. Yeung, Junhui Hou, Xiaoming Chen, Jie Chen, Zhibo Chen, and Yuk Ying Chung, Light Field Spatial Super-Resolution Using Deep Spatial-Angular Interleaved CNN, under review in IEEE Transactions on Image Processing (IEEE TIP).  
@@ -14,7 +14,7 @@
 * J. Chen and L. P. Chau, Multiscale Dictionary Learning via Cross-Scale Cooperative Learning and Atom Clustering for Visual Signal Processing, IEEE Transactions on Circuits and Systems for Video Technology (IEEE TCSVT), vol. 25, no. 9, pp. 1457-1468, 2015.  
 * J. Chen and L. P. Chau, A Rain Pixel Recovery Algorithm for Videos With Highly Dynamic Scenes, IEEE Transactions on Image Processing (IEEE TIP), vol. 23, no. 3, pp. 1097-1104, 2014. 
 
-### Conference Publications  
+## Conference Publications  
 * Jie Chen, Cheen-Hau Tan, Junhui Hou, Lap-Pui Chau, and He Li, Robust Video Content Alignment and Compensation for Rain Removal in a CNN Framework, accepted as spotlight (top 6.6%) on IEEE Conference on Computer Vision and Pattern Recognition (IEEE CVPR), Salt Lake City, Utah, 2018.  
 * Jie Chen, Yun Ni, Junhui Hou, and Lap-Pui Chau, Light Field Scene Flow with Occlusion Regularization, Asia-Pacific Signal and Information Processing Association, Annual Summit and Conference (APSIPA ASC), Kuala Lumpur, Malaysia, 2017.  
 * Cheen-Hau Tan, J. Chen and Lap-Pui Chau, Edge-preserving rain removal for light field images based on RPCA,  IEEE International Conference on Digital Signal Processing (DSP), pp. 1-5, London, UK, 2017.   
