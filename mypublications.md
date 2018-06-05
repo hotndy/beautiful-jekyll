@@ -1,7 +1,4 @@
----
-title: Publications
-subtitle: Pulications
----
+## Publications
 
 > Journal Publications
 
