@@ -1,5 +1,5 @@
 ---
-title: Publications
+subtitle: Publications
 ---
 ## Journal Publications  
 
