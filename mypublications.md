@@ -1,5 +1,6 @@
- ### Publications <p style="text-align: center;">
-
+<p style="text-align: center;">
+ ### Publications 
+ 
 > Journal Publications
 
 My name is Inigo Montoya. I have the following qualities:
