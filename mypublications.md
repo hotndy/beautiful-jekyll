@@ -1,4 +1,4 @@
-## Publications  
+# Publications  
 ### Journal Publications  
 #### _preprint_  
 * **Jie Chen**, Junhui Hou, and Lap-Pui. Chau, Light Field Denoising via Anisotropic Parallax Analysis in a CNN Framework, under review in IEEE Signal Processing Letters (IEEE SPL).  
