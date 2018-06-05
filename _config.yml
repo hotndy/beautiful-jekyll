@@ -24,8 +24,9 @@ description: A virtual proof that name is awesome!
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
+ # Resources:
+ #   - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
+  Publications: "http://deanattali.com/beautiful-jekyll/"
   Projects: 
     - Light Field Compressed Sensing: "http://deanattali.com/beautiful-jekyll/"
     - Light Field Compression: "http://deanattali.com/beautiful-jekyll/"
