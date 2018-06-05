@@ -1,4 +1,5 @@
 ---
+layout: pages
 title: Publications
 ---
 ## Journal Publications  
