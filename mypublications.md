@@ -1,5 +1,5 @@
 <p style="text-align: center;">
- ### Publications 
+### Publications 
  
 > Journal Publications
 
