@@ -1,7 +1,5 @@
-<center>
 ### Publications 
-<center> 
- 
+
 > Journal Publications
 
 My name is Inigo Montoya. I have the following qualities:
