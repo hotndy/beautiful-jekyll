@@ -5,7 +5,7 @@ title: Publications
 ## Journal Publications  
 
 #### _pre-print_  
-* **Jie Chen**, Junhui Hou, and Lap-Pui. Chau, [''Light Field Denoising via Anisotropic Parallax Analysis in a CNN Framework,''](https://arxiv.org/abs/1805.12358) under review in _IEEE Signal Processing Letters_ **(IEEE SPL)**.  
+* **Jie Chen**, Junhui Hou, and Lap-Pui. Chau, [``Light Field Denoising via Anisotropic Parallax Analysis in a CNN Framework,''](https://arxiv.org/abs/1805.12358) under review in _IEEE Signal Processing Letters_ **(IEEE SPL)**.  
 * **Jie Chen**,  Cheen-Hau. Tan, Junhui Hou, Lap-Pui. Chau, and He Li, [''Robust Video Content Alignment and Compensation for Clear Vision Through the Rain,''](https://arxiv.org/abs/1804.09555) under review in _IEEE Transactions on Pattern Analysis and Machine Intelligence_ **(IEEE TPAMI)**.  
 * Henry W. F. Yeung, Junhui Hou, Xiaoming Chen, **Jie Chen**, Zhibo Chen, and Yuk Ying Chung, ''Light Field Spatial Super-Resolution Using Deep Spatial-Angular Interleaved CNN,'' under review in _IEEE Transactions on Image Processing_ **(IEEE TIP)**.  
 * Yun Ni, **Jie Chen**, and Lap-Pui Chau, ''Reflection Removal On Single Light Field Capture With Focus Manipulation,'' major revision in _IEEE Transactions on Computational Imaging_ **(IEEE TCI)**.  
