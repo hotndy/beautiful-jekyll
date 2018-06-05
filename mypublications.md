@@ -1,9 +1,9 @@
 ### Publications 
 
 > Journal Publications
-<p style="text-align: center;">
-My name is Inigo Montoya. I have the following qualities:
-</p>
+
+<p style="text-align: center;">My name is Inigo Montoya. I have the following qualities:</p>
+
 - I rock a great mustache
 - I'm extremely loyal to my family
 
