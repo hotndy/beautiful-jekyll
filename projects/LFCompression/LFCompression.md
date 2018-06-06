@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ""
-use-avatar: false
+show-avatar: false
 ---
 
 Content to be added.
