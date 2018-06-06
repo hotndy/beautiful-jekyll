@@ -1,5 +1,6 @@
 ---
 layout: page
+title: null
 ---
 
 ## Light Field Compressed Sensing Camera
