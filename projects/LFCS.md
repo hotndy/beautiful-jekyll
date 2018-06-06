@@ -1,6 +1,6 @@
 ---
 layout: page
-title: null
+title: ""
 show-avatar: false
 ---
 
