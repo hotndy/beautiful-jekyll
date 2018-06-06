@@ -1,7 +1,7 @@
 ---
 layout: page
 title: First post!
-image: /img/hello_world.jpeg
+image: null
 ---
 
 To be added.
