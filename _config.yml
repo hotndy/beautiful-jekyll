@@ -32,7 +32,7 @@ navbar-links:
     - Light Field Compression: "projects/LFCS/"
     - Rain Removal: "projects/LFCS/"
     - 3D Depth Estimation: "projects/LFCS/"
-    - Multi-scale Sparse Coding: "_posts//"
+    - Multi-scale Sparse Coding: "_posts/2015-02-28-test-markdown/"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
