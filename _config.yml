@@ -28,10 +28,10 @@ navbar-links:
  #   - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
   Publications: "mypublications/"
   Projects: 
-    - Light Field Compressed Sensing: "projects/LFCS/"
-    - Light Field Compression: "projects/LFCompression/"
-    - Rain Removal: "projects/SPAC-CNN/"
-    - 3D Depth Estimation: "projects/LFDepth/"
+    - Light Field Compressed Sensing: "projects/LFCS/LFCS/"
+    - Light Field Compression: "projects/LFCompression/LFCompression/"
+    - Rain Removal: "projects/SPAC/SPAC-CNN/"
+    - 3D Depth Estimation: "projects/LFDepth/LFDepth/"
     - Multi-scale Sparse Coding: "_posts/2015-02-28-test-markdown/"
 
 # Image to show in the navigation bar - image must be a square (width = height)
