@@ -1,6 +1,6 @@
 ---
 layout: page
-title: First post!
+title: ""
 show-avatar: false
 ---
 
