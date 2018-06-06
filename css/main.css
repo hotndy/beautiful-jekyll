@@ -469,12 +469,12 @@ footer .theme-by {
   text-shadow: 1px 1px 3px #000;
 }
 .intro-header .page-heading h1 {
-  margin-top: 0;
-  font-size: 30px;
+  margin-top: 10;
+  font-size: 25px;
 }
 .intro-header .post-heading h1 {
-  margin-top: 0;
-  font-size: 35px;
+  margin-top: 10;
+  font-size: 25px;
 }
 .intro-header .page-heading .page-subheading,
 .intro-header .post-heading .post-subheading {
