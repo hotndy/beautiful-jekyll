@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: null
 ---
 
 ## Light Field Compressed Sensing Camera
