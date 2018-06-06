@@ -1,7 +1,7 @@
 ---
 layout: page
 title: First post!
-image: null
+show-avatar: false
 ---
 
 To be added.
