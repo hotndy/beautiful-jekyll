@@ -4,4 +4,4 @@ title: ""
 show-avatar: false
 ---
 
-To be added.
+Template post, content to be added.
