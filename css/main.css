@@ -335,7 +335,7 @@ footer .theme-by {
 }
 
 .post-preview .post-title {
-  font-size: 16px; /*20 oringially*/
+  font-size: 20px; /*20 oringially*/
   margin-top: 0;
 }
 .post-preview .post-subtitle {
@@ -381,7 +381,7 @@ footer .theme-by {
 
 @media only screen and (min-width: 768px) {
   .post-preview .post-title {
-    font-size: 20; /*36px*/;
+    font-size: 30; /*36px*/;
   }
 }
 
