@@ -3,7 +3,7 @@ layout: page
 title: Contact
 ---
 
-<p><strong>Email:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong>chen.jie at ntu dot edu dot sg</p>
+<p><strong>Email:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong>chen.jie at ntu dot edu dot sg</p>
 <p><strong>Address:</strong>&nbsp; &nbsp; &nbsp;ST Corplab, ABN Section A,</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Nanyang Technological University,</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Singapore 639798</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Nanyang Technological University,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Singapore 639798</p>
