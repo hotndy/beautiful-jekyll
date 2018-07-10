@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Light Field Compression Topics
-image: /img/hello_world.jpeg
+image: /projects/SPAC/systemDiagram.png
 ---
 
 ## Light Field Compression Topics
