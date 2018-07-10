@@ -3,8 +3,7 @@ layout: page
 title: Contact
 ---
 
-# Email:    chen.jie at ntu dot edu dot sg  
-  
-# Address:  ST Corplab, Level B2, Section A,  
-              Academic Block North, Nanyang Avenue,  
-              Singapore 639798
+<p><strong>Email:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong>chen.jie at ntu dot edu dot sg</p>
+<p><strong>Address:</strong>&nbsp; &nbsp; &nbsp;ST Corplab, ABN Section A,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Nanyang Technological University,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Singapore 639798</p>
