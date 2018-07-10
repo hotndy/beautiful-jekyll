@@ -1,7 +1,8 @@
 ---
 layout: page
 ---
-# Publications
+
+<h1 style="text-align: center;">Publications</h1>
 
 ## Journal Publications  
 
