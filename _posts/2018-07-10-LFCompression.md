@@ -1,6 +1,6 @@
 ---
 layout: post
-title: First post!
+title: Light Field Compression Topics
 image: /img/hello_world.jpeg
 ---
 
