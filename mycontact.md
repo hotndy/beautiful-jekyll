@@ -1,8 +1,7 @@
 ---
-layout: post
-title: Fast Light Field ReconstructionWith Deep Coarse-To-Fine Modeling of Spatial-Angular Clues [ECCV18']
+layout: page
+title: Contact
 show-avatar: false
-image: /projects/LFAngularSP/LFS_teaser.png
 ---
 
-Detail coming soon.
+Email: chen.jie at ntu dot edu dot sg  
