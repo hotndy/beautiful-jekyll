@@ -372,8 +372,8 @@ footer .theme-by {
 }*/
 .post-image img {
   /*border-radius: 100px;*/
-  height: 192px;
-  width: 192px;
+  height: 180px;
+  width: 320px;
 }
 .post-preview .post-read-more {
   font-weight: 800;
