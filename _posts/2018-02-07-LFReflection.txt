@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Fast Light Field ReconstructionWith Deep Coarse-To-Fine Modeling of Spatial-Angular Clues [ECCV18']
+title: Reflection Removal On Single Light Field Capture Using Focus Manipulation [TCI18']
 show-avatar: false
-image: /projects/LFAngularSP/LFS_teaser.png
+image: /projects/LFAngularSP/LFReflection_teaser.jpg
 ---
 
 Detail coming soon.
