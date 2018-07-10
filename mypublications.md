@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Publications
 ---
+# Publications
+
 ## Journal Publications  
 
 #### _pre-print_  
