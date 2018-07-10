@@ -5,11 +5,11 @@ title: Publications
 ## Journal Publications  
 
 #### _pre-print_  
-* **Jie Chen**, Junhui Hou, and Lap-Pui. Chau, [``Light Field Denoising via Anisotropic Parallax Analysis in a CNN Framework,''](https://arxiv.org/abs/1805.12358) under review in _IEEE Signal Processing Letters_ **(IEEE SPL)**.  
 * **Jie Chen**,  Cheen-Hau. Tan, Junhui Hou, Lap-Pui. Chau, and He Li, [``Robust Video Content Alignment and Compensation for Clear Vision Through the Rain,''](https://arxiv.org/abs/1804.09555) under review in _IEEE Transactions on Pattern Analysis and Machine Intelligence_ **(IEEE TPAMI)**.  
 * Henry W. F. Yeung, Junhui Hou, Xiaoming Chen, **Jie Chen**, Zhibo Chen, and Yuk Ying Chung, ``Light Field Spatial Super-Resolution Using Deep Spatial-Angular Interleaved CNN,'' under _major revision_ in _IEEE Transactions on Image Processing_ **(IEEE TIP)**.  
 
 #### _peer-reviewed_ 
+* **Jie Chen**, Junhui Hou, and Lap-Pui. Chau, [``Light Field Denoising via Anisotropic Parallax Analysis in a CNN Framework,''](https://arxiv.org/abs/1805.12358) accepted by _IEEE Signal Processing Letters_ **(IEEE SPL)**.  
 * Yun Ni, **Jie Chen**, and Lap-Pui Chau, ``Reflection Removal On Single Light Field Capture With Focus Manipulation,'' accepted by _IEEE Transactions on Computational Imaging_ **(IEEE TCI)**.  
 * **Jie Chen**, Juhhui Hou, Yun Ni, and Lap-Pui. Chau, [``Accurate Light Field Depth Estimation with Superpixel Regularization over Partially Occluded Regions,''](https://arxiv.org/abs/1708.01964) accepted by _IEEE Transactions on Image Processing_ **(IEEE TIP)**.  
 * Junhui Hou, **Jie Chen**, and Lap-Pui Chau, [``Light Field Image Compression Based on Bi-Level View Compensation with Rate Distortion Optimization,''](https://ieeexplore.ieee.org/abstract/document/8283506/) _IEEE Transactions on Circuits and Systems for Video Technology_ **(IEEE TCSVT)**.  
