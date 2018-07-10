@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Fast Light Field ReconstructionWith Deep Coarse-To-Fine Modeling of Spatial-Angular Clues [ECCV18']
+title: Accurate Light Field Depth Estimation with Superpixel Regularization over Partially Occluded Regions [TIP18']
 show-avatar: false
-image: /projects/LFAngularSP/LFS_teaser.png
+image: /projects/LFDepthSP/LFDepthSP.png
 ---
 
 Detail coming soon.
