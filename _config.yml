@@ -27,7 +27,7 @@ navbar-links:
  # Resources:
  #   - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
   Publications: "mypublications/"  
-  Projects: 
+  Research: 
     - Light Field Compressed Sensing: "projects/LFCS/LFCS/"
     - Light Field Compression: "projects/LFCompression/LFCompression/"
     - Rain Removal: "projects/SPAC/SPAC-CNN/"
