@@ -8,7 +8,7 @@ We present a video synthetic rain dataset. \[[download](https://github.com/hotnd
 
 ![](rainDatasetThumb.jpg)
 
-<img src="drawing.jpg" alt="drawing" width="200px"/>
+<img src="rainDatasetThumb.jpg" alt="drawing" width="200px"/>
 
 Supplementary material repository for Robust Video Content Alignment and Compensation framework for rain removal applications.
 
