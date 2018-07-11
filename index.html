@@ -25,7 +25,8 @@ use-site-title: true
     </a>
 
     <p class="post-meta">
-      <p>[<a href="{{post.paperlink}}">paper</a>]</p> Posted on {{ post.date | date: "%B %-d, %Y" }} 
+      <p>[<a href="{{post.paperlink}}">paper</a>]</p> 
+       {% Posted on {{ post.date | date: "%B %-d, %Y" }}  %}
     </p>
 
     <div class="post-entry-container">
