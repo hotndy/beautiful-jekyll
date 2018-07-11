@@ -12,6 +12,10 @@ moving cameras), as well as the labeling details for each data is shown in the t
 <img src="https://github.com/hotndy/hotndy.github.io/projects/SPAC/rainDatasetTable.jpg" width="500px"/>
 </p>
 
+<p align="center">
+<img src="rainDatasetTable.jpg" width="500px"/>
+</p>
+
 We also show the thumbnails for each data entry below.
 
 <p align="center">
