@@ -6,6 +6,8 @@ show-avatar: false
 
 We present a video synthetic rain dataset. \[[download](https://github.com/hotndy/SPAC-SupplementaryMaterials)\]
 
+![](https://hotndy.github.io/projects/SPAC/rainDatasetThumb.png)
+
 Supplementary material repository for Robust Video Content Alignment and Compensation framework for rain removal applications.
 
 Under the folder "SPAC-CNN_code" folder are the executable code for rain removal.
