@@ -349,6 +349,7 @@ footer .theme-by {
   color: #002266;
   font-size: 18px;
   /*font-style: italic;*/
+  font-style: normal;
   margin: 0 0 10px;
 }
 .post-preview .post-entry {
