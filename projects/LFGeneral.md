@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Light Field Imaing and Applications
+title: Light Field Imaging and Applications
 show-avatar: false
 ---
 
