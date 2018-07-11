@@ -7,7 +7,7 @@ show-avatar: false
 We present a video synthetic rain dataset. \[[download](https://github.com/hotndy/SPAC-SupplementaryMaterials)\]
 
 
-<center><img src="rainDatasetThumb.jpg" alt="drawing" width="200px"/></center>
+<center><img src="rainDatasetThumb.jpg" alt="drawing" width="200px"/><\center>
 
 Supplementary material repository for Robust Video Content Alignment and Compensation framework for rain removal applications.
 
