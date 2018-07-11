@@ -20,7 +20,7 @@ We also show the thumbnails for each data entry below.
 
 Please cite both Adobe After Effect [2], and our paper [1] when you use this dataset, or compare with our results.
 
-[1] J. Chen, C.-H. Tan, J. Hou, L.-P. Chau, and H. Li, “Robust video content alignment and compensation for rain removal in a CNN framework,” IEEE Conference on Computer Vision and Pattern Recognition, 2018.
+[1] J. Chen, C.-H. Tan, J. Hou, L.-P. Chau, and H. Li, “Robust video content alignment and compensation for rain removal in a CNN framework,” IEEE Conference on Computer Vision and Pattern Recognition, 2018. \[[pdf](https://arxiv.org/abs/1803.10433)\]
 
 [2] Adobe After Effects Software, available at www.adobe.com/AfterEffects.
 
