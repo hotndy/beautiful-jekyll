@@ -6,6 +6,14 @@ show-avatar: false
 
 We present a video synthetic rain dataset. \[[download](https://github.com/hotndy/SPAC-SupplementaryMaterials)\]
 
+The data category (i.e., training/testing data, and whether the rain is synthetic/real rain), the camera motion (i.e., slow/fast
+moving cameras), as well as the labeling details for each data is shown in Table 3.
+<p align="center">
+<img src="rainDatasetTable.jpg" alt="drawing" width="500px"/>
+</p>
+
+
+
 <p align="center">
 <img src="rainDatasetThumb.jpg" alt="drawing" width="500px"/>
 </p>
