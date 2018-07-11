@@ -13,6 +13,8 @@ moving cameras), as well as the labeling details for each data is shown in the t
 </p>
 
 ![](rainDatasetTable.jpg)
+The system diagram:  
+![](https://hotndy.github.io/projects/SPAC/systemDiagram.png)
 
 We also show the thumbnails for each data entry below.
 
