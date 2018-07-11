@@ -25,7 +25,9 @@ use-site-title: true
     </a>
 
     <p class="post-meta">
-      [<a href="{{post.paperlink}}">paper</a>]
+	{% if post.post.paperlink %}  
+	    [<a href="{{post.paperlink}}">paper</a>]
+      	{% endif %}
       <!-- Posted on {{ post.date | date: "%B %-d, %Y" }} -->
     </p>
 
