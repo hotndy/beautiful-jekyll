@@ -28,7 +28,7 @@ navbar-links:
  #   - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
   Publications: "mypublications/"  
   Research:
-    - Light Field Imaging and Applications: "projects/LFCS/LFGeneral.md"
+    - Light Field Imaging and Applications: "projects/LFGeneral.md"
     - Learning Based Vision Solutions: "projects/SPAC/SPAC-CNN/"
     - Multi-scale Sparse Coding: "_posts/2015-02-28-test-markdown/"
     - 3D Modeling: "projects/LFDepth/LFDepth/"
