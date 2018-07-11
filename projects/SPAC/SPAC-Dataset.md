@@ -25,9 +25,9 @@ Organization structure details of the dataset:
 0. Under the folder "SPAC-CNN_code" folder are the executable code for rain removal.     
   
 1. Under the "Dataset_Testing_Synthetic" and "Dataset_Training_Synthetic" folders are the synthetic rain dataset for model training, and algorithm testing.
-   > Files with names xxx_GT are the scene ground truth.  
-   > Files with names xxx_Rain are the synthesized rainy scenes with Adobe Affter Effect.  
-   > Files with names xxx_spacCNN are the derain output from SPAC-CNN (only for the testing dataset).  
+   > - Files with names xxx_GT are the scene ground truth.  
+   > - Files with names xxx_Rain are the synthesized rainy scenes with Adobe Affter Effect.  
+   > - Files with names xxx_spacCNN are the derain output from SPAC-CNN (only for the testing dataset).  
    
    Please cite both Adobe After Effect [2], and our paper [1] when you use this dataset, or compare with our results.      
 
