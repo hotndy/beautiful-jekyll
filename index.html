@@ -27,9 +27,9 @@ use-site-title: true
     <p class="post-meta">
 	{% if post.paperlink %}  
 	    [<a href="{{post.paperlink}}">paper</a>]
-	{% if post.codelink %}  
+	{% elseif post.codelink %}  
 	    [<a href="{{post.paperlink}}">code</a>]
-	{% if post.resourcelink %}  
+	{% elseif post.resourcelink %}  
 	    [<a href="{{post.paperlink}}">data</a>]
 	{% else %}
 	    Posted on {{ post.date | date: "%B %-d, %Y" }}
