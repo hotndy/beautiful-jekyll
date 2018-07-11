@@ -3,6 +3,9 @@ layout: post
 title: Accurate Light Field Depth Estimation with Superpixel Regularization over Partially Occluded Regions [TIP18']
 show-avatar: false
 image: /projects/LFDepthSP/LFDepthSP.png
+paperlink: https://arxiv.org/abs/1708.01964
+codelink: null
+resourcelink: null
 ---
 
 Detail coming soon.
