@@ -27,12 +27,11 @@ navbar-links:
  # Resources:
  #   - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
   Publications: "mypublications/"  
-  Research: 
-    - Light Field Compressed Sensing: "projects/LFCS/LFCS/"
-    - Light Field Compression: "projects/LFCompression/LFCompression/"
-    - Rain Removal: "projects/SPAC/SPAC-CNN/"
-    - 3D Depth Estimation: "projects/LFDepth/LFDepth/"
+  Research:
+    - Light Field Imaging and Applications: "projects/LFCS/LFCS/"
+    - Learning Based Vision Solutions: "projects/SPAC/SPAC-CNN/"
     - Multi-scale Sparse Coding: "_posts/2015-02-28-test-markdown/"
+    - 3D Modeling: "projects/LFDepth/LFDepth/"
   Resources:
     - Light Field Depth Estimation: "projects/LFCS/LFCS/"
     - Light Field Compression: "projects/LFCompression/LFCompression/"
