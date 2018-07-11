@@ -2,6 +2,7 @@
 layout: page
 ---
 
+<p>&nbsp;</p>
 <h1 style="text-align: center;">Publications</h1>
 
 ## Journal Publications  
