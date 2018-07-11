@@ -4,17 +4,13 @@ title: "Synthetic Rain Dataset with Adobe After Effect"
 show-avatar: false
 ---
 
-We present a video synthetic rain dataset. \[[download](https://github.com/hotndy/SPAC-SupplementaryMaterials)\]
+We present a video synthetic rain dataset. \[[download](https://github.com/hotndy/SPAC-SupplementaryMaterials)\] \[[paper](https://arxiv.org/abs/1803.10433)\]
 
 The data category (i.e., training/testing data, and whether the rain is synthetic/real rain), the camera motion (i.e., slow/fast
 moving cameras), as well as the labeling details for each data is shown in the table below.
 <p align="center">
 <img src="https://hotndy.github.io/projects/SPAC/rainDatasetTable.png" width="500px"/>
 </p>
-
-![](https://hotndy.github.io/projects/SPAC/rainDatasetTable.jpg)
-The system diagram:  
-![](https://hotndy.github.io/projects/SPAC/systemDiagram.png)
 
 We also show the thumbnails for each data entry below.
 
