@@ -7,7 +7,7 @@ show-avatar: false
 We present a video synthetic rain dataset. \[[download](https://github.com/hotndy/SPAC-SupplementaryMaterials)\]
 
 The data category (i.e., training/testing data, and whether the rain is synthetic/real rain), the camera motion (i.e., slow/fast
-moving cameras), as well as the labeling details for each data is shown in Table 3.
+moving cameras), as well as the labeling details for each data is shown in the table below.
 <p align="center">
 <img src="hotndy.github.io/projects/SPAC/rainDatasetTable.jpg" alt="drawing" width="500px"/>
 </p>
@@ -15,7 +15,7 @@ moving cameras), as well as the labeling details for each data is shown in Table
 We also show the thumbnails for each data entry below.
 
 <p align="center">
-<img src="https://github.com/hotndy/hotndy.github.io/edit/master/projects/SPAC/rainDatasetThumb.jpg" alt="drawing" width="500px"/>
+<img src="hotndy.github.io/projects/SPAC/rainDatasetThumb.jpg" alt="drawing" width="500px"/>
 </p>
 
 Please cite both Adobe After Effect [2], and our paper [1] when you use this dataset, or compare with our results.
