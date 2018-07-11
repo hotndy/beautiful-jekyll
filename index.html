@@ -27,14 +27,14 @@ use-site-title: true
     <p class="post-meta">
 	{% if post.paperlink %}  
 	    [<a href="{{post.paperlink}}">paper</a>]
-	{% elseif post.codelink %}  
+	{% endif %} 
+	{% if post.codelink %}  
 	    [<a href="{{post.paperlink}}">code</a>]
-	{% elseif post.resourcelink %}  
+	{% endif %} 
+	{% if post.resourcelink %}  
 	    [<a href="{{post.paperlink}}">data</a>]
-	{% else %}
-	    Posted on {{ post.date | date: "%B %-d, %Y" }}
-      	{% endif %} 
-	    
+	{% endif %} 
+	<p>&nbsp;&nbsp;</p>    	    
       <!-- Posted on {{ post.date | date: "%B %-d, %Y" }} -->
     </p>
 
