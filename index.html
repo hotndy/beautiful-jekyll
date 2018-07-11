@@ -24,21 +24,6 @@ use-site-title: true
 	  {% endif %}
     </a>
 
-    <p class="post-meta">
-	{% if post.paperlink %}  
-	    <!--[<a href="{{post.paperlink}}">paper</a>]-->
-	    <span style="color: #0000ff;">[<a href="{{post.paperlink}}">paper</a>]</span>
-	{% endif %} 
-	{% if post.codelink %}  
-	    <span style="color: #0000ff;">[<a href="{{post.codelink}}">code</a>]</span>
-	{% endif %} 
-	{% if post.resourcelink %}  
-	    <span style="color: #0000ff;">[<a href="{{post.resourcelink}}">data</a>]</span>
-	{% endif %} 
-	&nbsp;&nbsp;   	    
-      	<!-- Posted on {{ post.date | date: "%B %-d, %Y" }} -->
-    </p>
-
     <div class="post-entry-container">
       {% if post.image %}
       <div class="post-image">
@@ -55,6 +40,21 @@ use-site-title: true
         {% endif %}
       </div>
     </div>
+	  
+    <p class="post-meta">
+	{% if post.paperlink %}  
+	    <!--[<a href="{{post.paperlink}}">paper</a>]-->
+	    <span style="color: #0000ff;">[<a href="{{post.paperlink}}">paper</a>]</span>
+	{% endif %} 
+	{% if post.codelink %}  
+	    <span style="color: #0000ff;">[<a href="{{post.codelink}}">code</a>]</span>
+	{% endif %} 
+	{% if post.resourcelink %}  
+	    <span style="color: #0000ff;">[<a href="{{post.resourcelink}}">data</a>]</span>
+	{% endif %} 
+	&nbsp;&nbsp;   	    
+      	<!-- Posted on {{ post.date | date: "%B %-d, %Y" }} -->
+    </p>
 
     {% if post.tags.size > 0 %}
     <div class="blog-tags">
