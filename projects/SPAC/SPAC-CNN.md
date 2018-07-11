@@ -12,6 +12,8 @@ moving cameras), as well as the labeling details for each data is shown in the t
 <img src="rainDatasetTable.jpg" width="500px"/>
 </p>
 
+![](rainDatasetTable.jpg)
+
 We also show the thumbnails for each data entry below.
 
 <p align="center">
