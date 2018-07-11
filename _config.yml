@@ -29,7 +29,7 @@ navbar-links:
   Publications: "mypublications/"  
   Research:
     - Light Field Imaging and Applications: "projects/LFGeneral/"
-    - Deep Learning Based Vision Enhancement: "projects/VisionGeneral"
+    - Deep Learning Based Vision Enhancement: "projects/learningVision/"
     - Multi-scale Sparse Coding: "_posts/2015-02-28-test-markdown/"
     - 3D Modeling: "projects/LFDepth/LFDepth/"
   Resources:
