@@ -33,7 +33,7 @@ navbar-links:
     - Multi-scale Sparse Coding: "_posts/2015-02-28-test-markdown/"
     - 3D Modeling: "projects/LFDepth/LFDepth/"
   Resources:
-    - Synthetic Rain Dataset: "projects/SPAC/SPAC-CNN/"
+    - Synthetic Rain Dataset: "projects/SPAC/SPAC-Dataset/"
     - Light Field Depth Estimation: "projects/LFCS/LFCS/"    
   Contact: "mycontact/" 
 
