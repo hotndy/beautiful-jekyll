@@ -9,7 +9,7 @@ We present a video synthetic rain dataset. \[[download](https://github.com/hotnd
 The data category (i.e., training/testing data, and whether the rain is synthetic/real rain), the camera motion (i.e., slow/fast
 moving cameras), as well as the labeling details for each data is shown in Table 3.
 <p align="center">
-<img src="https://github.com/hotndy/hotndy.github.io/edit/master/projects/SPAC/rainDatasetTable.jpg" alt="drawing" width="500px"/>
+<img src="hotndy.github.io/projects/SPAC/rainDatasetTable.jpg" alt="drawing" width="500px"/>
 </p>
 
 We also show the thumbnails for each data entry below.
