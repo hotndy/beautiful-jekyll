@@ -25,7 +25,8 @@ use-site-title: true
     </a>
 
     <p class="post-meta">	    
-      	Posted on {{ post.date | date: "%B %-d, %Y" }}
+      	<!--Posted on {{ post.date | date: "%B %-d, %Y" }}-->
+	{{post.publish}}
     </p>
 	  
     <div class="post-entry-container">
