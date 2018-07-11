@@ -24,7 +24,8 @@ use-site-title: true
 	  {% endif %}
     </a>
 
-    <div class="post-entry-container">  
+    <!-- <div class="post-entry-container"> -->
+    <p class="post-entry-container">
 	{% if post.image %}
 		<div class="post-image">
 			  <a href="{{ post.url | prepend: site.baseurl }}">
@@ -39,7 +40,7 @@ use-site-title: true
           <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">[Read&nbsp;More]</a>
         {% endif %}
       </div>
-    </div>
+    </p> <!--</div>-->
 	  
     <p class="post-meta">
 	{% if post.paperlink %}  
