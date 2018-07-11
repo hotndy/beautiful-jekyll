@@ -28,6 +28,12 @@ use-site-title: true
 	{% if post.paperlink %}  
 	    [<a href="{{post.paperlink}}">paper</a>]
       	{% endif %}
+	    {% if post.codelink %}  
+	    [<a href="{{post.paperlink}}">code</a>]
+      	{% endif %}
+	    {% if post.resourcelink %}  
+	    [<a href="{{post.paperlink}}">data</a>]
+      	{% endif %}        
       <!-- Posted on {{ post.date | date: "%B %-d, %Y" }} -->
     </p>
 
