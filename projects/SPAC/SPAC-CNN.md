@@ -7,11 +7,7 @@ show-avatar: false
 We present a video synthetic rain dataset. \[[download](https://github.com/hotndy/SPAC-SupplementaryMaterials)\]
 
 <p align="center">
-<img src="rainDatasetThumb.jpg" alt="drawing" width="200px"/>
-</p>
-
-<p align="center">
-<img width="460" height="300" src="http://www.fillmurray.com/460/300">
+<img src="rainDatasetThumb.jpg" alt="drawing" width="400px"/>
 </p>
 
 
