@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Light Field Compression Topics
-publish: IEEE TIP 2017 \& IEEE TCSVT 2018
+publish: IEEE TIP 2017 & IEEE TCSVT 2018
 show-avatar: false
 image: /projects/LFAPA/LFAPA.jpg
-paperlink: https://arxiv.org/abs/1805.12358
+paperlink: https://ieeexplore.ieee.org/document/8030107/
 codelink: 
 resourcelink: https://github.com/hotndy/APA-LFDenoising 
 ---
