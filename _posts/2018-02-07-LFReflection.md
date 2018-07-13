@@ -9,7 +9,7 @@ codelink: null
 resourcelink: null
 ---
 
-We propose an integral framework that is able to seperate the scene and supperimposed reflections with a focal length manipulated single capture with a light field camera.                                                                  
+We propose an integral framework that is able to seperate the scene and supperimposed reflections with a single capture from a light field camera, following a series of focal length manipulation procedures.                                                             
   
 \[[paper](null)\] 
   
