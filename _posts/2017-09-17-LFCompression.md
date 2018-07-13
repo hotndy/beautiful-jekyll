@@ -12,7 +12,7 @@ resourcelink: https://github.com/hotndy/APA-LFDenoising
 We explore the anisotropic parallaxes along different observation motions to suppress noise within a light field image. Two sequential CNN are jointly designed to reconstruct the light field, and preserve the view-dependent energies.
 
 <p align="center">
-<img src="https://hotndy.github.io/projects/LFAPA/LFAPA.jpg" width="500px"/>
+<img src="https://hotndy.github.io/projects/LFCompression/LFDictionary.jpg" width="500px"/>
 </p>
 
 ### Abstract
