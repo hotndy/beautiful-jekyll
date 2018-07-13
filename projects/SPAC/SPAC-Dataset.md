@@ -6,9 +6,9 @@ show-avatar: false
 
 We present a video rain dataset that contains both sythetic rain (by _Adobe After Effect_) and real rain video clips for algorithm training and testing.   
   
-\[[dataset download](https://github.com/hotndy/SPAC-SupplementaryMaterials)\] 
+\[[dataset download](https://github.com/hotndy/SPAC-SupplementaryMaterials)\]  
 \[[paper](https://arxiv.org/abs/1803.10433)\]
-\[[code download](https://bitbucket.org/st_ntu_corplab/mrp2a/src/bd2633dbc9912b833de156c799fdeb82747c1240?at=master)\]
+\[[code](https://bitbucket.org/st_ntu_corplab/mrp2a/src/bd2633dbc9912b833de156c799fdeb82747c1240?at=master)\]
   
 The data category usage (i.e., training/testing dataset), the rain types (i.e., whether the rain is synthetic/real rain), the camera motion for each data entry (i.e., slow/fast moving cameras), as well as the labeling details for each data is shown in the table below.
 <p align="center">
