@@ -20,3 +20,18 @@ We propose an integral framework that is able to seperate the scene and supperim
 
 ### Abstract
 > Photos taken through reflective surfaces such as display windows inevitably suffer from visual degradations caused by reflection interferences. The superimposition of two layers, i.e., background and reflection, obscures important target features, and causes challenges for subsequent computer vision applications. In this paper, we introduce a reflection removal method using single light field (LF) captures. Through focus manipulation and subsequent optimization, our algorithm is able to separate reflection from background effectively by exploiting the subtle pixel parallax of LF data. Since it requires only a single capture of the scene, it can handle moving scenes that change quickly, as well as static ones. Extensive experiments have been carried out over both synthetic and real LF data, which show our method outperforms state-of-the-art ones by at least 3.0 dB in terms of background restoration PSNR, with significantly fewer visual artifacts.
+
+### Visual Demonstration
+<p align="center">
+  <img src= "/projects/LFReflection/LFRFoutput1.jpg" width="850px">
+<\p>
+  
+<p align="center">
+  <img src= "/projects/LFReflection/LFRFoutput2.jpg" width="850px">
+<\p>
+  
+<p align="center">
+  <img src= "/projects/LFReflection/LFRFoutput3.jpg" width="850px">
+<\p>  
+  
+  
