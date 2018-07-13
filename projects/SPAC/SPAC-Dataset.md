@@ -52,7 +52,7 @@ Organization structure details of the dataset:
 4. Under the "SupperPixel_Matching_Evaluations" foder are the experiment results of content matching using SP units vs. rectangular patches for the Middleburry Stereo Dataset. Matching results for the SP units are with names "xxx_sp.png", and the results for the rectangular patches are with names "xxx_blk.png".
 
 
-[1] J. Chen, C.-H. Tan, J. Hou, L.-P. Chau, and H. Li, “Robust video content alignment and compensation for rain removal in a CNN framework,” IEEE Conference on Computer Vision and Pattern Recognition, 2018. \[[pdf](https://arxiv.org/abs/1803.10433)\]
+[1] J. Chen, C.-H. Tan, J. Hou, L.-P. Chau, and H. Li, “Robust video content alignment and compensation for rain removal in a CNN framework,” IEEE Conference on Computer Vision and Pattern Recognition, 2018. \[[pdf](https://arxiv.org/abs/1803.10433)\] \[[code](https://bitbucket.org/st_ntu_corplab/mrp2a/src/bd2633dbc9912b833de156c799fdeb82747c1240?at=master)\]
 
 [2] Adobe After Effects Software, available at www.adobe.com/AfterEffects.
 
