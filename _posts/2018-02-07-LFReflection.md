@@ -9,7 +9,10 @@ codelink: null
 resourcelink: null
 ---
 
-We propose an integral framework that is able to seperate the scene and supperimposed reflections with a focal manipulated single capture with a light field camera.
+We propose an integral framework that is able to seperate the scene and supperimposed reflections with a focal manipulated single capture with a light field camera.  
+  
+\[[paper](null)\]  
+  
 
 <p align="center">
 <img src="/projects/LFReflection/LFReflection_teaser.jpg" width="480px"/>
