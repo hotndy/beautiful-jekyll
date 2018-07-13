@@ -24,14 +24,14 @@ We propose an integral framework that is able to seperate the scene and supperim
 ### Visual Demonstration
 <p align="center">
   <img src= "/projects/LFReflection/LFRFoutput1.jpg" width="850px">
-<\p>
+</p>
   
 <p align="center">
   <img src= "/projects/LFReflection/LFRFoutput2.jpg" width="850px">
-<\p>
+</p>
   
 <p align="center">
   <img src= "/projects/LFReflection/LFRFoutput3.jpg" width="850px">
-<\p>  
+</p>
   
   
