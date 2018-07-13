@@ -6,11 +6,14 @@ show-avatar: false
 image: /projects/LFAPA/LFAPA.jpg
 paperlink: https://ieeexplore.ieee.org/document/8030107/
 codelink: 
-resourcelink: https://github.com/hotndy/APA-LFDenoising 
+resourcelink: 
 ---
 
-We explore the anisotropic parallaxes along different observation motions to suppress noise within a light field image. Two sequential CNN are jointly designed to reconstruct the light field, and preserve the view-dependent energies.
+We propose a LF codec which is based on disparity guide Sparse Coding over a learned perspective-shifted LF dictionary based on selected Structural Key Views. Up to 80 percent bit rate reduction is achieved compared with HEVC.
 
+\[[TIP 2017 paper](https://ieeexplore.ieee.org/document/8030107/)\]
+\[[TCSVT 2018 paper](https://ieeexplore.ieee.org/document/8283506/)\]
+  
 <p align="center">
 <img src="https://hotndy.github.io/projects/LFCompression/LFDictionary.jpg" width="500px"/>
 </p>
