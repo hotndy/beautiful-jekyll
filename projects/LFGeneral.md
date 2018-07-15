@@ -12,9 +12,9 @@ I have been working on a number of topics and applications that are related to l
 - Light Field Data Compression  
 - Light Field Depth Esitmation  
 - Light Field View Synthesis  
-- Novel Applications
+- Novel Applications  
 &nbsp; &nbsp; - Light Field Rain Removal  
-&nbsp; &nbsp;- Reflection Removal based on a Single LF Capture  
+&nbsp; &nbsp; - Reflection Removal based on a Single LF Capture  
 
 <p align="center">
 <img src="https://hotndy.github.io/projects/LFCS/opticalDiagram.jpg" width="500px"/>
