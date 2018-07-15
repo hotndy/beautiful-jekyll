@@ -33,12 +33,17 @@ I have been working on a number of topics and applications that are related to l
 
 ### <a name="syn"></a> Light Field View Synthesis  
 
+* Henry Wing Fung Yeung, Junhui Hou, **Jie Chen**, Yuk Ying Chung, and Xiaoming Chen, [''Fast Light Field ReconstructionWith Deep Coarse-To-Fine Modeling of Spatial-Angular Clues''](), accepted by _European Conference on Computer Vision_ **(ECCV)**, Munich, Germany, 2018.
 
 ### <a name="app"></a> Novel Applications  
-#### <a name="rain"></a> Light Field Rain Removal  
-#### <a name="refelction"></a> Reflection Removal based on a Single LF Capture  
-* Yun Ni, **Jie Chen**, and Lap-Pui Chau, ''Reflection Removal On Single Light Field Capture With Focus Manipulation,'' accepted by _IEEE Transactions on Computational Imaging_ **(IEEE TCI)**. 
+#### <a name="rain"></a> Light Field Rain Removal 
 
+* Cheen-Hau Tan, **J. Chen** and Lap-Pui Chau, [''Edge-preserving rain removal for light field images based on RPCA'''](http://ieeexplore.ieee.org/document/8096066/) _IEEE International Conference on Digital Signal Processing_ **(DSP)**, pp. 1-5, London, UK, 2017.  
+
+#### <a name="refelction"></a> Reflection Removal based on a Single LF Capture  
+* Yun Ni, **Jie Chen**, and Lap-Pui Chau, ''Reflection Removal On Single Light Field Capture With Focus Manipulation,'' accepted by _IEEE Transactions on Computational Imaging_ **(IEEE TCI)**.  
+  
+* Yun Ni, **ie Chen** and Lap-Pui Chau, [''Reflection removal based on single light field capture,''](http://ieeexplore.ieee.org/abstract/document/8050813/) _IEEE International Symposium on Circuits and Systems_ **(ISCAS)**, pp. 1-4, Baltimore, USA, 2017.  
 
 
 <p align="center">
