@@ -17,6 +17,8 @@ I have been working on a number of topics and applications that are related to l
 &nbsp; &nbsp; - [Reflection Removal based on a Single LF Capture](#reflection)    
 
 ### <a name="acq"></a> Light Field Acquisition and Reconstruction
+[^fn1] Jie Chen and Lap-Pui Chau, ``Light Field Compressed Sensing Over a Disparity-Aware Dictionary,’’ IEEE Transactions on Circuits and Systems for Video Technology (IEEE TCSVT), vol. 27, no. 4, pp. 855-865, 2017.
+  
 ### <a name="compression"></a> Light Field Data Compression  
 ### <a name="depth"></a> Light Field Depth Esitmation  
 ### <a name="syn"></a> Light Field View Synthesis  
