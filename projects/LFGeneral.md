@@ -20,6 +20,7 @@ I have been working on a number of topics and applications that are related to l
  
 * **Jie Chen** and Lap-Pui Chau, [''Light Field Compressed Sensing Over a Disparity-Aware Dictionary,''](http://ieeexplore.ieee.org.ezlibproxy1.ntu.edu.sg/document/7368916/) _IEEE Transactions on Circuits and Systems for Video Technology_ **(IEEE TCSVT)**, vol. 27, no. 4, pp. 855-865, 2017.   
 
+* **Jie Chen**, Alexander Matyasko, and Lap-Pui Chau, [''A Light Field Sparse Representation Structure and Its Fast Coding Technique,''](http://ieeexplore.ieee.org/document/6900831/) _IEEE International Conference on Digital Signal Processing_ **(DSP)**, pp. 214-218, Hongkong, China, 2014.   
   
 ### <a name="compression"></a> Light Field Data Compression  
   
@@ -29,7 +30,11 @@ I have been working on a number of topics and applications that are related to l
   
 ### <a name="depth"></a> Light Field Depth Esitmation  
 
-* **Jie Chen**, Juhhui Hou, Yun Ni, and Lap-Pui. Chau, [''Accurate Light Field Depth Estimation with Superpixel Regularization over Partially Occluded Regions,''](https://arxiv.org/abs/1708.01964) accepted by _IEEE Transactions on Image Processing_ **(IEEE TIP)**.   
+* **Jie Chen**, Juhhui Hou, Yun Ni, and Lap-Pui. Chau, [''Accurate Light Field Depth Estimation with Superpixel Regularization over Partially Occluded Regions,''](https://arxiv.org/abs/1708.01964) accepted by _IEEE Transactions on Image Processing_ **(IEEE TIP)**. 
+  
+* **Jie Chen**, Lap-Pui Chau and He Li, [''Light field depth from multi-scale particle filtering,''](http://ieeexplore.ieee.org/document/7820906/) _Asia-Pacific Signal and Information Processing Association Annual Summit and Conference_ **(APSIPA ASC)**, pp. 1-6, Jeju, Korea, 2016. 
+
+* **Jie Chen**, and Lap-Pui Chau. [''A Fast Adaptive Guided Filtering Algorithm for Light Field Depth Interpolation,''](http://ieeexplore.ieee.org/document/6865626/) _IEEE International Symposium on Circuits and Systems_ **(ISCAS)**, pp. 2281-2284, Melbourne, Australia, 2014. 
 
 ### <a name="syn"></a> Light Field View Synthesis  
 
