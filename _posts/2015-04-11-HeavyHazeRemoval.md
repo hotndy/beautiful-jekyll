@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Light Field Compressed Sensing Over a Disparity-Aware Dictionary
-publish: IEEE TCSVT 2015
+publish: IEEE ISCAS 2015
 show-avatar: false
 image: /projects/HazeRemoval/HeavyHazeTeaser.jpg
 paperlink: https://ieeexplore.ieee.org/document/7368916/
