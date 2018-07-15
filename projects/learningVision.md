@@ -11,9 +11,9 @@ I have been working on a number of topics and applications that are related to l
 - [Clear Vision Through the Rain](#rain)  
 - [Vision Enhancement through the Haze](#haze)       
 
-### <a name="rain"></a> Vision Enhancement through the Haze
+### <a name="rain"></a> Clear Vision Through the Rain
  
-
+### <a name="haze"></a> Vision Enhancement through the Haze
 
 <p align="center">
 <img src="https://hotndy.github.io/projects/LFCS/opticalDiagram.jpg" width="500px"/>
