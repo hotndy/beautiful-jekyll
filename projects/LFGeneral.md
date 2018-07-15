@@ -16,7 +16,7 @@ I have been working on a number of topics and applications that are related to l
 &nbsp; &nbsp; - Light Field Rain Removal  
 &nbsp; &nbsp; - Reflection Removal based on a Single LF Capture  
 
-### Light Field Acquisition and Reconstruction <a name="acq"></a>  
+### <a name="acq"></a>Light Field Acquisition and Reconstruction
 ### Light Field Data Compression  
 ### Light Field Depth Esitmation  
 ### Light Field View Synthesis  
