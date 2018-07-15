@@ -3,6 +3,7 @@ layout: page
 title: Light Field Imaging and Applications
 show-avatar: false
 ---
+Light Field imaging captures the 3D world in a higher dimension than conventional 2D imaging.
 
 <p align="center">
 <img src="https://hotndy.github.io/projects/LFCS/opticalDiagram.jpg" width="500px"/>
