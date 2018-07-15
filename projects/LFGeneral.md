@@ -9,8 +9,8 @@ The light rays are recorded not only when they reach and integrate at the camera
 I have been working on a number of topics and applications that are related to light field imaging. This page gives a brief overlook of these areas.
 
 > - Light Field Acquisition and Reconstruction  
-- Light Field Data Compression  
-- Light Field Depth Esitmation  
+> - Light Field Data Compression  
+> - Light Field Depth Esitmation  
 - Light Field View Synthesis  
 - Novel Applications  
   
