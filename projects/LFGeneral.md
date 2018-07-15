@@ -3,7 +3,7 @@ layout: page
 title: Light Field Imaging and Applications
 show-avatar: false
 ---
-A _Light Field camera_ captures the image of 3D world in a more immersive way than conventional 2D imaging.
+[//]: # A _Light Field camera_ captures the image of 3D world in a more immersive way than conventional 2D imaging. The information is recorded not only on the camera sensor plane, but also the propogation of all light rays before they finally reach the sensor. 
 
 <p align="center">
 <img src="https://hotndy.github.io/projects/LFCS/opticalDiagram.jpg" width="500px"/>
