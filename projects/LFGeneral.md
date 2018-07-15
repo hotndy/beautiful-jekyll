@@ -16,6 +16,19 @@ I have been working on a number of topics and applications that are related to l
 &nbsp; &nbsp; - Light Field Rain Removal  
 &nbsp; &nbsp; - Reflection Removal based on a Single LF Capture  
 
+### Light Field Acquisition and Reconstruction  
+### Light Field Data Compression  
+### Light Field Depth Esitmation  
+### Light Field View Synthesis  
+### Novel Applications  
+#### Light Field Rain Removal  
+#### Reflection Removal based on a Single LF Capture  
+
+
+
+
+
+
 <p align="center">
 <img src="https://hotndy.github.io/projects/LFCS/opticalDiagram.jpg" width="500px"/>
 </p>
