@@ -9,20 +9,20 @@ The light rays are recorded not only when they reach and integrate at the camera
 I have been working on a number of topics and applications that are related to light field imaging. This page gives a brief overlook of these areas.
 
 - [Light Field Acquisition and Reconstruction](#acq)  
-- [Light Field Data Compression](#acq)    
-- [Light Field Depth Esitmation](#acq)    
-- [Light Field View Synthesis](#acq)    
-- [Novel Applications](#acq)    
-&nbsp; &nbsp; - [Light Field Rain Removal](#acq)    
-&nbsp; &nbsp; - [Reflection Removal based on a Single LF Capture](#acq)    
+- [Light Field Data Compression](#compression)    
+- [Light Field Depth Esitmation](#depth)    
+- [Light Field View Synthesis](#syn)    
+- [Novel Applications](#app)    
+&nbsp; &nbsp; - [Light Field Rain Removal](#rain)    
+&nbsp; &nbsp; - [Reflection Removal based on a Single LF Capture](#reflection)    
 
 ### <a name="acq"></a> Light Field Acquisition and Reconstruction
-### Light Field Data Compression  
-### Light Field Depth Esitmation  
-### Light Field View Synthesis  
-### Novel Applications  
-#### Light Field Rain Removal  
-#### Reflection Removal based on a Single LF Capture  
+### <a name="compression"></a> Light Field Data Compression  
+### <a name="depth"></a> Light Field Depth Esitmation  
+### <a name="syn"></a> Light Field View Synthesis  
+### <a name="app"></a> Novel Applications  
+#### <a name="rain"></a> Light Field Rain Removal  
+#### <a name="refelction"></a> Reflection Removal based on a Single LF Capture  
 
 
 
