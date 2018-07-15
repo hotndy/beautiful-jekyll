@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Light Field Compressed Sensing Over a Disparity-Aware Dictionary
-publish: IEEE TCSVT 2015
+title: Heavy Haze Removal in A Learning Framework
+publish: ISCAS 2015
 show-avatar: false
 image: /projects/LFCS/LFCSSystem.jpg
-paperlink: https://ieeexplore.ieee.org/document/7368916/
+paperlink: https://ieeexplore.ieee.org/document/7168952
 codelink: 
 resourcelink: 
 ---
