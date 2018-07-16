@@ -30,8 +30,9 @@ navbar-links:
   Research:
     - Light Field Imaging and Applications: "projects/LFGeneral/"
     - Deep Learning Based Vision Enhancement: "projects/learningVision/"
+    - 3D Content Modeling with Deep Learning: "projects/learning3D/"
     - Multi-scale Sparse Coding: "https://hotndy.github.io/2014-12-27-MSC/"
-    - 3D Modeling: "projects/LFDepth/LFDepth/"
+
   Resources:
     - Synthetic Rain Dataset: "projects/SPAC/SPAC-Dataset/"
     - Light Field Depth Estimation: "projects/LFCS/LFCS/"    
