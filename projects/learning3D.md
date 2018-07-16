@@ -12,6 +12,6 @@ I have been working on a number of topics and applications that are related to 3
 
 ### <a name="viewSyn"></a> Light Field View Synthesis
   
-### <a name="SR"></a> Light Field View Synthesis
+### <a name="SR"></a> Light Field SuperResolution
   
-### <a name="hf"></a> Light Field View Synthesis
+### <a name="hf"></a> Parallax Transfer for Hyperspectral Light Field
