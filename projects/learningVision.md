@@ -21,6 +21,13 @@ I have been working on a number of topics and applications that are related to l
 <img src="https://hotndy.github.io/projects/LFRain/N1CARrain.gif" width="300px"/>
 <img src="https://hotndy.github.io/projects/LFRain/N1CARderain.gif" width="300px"/>
 </p>
+<p align='center'>
+<img src="https://hotndy.github.io/projects/LFRain/WKWrain.gif" width="300px"/>
+<img src="https://hotndy.github.io/projects/LFRain/WKWderain.gif" width="300px"/>
+</p>
+
+
+
 
 * Cheen-Hau Tan, **Jie Chen**, and Lap-Pui Chau. [''Dynamic scene rain removal for moving cameras,''](http://ieeexplore.ieee.org/document/6900689/) _IEEE International Conference on Digital Signal Processing_ **(DSP)**, pp. 372-376, Hongkong, China, 2014. 
 
