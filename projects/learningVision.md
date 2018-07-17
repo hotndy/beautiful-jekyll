@@ -23,7 +23,7 @@ I have been working on a number of topics and applications that are related to l
 </p>
 <p align='center'>
 <img src="https://hotndy.github.io/projects/LFRain/WKWrain.gif" width="300px"/>
-<img src="https://hotndy.github.io/projects/LFRain/WKWderain.gif" width="300px"/>
+<img src="https://hotndy.github.io/projects/LFRain/WKWdrain.gif" width="300px"/>
 </p>
 
 
