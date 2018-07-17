@@ -17,6 +17,10 @@ I have been working on a number of topics and applications that are related to l
 
 * Cheen-Hau Tan, **J. Chen**, and Lap-Pui Chau, [''Edge-preserving rain removal for light field images based on RPCA'''](http://ieeexplore.ieee.org/document/8096066/) _IEEE International Conference on Digital Signal Processing_ **(DSP)**, pp. 1-5, London, UK, 2017.
 
+<p align='center'>
+<img src="https://hotndy.github.io/projects/LFRain/N1CARrain.gif" width="500px"/>
+</p>
+
 * Cheen-Hau Tan, **Jie Chen**, and Lap-Pui Chau. [''Dynamic scene rain removal for moving cameras,''](http://ieeexplore.ieee.org/document/6900689/) _IEEE International Conference on Digital Signal Processing_ **(DSP)**, pp. 372-376, Hongkong, China, 2014. 
 
 * **J. Chen** and Lap-Pui Chau, [''A Rain Pixel Recovery Algorithm for Videos With Highly Dynamic Scenes,''](http://ieeexplore.ieee.org.ezlibproxy1.ntu.edu.sg/document/6662475/) _IEEE Transactions on Image Processing_ **(IEEE TIP)**, vol. 23, no. 3, pp. 1097-1104, 2014. 
