@@ -4,7 +4,8 @@ layout: page
 
 <p>&nbsp;</p>
 <h1 style="text-align: center;">Publications</h1>
-<h1 style="text-align: center;">[Publications](https://scholar.google.com.sg/citations?user=qrWi1RYAAAAJ&hl=en)</h1>
+
+[Publications](https://scholar.google.com.sg/citations?user=qrWi1RYAAAAJ&hl=en)
 
 
 ## Journal Publications  
