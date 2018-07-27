@@ -7,13 +7,11 @@ layout: page
 <h3 style="text-align: center;"><span style="text-decoration: underline;"><a href="https://scholar.google.com.sg/citations?user=qrWi1RYAAAAJ&amp;hl=en"><span style="text-align: center; color: #20008c; text-decoration: underline;">Google Scholar</span></a></span></h3>  
 
 ## Journal Publications  
-
 #### _pre-print_  
 * **Jie Chen**,  Cheen-Hau Tan, Junhui Hou, Lap-Pui. Chau, and He Li, [''Robust Video Content Alignment and Compensation for Clear Vision Through the Rain,''](https://arxiv.org/abs/1804.09555) under review in _IEEE Transactions on Pattern Analysis and Machine Intelligence_ **(IEEE TPAMI)**.  
 * Henry W. F. Yeung, Junhui Hou, Xiaoming Chen, **Jie Chen**, Zhibo Chen, and Yuk Ying Chung, ''Light Field Spatial Super-Resolution Using Deep Spatial-Angular Interleaved CNN,'' under _major revision_ in _IEEE Transactions on Image Processing_ **(IEEE TIP)**.  
 
 #### _peer-reviewed_ 
-
 * **Jie Chen**, Junhui Hou, and Lap-Pui. Chau, [''Light Field Denoising via Anisotropic Parallax Analysis in a CNN Framework,''](https://arxiv.org/abs/1805.12358) accepted by _IEEE Signal Processing Letters_ **(IEEE SPL)**.
 * Yun Ni, **Jie Chen**, and Lap-Pui Chau, ''Reflection Removal On Single Light Field Capture With Focus Manipulation,'' accepted by _IEEE Transactions on Computational Imaging_ **(IEEE TCI)**.  
 * **Jie Chen**, Junhui Hou, Yun Ni, and Lap-Pui. Chau, [''Accurate Light Field Depth Estimation with Superpixel Regularization over Partially Occluded Regions,''](https://arxiv.org/abs/1708.01964) accepted by _IEEE Transactions on Image Processing_ **(IEEE TIP)**.  
@@ -23,7 +21,7 @@ layout: page
 * **Jie Chen** and Lap-Pui Chau, [''Light Field Compressed Sensing Over a Disparity-Aware Dictionary,''](http://ieeexplore.ieee.org.ezlibproxy1.ntu.edu.sg/document/7368916/) _IEEE Transactions on Circuits and Systems for Video Technology_ **(IEEE TCSVT)**, vol. 27, no. 4, pp. 855-865, 2017.  
 * **Jie Chen** and Lap-Pui Chau, [''Multiscale Dictionary Learning via Cross-Scale Cooperative Learning and Atom Clustering for Visual Signal Processing,''](http://ieeexplore.ieee.org.ezlibproxy1.ntu.edu.sg/document/7014226/) _IEEE Transactions on Circuits and Systems for Video Technology_ **(IEEE TCSVT)**, vol. 25, no. 9, pp. 1457-1468, 2015.  
 * **J. Chen** and Lap-Pui Chau, [''A Rain Pixel Recovery Algorithm for Videos With Highly Dynamic Scenes,''](http://ieeexplore.ieee.org.ezlibproxy1.ntu.edu.sg/document/6662475/) _IEEE Transactions on Image Processing_ **(IEEE TIP)**, vol. 23, no. 3, pp. 1097-1104, 2014. 
-</ol>
+
 ## Conference Publications  
 * Henry Wing Fung Yeung, Junhui Hou, **Jie Chen**, Yuk Ying Chung, and Xiaoming Chen, [''Fast Light Field ReconstructionWith Deep Coarse-To-Fine Modeling of Spatial-Angular Clues,'']() accepted by _European Conference on Computer Vision_ **(ECCV)**, Munich, Germany, 2018.
 * **Jie Chen**, Cheen-Hau Tan, Junhui Hou, Lap-Pui Chau, and He Li, [''Robust Video Content Alignment and Compensation for Rain Removal in a CNN Framework,''](https://arxiv.org/abs/1708.01964) accepted as **spotlight (6.6%)** on _IEEE Conference on Computer Vision and Pattern Recognition_ **(CVPR)**, Salt Lake City, Utah, 2018.  
