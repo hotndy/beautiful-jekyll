@@ -4,14 +4,14 @@ title: Reflection Removal On Single Light Field Capture Using Focus Manipulation
 publish: IEEE Transactions on Computational Imaging 2018
 show-avatar: false
 image: /projects/LFReflection/LFReflection_teaser.jpg
-paperlink: null
+paperlink: https://ieeexplore-ieee-org.ezlibproxy1.ntu.edu.sg/document/8421062/
 codelink: null
 resourcelink: null
 ---
 
 We propose an integral framework that is able to seperate the scene and supperimposed reflections with a single capture from a light field camera, following a series of focal length manipulation procedures.                                                             
   
-\[[paper](null)\] 
+\[[paper](https://ieeexplore-ieee-org.ezlibproxy1.ntu.edu.sg/document/8421062/)\] 
   
 <p align="center">
 <img src="/projects/LFReflection/LFReflection_teaser.jpg" width="480px"/>
