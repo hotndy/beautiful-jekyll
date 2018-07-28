@@ -9,8 +9,11 @@ codelink:
 resourcelink: 
 ---
 
-We propose a vision solution for extreme haze hazards. A vision restoration scheme that specifically studies the particle distribution under dense hazy atmosphere is proposed, and a learning based method is adopted for estimation of model parameters.
+We propose a vision solution for extreme haze hazards. A vision restoration scheme that specifically studies the particle distribution under dense hazy atmosphere is proposed, and a learning based method is adopted for estimation of model parameters.  
   
+    
+    
+    
 \[[paper](https://ieeexplore.ieee.org/document/7368916/)\]
   
 <p align="center">
