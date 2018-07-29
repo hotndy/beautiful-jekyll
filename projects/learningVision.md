@@ -41,5 +41,9 @@ I have been working on a number of topics and applications that are related to l
 * **Jie Chen**, and Lap-Pui Chau, [''An Enhanced Window-Variant Dark Channel Prior for Depth Estimation Using Single Foggy Image,''](http://ieeexplore.ieee.org/document/6738724/) _IEEE International Conference on Image Processing_ **(ICIP)**, pp. 3508-3512, Melbourne, Australia, 2013. 
 
 <p align="center">
-<img src="https://hotndy.github.io/projects/LFCS/opticalDiagram.jpg" width="500px"/>
+<img src="https://hotndy.github.io/projects/HazeRemoval/HeavyHazeOutput1.jpg" width="500px"/>
+</p>
+  
+<p align="center">
+<img src="https://hotndy.github.io/projects/HazeRemoval/HeavyHazeOutput2.jpg" width="500px"/>
 </p>
