@@ -21,23 +21,6 @@ layout: null
   }
 }
 
-@media (max-width:1024px) {
-	.un_address{
-		display:none;
-	}
-}
-
-@media (max-width:768px) {
-	.un_age{
-		display:none;
-	}
-}
-
-@media (max-width:500px) {
-	.un_first{
-		display:none;
-	}
-}
 
 /* --- General --- */
 
