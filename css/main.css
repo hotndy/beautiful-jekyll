@@ -55,8 +55,8 @@ layout: null
 }*/
 .bio-image img {
   /*border-radius: 100px;*/
-  height: 150px;
-  width: 270px;
+  /*height: 150px;*/
+  width: 250px;
 }
 
 @media only screen and (min-width: 768px) {
