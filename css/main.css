@@ -17,6 +17,7 @@ layout: null
   }
 }
 
+/* ---
 .bio-preview:last-child {
   border-bottom: 0;
 }
@@ -35,7 +36,7 @@ layout: null
 .bio-preview .bio-entry {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-
+--- */
 .bio-entry-container {
   display: inline-block;
   width: 100%;
@@ -47,7 +48,7 @@ layout: null
   float: left;
   /*height: 150px;*/
   width: 200px;
-  margin-top: -35px;
+  margin-top: 0px;
   /*filter: grayscale(0%);*/
 }
  /*.post-image:hover {
