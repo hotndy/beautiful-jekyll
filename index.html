@@ -11,6 +11,21 @@ use-site-title: true
 <p id="h.p_wYsnr3En9A7y" class="zfr3Q">My research interests are in computational photography (systems and algorithms for light field/hyperspectral signal acquisition, compressed compressing and compression), computational and machine learning methods for image/video restoration (denoising, vision enhancement, super resolution, motion analysis), and 3D content modeling.</p> 
 -->
 
+<div class="bio-entry-container">
+
+	<div class="bio-image">
+		  <img src="hotndy.github.io/img/GrandTeton.jpg" alt="" width="250" />
+	</div>
+
+<div class="post-entry">
+{{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
+{% assign excerpt_word_count = post.excerpt | number_of_words %}
+{% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
+  <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">[Read&nbsp;More]</a>
+{% endif %}
+</div>
+</div>
+
 <table style="height: 67px;" width=100%>
 <tbody>
 <tr>
