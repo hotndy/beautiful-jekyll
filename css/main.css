@@ -32,14 +32,10 @@ layout: null
   color: {{ site.hover-col }};
 }
 
-.bio-preview .post-title {
-  font-size: 20px; /*20 oringially*/
-  margin-top: 0;
-}
-
 .bio-preview .bio-entry {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+
 .bio-entry-container {
   display: inline-block;
   width: 100%;
