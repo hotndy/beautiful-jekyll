@@ -17,26 +17,6 @@ layout: null
   }
 }
 
-/* ---
-.bio-preview:last-child {
-  border-bottom: 0;
-}
-
-.bio-preview a {
-  text-decoration: none;
-  color: #404040;
-}
-
-.bio-preview a:focus,
-.bio-preview a:hover {
-  text-decoration: none;
-  color: {{ site.hover-col }};
-}
-
-.bio-preview .bio-entry {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
---- */
 .bio-entry-container {
   display: inline-block;
   width: 100%;
@@ -51,9 +31,7 @@ layout: null
   margin-top: 30px;
   /*filter: grayscale(0%);*/
 }
- /*.post-image:hover {
-  filter: grayscale(0%);
-}*/
+
 .bio-image img {
   /*border-radius: 100px;*/
   /*height: 150px;*/
@@ -65,7 +43,6 @@ layout: null
     font-size: 24px; /*36px*/;
   }
 }
-
 
 /* --- General --- */
 
