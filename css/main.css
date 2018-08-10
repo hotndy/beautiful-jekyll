@@ -7,7 +7,7 @@ layout: null
 /* --- Mine Bio--- */
 
 .bio-preview {
-  padding: 0px 0;
+  padding: 20px 0;
   border-bottom: 1px solid #eee;
 }
 
@@ -48,7 +48,7 @@ layout: null
   float: left;
   /*height: 150px;*/
   width: 200px;
-  margin-top: 0px;
+  margin-top: 30px;
   /*filter: grayscale(0%);*/
 }
  /*.post-image:hover {
