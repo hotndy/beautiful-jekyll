@@ -4,6 +4,23 @@ layout: null
 
 @import url("pygment_highlights.css");
 
+/* --- Mine --- */
+@media only screen and (max-width: 500px) {
+  .bio-image, .bio-image img {
+    /*height: 100px;
+    width: 100px;*/
+    height: 90%;
+    width: 90%;
+  }
+
+  .bio-image {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    float: left;
+  }
+}
+
 /* --- General --- */
 
 body {
