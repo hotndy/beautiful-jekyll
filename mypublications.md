@@ -1,5 +1,6 @@
 ---
 layout: page
+show-avatar: false
 ---
 
 <p>&nbsp;</p>
