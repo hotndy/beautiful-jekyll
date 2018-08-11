@@ -6,6 +6,7 @@ show-avatar: false
 <h1 style="text-align: center;">Publications</h1>
 <h3 style="text-align: center;"><span style="text-decoration: underline;"><a href="https://scholar.google.com.sg/citations?user=qrWi1RYAAAAJ&amp;hl=en"><span style="text-align: center; color: #20008c; text-decoration: underline;">Google Scholar</span></a></span></h3>
 
+## 2018
 ## Journal Publications  
 #### _pre-print_  
 * **Jie Chen**,  Cheen-Hau Tan, Junhui Hou, Lap-Pui. Chau, and He Li, ["Robust Video Content Alignment and Compensation for Clear Vision Through the Rain,''](https://arxiv.org/abs/1804.09555) under review in _IEEE Transactions on Pattern Analysis and Machine Intelligence_ **(IEEE TPAMI)**.
