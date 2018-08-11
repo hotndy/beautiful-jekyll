@@ -14,6 +14,14 @@ show-avatar: false
 <p>Help us launch CURe Solution Hub & Info Hub </p> 
 </div>
 
+<div class="TNRmarkerleft"> 
+<p>
+ Help us launch CURe Solution Hub & Info Hub
+ Let me test if this works
+</p> 
+<p>Help us launch CURe Solution Hub & Info Hub </p> 
+</div>
+
 ## Journal Publications  
 #### _pre-print_  
 * **Jie Chen**,  Cheen-Hau Tan, Junhui Hou, Lap-Pui. Chau, and He Li, ["Robust Video Content Alignment and Compensation for Clear Vision Through the Rain,''](https://arxiv.org/abs/1804.09555) under review in _IEEE Transactions on Pattern Analysis and Machine Intelligence_ **(IEEE TPAMI)**.
