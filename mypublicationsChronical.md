@@ -25,8 +25,6 @@ show-avatar: false
 
 ## 2017 
 * **Jie Chen** and Lap-Pui Chau, ["Light Field Compressed Sensing Over a Disparity-Aware Dictionary,''](http://ieeexplore.ieee.org.ezlibproxy1.ntu.edu.sg/document/7368916/) _IEEE Transactions on Circuits and Systems for Video Technology_ **(IEEE TCSVT)**, vol. 27, no. 4, pp. 855-865, 2017.  
-* **Jie Chen** and Lap-Pui Chau, ["Multiscale Dictionary Learning via Cross-Scale Cooperative Learning and Atom Clustering for Visual Signal Processing,''](http://ieeexplore.ieee.org.ezlibproxy1.ntu.edu.sg/document/7014226/) _IEEE Transactions on Circuits and Systems for Video Technology_ **(IEEE TCSVT)**, vol. 25, no. 9, pp. 1457-1468, 2015.  
-* **J. Chen** and Lap-Pui Chau, ["A Rain Pixel Recovery Algorithm for Videos With Highly Dynamic Scenes,''](http://ieeexplore.ieee.org.ezlibproxy1.ntu.edu.sg/document/6662475/) _IEEE Transactions on Image Processing_ **(IEEE TIP)**, vol. 23, no. 3, pp. 1097-1104, 2014. 
 * **Jie Chen**, Yun Ni, Junhui Hou, and Lap-Pui Chau, ["Light Field Scene Flow with Occlusion Regularization,''](https://ieeexplore.ieee.org/abstract/document/8282200/) _Asia-Pacific Signal and Information Processing Association Annual Summit and Conference_ **(APSIPA ASC)**, Kuala Lumpur, Malaysia, 2017.  
 * Cheen-Hau Tan, **Jie Chen**, and Lap-Pui Chau, ["Edge-preserving rain removal for light field images based on RPCA,''](http://ieeexplore.ieee.org/document/8096066/) _IEEE International Conference on Digital Signal Processing_ **(DSP)**, pp. 1-5, London, UK, 2017.   
 * Yun Ni, **Jie Chen**, and Lap-Pui Chau, ["Reflection removal based on single light field capture,''](http://ieeexplore.ieee.org/abstract/document/8050813/) _IEEE International Symposium on Circuits and Systems_ **(ISCAS)**, pp. 1-4, Baltimore, USA, 2017.  
@@ -36,9 +34,11 @@ show-avatar: false
 * Junhui Hou, **Jie Chen**, Lap-Pui. Chau, and Y. He, ["Sparse Two-Dimensional Singular Value Decomposition,''](http://ieeexplore.ieee.org/document/7552922/) _IEEE International Conference on Multimedia & Expo_ **(ICME)**, pp. 1-6, Seattle, USA,  2016.  
 
 ##2015  
+* **Jie Chen** and Lap-Pui Chau, ["Multiscale Dictionary Learning via Cross-Scale Cooperative Learning and Atom Clustering for Visual Signal Processing,''](http://ieeexplore.ieee.org.ezlibproxy1.ntu.edu.sg/document/7014226/) _IEEE Transactions on Circuits and Systems for Video Technology_ **(IEEE TCSVT)**, vol. 25, no. 9, pp. 1457-1468, 2015.  
 * **Jie Chen**, and Lap-Pui Chau. ["Heavy Haze Removal in A Learning Framework,''](http://ieeexplore.ieee.org/document/7168952/) _IEEE International Symposium on Circuits and Systems_ **(ISCAS)**, pp. 1590-1593, Lisbon, Portugal, 2015.  
 
 ##2014
+* **J. Chen** and Lap-Pui Chau, ["A Rain Pixel Recovery Algorithm for Videos With Highly Dynamic Scenes,''](http://ieeexplore.ieee.org.ezlibproxy1.ntu.edu.sg/document/6662475/) _IEEE Transactions on Image Processing_ **(IEEE TIP)**, vol. 23, no. 3, pp. 1097-1104, 2014. 
 * **Jie Chen**, and Lap-Pui Chau. ["A Fast Adaptive Guided Filtering Algorithm for Light Field Depth Interpolation,''](http://ieeexplore.ieee.org/document/6865626/) _IEEE International Symposium on Circuits and Systems_ **(ISCAS)**, pp. 2281-2284, Melbourne, Australia, 2014. \[[bibtex](https://scholar.googleusercontent.com/scholar.bib?q=info:NAnqkgl-FLwJ:scholar.google.com/&output=citation&scisig=AAGBfm0AAAAAW2e4ZukMNrSAojDf_9x2lSLnlGpebvNy&scisf=4&ct=citation&cd=-1&hl=en)\]
 * **Jie Chen**, Alexander Matyasko, and Lap-Pui Chau, ["A Light Field Sparse Representation Structure and Its Fast Coding Technique,''](http://ieeexplore.ieee.org/document/6900831/) _IEEE International Conference on Digital Signal Processing_ **(DSP)**, pp. 214-218, Hongkong, China, 2014.  
 * Cheen-Hau Tan, **Jie Chen**, and Lap-Pui Chau, ["Dynamic scene rain removal for moving cameras,''](http://ieeexplore.ieee.org/document/6900689/) _IEEE International Conference on Digital Signal Processing_ **(DSP)**, pp. 372-376, Hongkong, China, 2014.  
