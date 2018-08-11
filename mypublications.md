@@ -3,7 +3,7 @@ layout: page
 show-avatar: false
 ---
 
-<h1 style="text-align: center;">Publications</h1>
+<h1 style="text-align: center;">Publications</h1><div style="text-align: right"> by year </div>
 <h3 style="text-align: center;"><span style="text-decoration: underline;"><a href="https://scholar.google.com.sg/citations?user=qrWi1RYAAAAJ&amp;hl=en"><span style="text-align: center; color: #20008c; text-decoration: underline;">Google Scholar</span></a></span></h3>
 
 ## Journal Publications  
