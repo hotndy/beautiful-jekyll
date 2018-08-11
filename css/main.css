@@ -6,6 +6,8 @@ layout: null
 
 /* --- Mine Bio--- */
 
+.WYCDmarkerleft{ text-align: left; font-family: Source Serif Pro; font-size: 11px; line-height: 15px;}
+
 .bio-preview {
   padding: 20px 0;
   border-bottom: 1px solid #eee;
