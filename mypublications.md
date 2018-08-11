@@ -8,7 +8,7 @@ show-avatar: false
 
 ## Journal Publications  
 #### _pre-print_  
-* **Jie Chen**,  Cheen-Hau Tan, Junhui Hou, Lap-Pui. Chau, and He Li, ["Robust Video Content Alignment and Compensation for Clear Vision Through the Rain,''](https://arxiv.org/abs/1804.09555) under review in _IEEE Transactions on Pattern Analysis and Machine Intelligence_ **(IEEE TPAMI)**. \[pdf\](https://arxiv.org/abs/1804.09555)
+* **Jie Chen**,  Cheen-Hau Tan, Junhui Hou, Lap-Pui. Chau, and He Li, ["Robust Video Content Alignment and Compensation for Clear Vision Through the Rain,''](https://arxiv.org/abs/1804.09555) under review in _IEEE Transactions on Pattern Analysis and Machine Intelligence_ **(IEEE TPAMI)**. \[[pdf](https://arxiv.org/abs/1804.09555)\]
 * Henry W. F. Yeung, Junhui Hou, Xiaoming Chen, **Jie Chen**, Zhibo Chen, and Yuk Ying Chung, ''Light Field Spatial Super-Resolution Using Deep Spatial-Angular Interleaved CNN,'' under _major revision_ in _IEEE Transactions on Image Processing_ **(IEEE TIP)**.  
 
 #### _peer-reviewed_ 
