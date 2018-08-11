@@ -6,7 +6,7 @@ show-avatar: false
 image: /projects/LFCompression/LFDictionary.jpg
 paperlink: https://ieeexplore.ieee.org/document/8030107/
 codelink: 
-resourcelink: 
+resourcelink: https://github.com/hotndy/SC-SKV
 ---
 
 We propose a LF codec which is based on disparity guide Sparse Coding over a learned perspective-shifted LF dictionary based on selected Structural Key Views. Up to 80 percent bit rate reduction is achieved compared with HEVC.  
