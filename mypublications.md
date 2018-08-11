@@ -3,7 +3,7 @@ layout: page
 show-avatar: false
 ---
 
-<h4 style="text-align: right;"><span style="text-decoration: underline;"><a href="https://hotndy.github.io/mypublicationsChronical/"><span style="text-align: center; color: #20008c; text-decoration: underline;">by year</span></a></span></h4>
+<h4 style="text-align: right;"><span style="text-decoration: underline;"><a href="https://hotndy.github.io/mypublicationsChronical/"><span style="text-align: center; color: #000000; text-decoration: underline;">by year</span></a></span></h4>
 <h1 style="text-align: center;">Publications</h1>
 <h3 style="text-align: center;"><span style="text-decoration: underline;"><a href="https://scholar.google.com.sg/citations?user=qrWi1RYAAAAJ&amp;hl=en"><span style="text-align: center; color: #20008c; text-decoration: underline;">Google Scholar</span></a></span></h3>
 
