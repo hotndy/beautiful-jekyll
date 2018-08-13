@@ -6,15 +6,15 @@ use-site-title: true
 <h2><u>Research Highlights</u></h2>
 
 <div class="posts-list">
-  {% for post in paginator.posts %}
+  for post in paginator.posts 
   <article class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
 	  <h3 class="post-title">{{ post.title }}</h3>
-	  {% if post.subtitle %}
+	  if post.subtitle 
 	  <h3 class="post-subtitle">
 	    {{ post.subtitle }}
 	  </h3>
-	  {% endif %}
+	  endif
     </a>
 
     <p class="post-meta">	    
