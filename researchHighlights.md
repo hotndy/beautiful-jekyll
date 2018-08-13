@@ -1,9 +1,8 @@
 ---
-layout: post
-title: Chen Jie (陈杰)
-subtitle: Chen Jie
+layout: page
 use-site-title: true
 ---
+
 
 <div class="posts-list">
   {% for post in paginator.posts %}
