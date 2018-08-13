@@ -8,7 +8,8 @@ show-avatar: false
 
 
 
-## 2018  
+## 2018
+_**Journal**_
 * **Jie Chen**,  Cheen-Hau Tan, Junhui Hou, Lap-Pui. Chau, and He Li, ["Robust Video Content Alignment and Compensation for Clear Vision Through the Rain,''](https://arxiv.org/abs/1804.09555) under review in _IEEE Transactions on Pattern Analysis and Machine Intelligence_ **(IEEE TPAMI)**.
 * Henry W. F. Yeung, Junhui Hou, Xiaoming Chen, **Jie Chen**, Zhibo Chen, and Yuk Ying Chung, "Light Field Spatial Super-Resolution Using Deep Spatial-Angular Interleaved CNN,'' under _major revision_ in _IEEE Transactions on Image Processing_ **(IEEE TIP)**.  
 * **Jie Chen**, Junhui Hou, and Lap-Pui. Chau, ["Light Field Denoising via Anisotropic Parallax Analysis in a CNN Framework,''](https://arxiv.org/abs/1805.12358) _IEEE Signal Processing Letters_ **(IEEE SPL)**, vol. 25, no. 9, pp. 1403-1407, 2018. 
