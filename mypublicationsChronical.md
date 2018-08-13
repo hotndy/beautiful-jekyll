@@ -40,7 +40,8 @@ show-avatar: false
 #### _Journal_
 * **Jie Chen** and Lap-Pui Chau, ["Multiscale Dictionary Learning via Cross-Scale Cooperative Learning and Atom Clustering for Visual Signal Processing,''](http://ieeexplore.ieee.org.ezlibproxy1.ntu.edu.sg/document/7014226/) _IEEE Transactions on Circuits and Systems for Video Technology_ **(IEEE TCSVT)**, vol. 25, no. 9, pp. 1457-1468, 2015.  
 * **Jie Chen** and Lap-Pui Chau, ["A Rain Pixel Recovery Algorithm for Videos With Highly Dynamic Scenes,''](http://ieeexplore.ieee.org.ezlibproxy1.ntu.edu.sg/document/6662475/) _IEEE Transactions on Image Processing_ **(IEEE TIP)**, vol. 23, no. 3, pp. 1097-1104, 2014.  
-#### _Conference_
+  
+#### _Conference_  
 * **Jie Chen**, Lap-Pui Chau and He Li, ["Light field depth from multi-scale particle filtering,''](http://ieeexplore.ieee.org/document/7820906/) _Asia-Pacific Signal and Information Processing Association Annual Summit and Conference_ **(APSIPA ASC)**, pp. 1-6, Jeju, Korea, 2016. \[[bibtex](https://scholar.googleusercontent.com/scholar.bib?q=info:iX2aOtnJGo8J:scholar.google.com/&output=citation&scisig=AAGBfm0AAAAAW2e5b0ebXZt3Qgmwg-wxv0qNE_m09edP&scisf=4&ct=citation&cd=-1&hl=en)\] 
 * Junhui Hou, **Jie Chen**, Lap-Pui. Chau, and Y. He, ["Sparse Two-Dimensional Singular Value Decomposition,''](http://ieeexplore.ieee.org/document/7552922/) _IEEE International Conference on Multimedia & Expo_ **(ICME)**, pp. 1-6, Seattle, USA,  2016.  
 * **Jie Chen**, and Lap-Pui Chau. ["Heavy Haze Removal in A Learning Framework,''](http://ieeexplore.ieee.org/document/7168952/) _IEEE International Symposium on Circuits and Systems_ **(ISCAS)**, pp. 1590-1593, Lisbon, Portugal, 2015.  
