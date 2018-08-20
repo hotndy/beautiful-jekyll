@@ -15,8 +15,12 @@ I have been working on a number of topics and applications that are related to l
 
 * **Jie Chen**, Cheen-Hau Tan, Junhui Hou, Lap-Pui Chau, and He Li, [''Robust Video Content Alignment and Compensation for Rain Removal in a CNN Framework''](https://arxiv.org/abs/1708.01964), accepted as **spotlight (6.6%)** on _IEEE Conference on Computer Vision and Pattern Recognition_ **(CVPR)**, Salt Lake City, Utah, 2018. 
 
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/6m7V8bB0P40" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
 
 #### Edge-preserving rain removal for light field images based on RPCA
+
+* Cheen-Hau Tan, **J. Chen**, and Lap-Pui Chau, [''Edge-preserving rain removal for light field images based on RPCA'''](http://ieeexplore.ieee.org/document/8096066/) _IEEE International Conference on Digital Signal Processing_ **(DSP)**, pp. 1-5, London, UK, 2017.
+
 <p align='center'>
 <img src="https://hotndy.github.io/projects/LFRain/N1CARrain.gif" width="300px"/>
 <img src="https://hotndy.github.io/projects/LFRain/N1CARderain.gif" width="300px"/>
@@ -25,8 +29,6 @@ I have been working on a number of topics and applications that are related to l
 <img src="https://hotndy.github.io/projects/LFRain/WKWrain.gif" width="300px"/>
 <img src="https://hotndy.github.io/projects/LFRain/WKWdrain.gif" width="300px"/>
 </p>
-
-* Cheen-Hau Tan, **J. Chen**, and Lap-Pui Chau, [''Edge-preserving rain removal for light field images based on RPCA'''](http://ieeexplore.ieee.org/document/8096066/) _IEEE International Conference on Digital Signal Processing_ **(DSP)**, pp. 1-5, London, UK, 2017.
 
 * Cheen-Hau Tan, **Jie Chen**, and Lap-Pui Chau. [''Dynamic scene rain removal for moving cameras,''](http://ieeexplore.ieee.org/document/6900689/) _IEEE International Conference on Digital Signal Processing_ **(DSP)**, pp. 372-376, Hongkong, China, 2014. 
 
