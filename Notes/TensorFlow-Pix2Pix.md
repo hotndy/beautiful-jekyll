@@ -7,11 +7,9 @@ shadow_variable = decay * shadow_variable + (1 - decay) * variable
 
 ### control_dependencies
 
-TF可以*协调*多个数据流，在存在依赖的节点下非常有用，例如节点B要读取模型参数值V更新后的值，而节点A负责更新参数V，所以节点B就要等节点A执行完成后再执行，不然读到的就是更新以前的数据。这时候就需要个运算控制器 > tf.control_dependencies  
+TF可以*协调*多个数据流，在存在依赖的节点下非常有用，例如节点B要读取模型参数值V更新后的值，而节点A负责更新参数V，所以节点B就要等节点A执行完成后再执行，不然读到的就是更新以前的数据。这时候就需要个运算控制器 
 
-参考官方说明文档
-
-format：control_dependencies(self, control_inputs)
+> tf.control_dependencies(self, control_inputs)
 
 arguments：control_inputs: A list of `Operation` or `Tensor` objects which must be executed or computed before running the operations defined in the context. （注意这里control_inputs是list）
 
