@@ -1,5 +1,5 @@
 
-### Exponential Moving Average (E)
+### Exponential Moving Average (EMA)
 When training a model, it is often beneficial to maintain moving averages of the trained parameters. Evaluations that use averaged parameters sometimes produce significantly better results than the final trained values.   
 shadow_variable = decay * shadow_variable + (1 - decay) * variable
 > ema = tf.train.ExponentialMovingAverage(decay=0.99)  
@@ -15,7 +15,7 @@ TF可以协调多个数据流，在存在依赖的节点下非常有用，例如
 
 其实用法很简单，只有在 control_inputs被执行以后，上下文管理器中的操作才会被执行。例如
 
-It is not a conditional. It is a mechanism to add dependencies to whatever ops you create in the with block. More specifically, what you specify in the argument to control_dependencies is ensured to be evaluated before anything you define in the with block. 
+_It_ *is* not a conditional. It is a mechanism to add dependencies to whatever ops you create in the with block. More specifically, what you specify in the argument to control_dependencies is ensured to be evaluated before anything you define in the with block. 
 
 
 ### tf.train.Supervisor
