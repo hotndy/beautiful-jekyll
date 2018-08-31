@@ -9,9 +9,7 @@ When training a model, it is often beneficial to maintain moving averages of the
 It is not a conditional. It is a mechanism to add dependencies to whatever ops you create in the with block. More specifically, what you specify in the argument to control_dependencies is ensured to be evaluated before anything you define in the with block. 
 
 ### Training supervisor
-> tf.train.Supervisor
 A training helper that checkpoints models and computes summaries.
+> tf.train.Supervisor  (newer version tf.train.MonitoredTrainingSession)    
 
-This class is deprecated. Please use tf.train.MonitoredTrainingSession instead.
-
-The Supervisor is a small wrapper around a Coordinator, a Saver, and a SessionManager that takes care of common needs of TensorFlow training programs.
+The Supervisor is a small wrapper around a *Coordinator*, a *Saver*, and a *SessionManager* that takes care of common needs of TensorFlow training programs.
