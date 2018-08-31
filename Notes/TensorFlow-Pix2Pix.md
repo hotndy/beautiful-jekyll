@@ -4,6 +4,9 @@ title: "Tensorflow-Pix2pix"
 ---
 
 - [Exponential Moving Average (EMA)](#ema)  
+- [Training supervisor](#sup)  
+- [Control Dependencies](#depend)  
+- [Variable scope](#scope)  
   
 ### <a name="ema"></a> Exponential Moving Average (EMA)
 When training a model, it is often beneficial to maintain moving averages of the trained parameters. Evaluations that use averaged parameters sometimes produce significantly better results than the final trained values.   
@@ -11,7 +14,7 @@ shadow_variable = decay * shadow_variable + (1 - decay) * variable
 > ema = tf.train.ExponentialMovingAverage(decay=0.99)  
 > update_losses = ema.apply([discrim_loss, gen_loss_GAN, gen_loss_L1])  
 
-### Training supervisor
+### <a name="sup"></a> Training supervisor
 A training helper that checkpoints models and computes summaries.  
 
 > tf.train.Supervisor (newer version tf.train.MonitoredTrainingSession)  
@@ -36,7 +39,7 @@ Supervisor帮助我们处理一些事情
 （3）不需要创建summary writer  
   
 
-### control_dependencies
+### <a name="depend"></a> control_dependencies
 
 TF可以**协调**多个数据流，在存在依赖的节点下非常有用，例如节点B要读取模型参数值V更新后的值，而节点A负责更新参数V，所以节点B就要等节点A执行完成后再执行，不然读到的就是更新以前的数据。这时候就需要个运算控制器 
 
@@ -50,9 +53,7 @@ Example
 >       d = ...  
 >       e = ...  
   
-### tf.train.Supervisor
-
-### Variable Scope
+### <a name="scope"></a> Variable Scope 
 name_scope, variable_scope目的：  
 1. 减少训练参数的个数  
 2. 区别同名变量  
@@ -92,27 +93,27 @@ result2 = my_image_filter(image2)
 
 1）
 ```
-with tf.variable_scope("image_filters") as scope:
-    result1 = my_image_filter(image1)
-    scope.reuse_variables() # or 
-    #tf.get_variable_scope().reuse_variables()
-    result2 = my_image_filter(image2)
+with tf.variable_scope("image_filters") as scope:  
+    result1 = my_image_filter(image1)  
+    scope.reuse_variables() # or   
+    #tf.get_variable_scope().reuse_variables()  
+    result2 = my_image_filter(image2)  
 ```
 需要注意的是：最好不要设置 reuse 标识为 False，只在需要的时候设置 reuse 标识为 True。
 
 2)
 ```
-with tf.variable_scope("image_filters1") as scope1:
-    result1 = my_image_filter(image1)
-with tf.variable_scope(scope1, reuse = True)
-    result2 = my_image_filter(image2)
+with tf.variable_scope("image_filters1") as scope1:  
+    result1 = my_image_filter(image1)  
+with tf.variable_scope(scope1, reuse = True)  
+    result2 = my_image_filter(image2)  
 ``` 
 通常情况下，tf.variable_scope 和 tf.name_scope 配合，能画出非常漂亮的流程图，但是他们两个之间又有着细微的差别，那就是 name_scope 只能管住操作 Ops 的名字，而管不住变量 Variables 的名字，看下例：
 ```
-with tf.variable_scope("foo"):
-    with tf.name_scope("bar"):
-        v = tf.get_variable("v", [1])
-        x = 1.0 + v
-assert v.name == "foo/v:0"
-assert x.op.name == "foo/bar/add"
+with tf.variable_scope("foo"):  
+    with tf.name_scope("bar"):  
+        v = tf.get_variable("v", [1])  
+        x = 1.0 + v  
+assert v.name == "foo/v:0"  
+assert x.op.name == "foo/bar/add"  
 ```
