@@ -12,9 +12,13 @@ TF可以**协调**多个数据流，在存在依赖的节点下非常有用，�
 > tf.control_dependencies(self, control_inputs)  
 > **Arguments**：control_inputs: A list of 'Operation' or 'Tensor' objects which must be executed or computed before running the operations defined in the context. (*note* control_inputs is a list)  
 > **Return**: A context manager that specifies control dependencies for all operations constructed within the context.  
-'''  
-Example:  
-'''
 
+Example  
+'''
+with tf.control_dependencies([a, b, c]):
+      # `d` and `e` will only run after `a`, `b`, and `c` have executed.
+      d = ...
+      e = ...
+'''
 
 ### tf.train.Supervisor
