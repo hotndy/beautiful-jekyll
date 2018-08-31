@@ -35,6 +35,7 @@ navbar-links:
 
   Resources:
     - Synthetic Rain Dataset: "projects/SPAC/SPAC-Dataset/"
+    - My Notes: "../myNotes/README.md"
     # - Light Field Depth Estimation: "projects/LFCS/LFCS/"    
   Contact: "mycontact/" 
 
