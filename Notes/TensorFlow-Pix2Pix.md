@@ -74,42 +74,43 @@ def my_image_filter(input_images):
     return  tf.nn.relu(conv1 + conv1_biases)
 ```
 有两个变量(Variables)conv1_weighs, conv1_biases和一个操作(Op)conv1，如果你直接调用两次，不会出什么问题，但是会生成两套变量；
-
+```  
 # First call creates one set of 2 variables.
 result1 = my_image_filter(image1)
 # Another set of 2 variables is created in the second call.
 result2 = my_image_filter(image2)
+```
 如果把 tf.Variable 改成 tf.get_variable，直接调用两次，就会出问题了：
-
+```
 result1 = my_image_filter(image1)
 result2 = my_image_filter(image2)
 # Raises ValueError(... conv1/weights already exists ...)
+```
 为了解决这个问题，TensorFlow 又提出了 tf.variable_scope 函数：它的主要作用是，在一个作用域 scope 内共享一些变量，可以有如下几种用法：
 
 1）
-
+```
 with tf.variable_scope("image_filters") as scope:
     result1 = my_image_filter(image1)
     scope.reuse_variables() # or 
     #tf.get_variable_scope().reuse_variables()
     result2 = my_image_filter(image2)
+```
 需要注意的是：最好不要设置 reuse 标识为 False，只在需要的时候设置 reuse 标识为 True。
 
 2)
-
+```
 with tf.variable_scope("image_filters1") as scope1:
     result1 = my_image_filter(image1)
 with tf.variable_scope(scope1, reuse = True)
     result2 = my_image_filter(image2)
- 
-
- 
-
+``` 
 通常情况下，tf.variable_scope 和 tf.name_scope 配合，能画出非常漂亮的流程图，但是他们两个之间又有着细微的差别，那就是 name_scope 只能管住操作 Ops 的名字，而管不住变量 Variables 的名字，看下例：
-
+```
 with tf.variable_scope("foo"):
     with tf.name_scope("bar"):
         v = tf.get_variable("v", [1])
         x = 1.0 + v
 assert v.name == "foo/v:0"
 assert x.op.name == "foo/bar/add"
+```
