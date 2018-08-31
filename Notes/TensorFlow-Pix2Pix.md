@@ -14,11 +14,9 @@ TF可以**协调**多个数据流，在存在依赖的节点下非常有用，�
 > **Return**: A context manager that specifies control dependencies for all operations constructed within the context.  
 
 Example  
-'''
-with tf.control_dependencies([a, b, c]):
-      # `d` and `e` will only run after `a`, `b`, and `c` have executed.
-      d = ...
-      e = ...
-'''
+> with tf.control_dependencies([a, b, c]):
+>       # `d` and `e` will only run after `a`, `b`, and `c` have executed.
+>       d = ...
+>       e = ...
 
 ### tf.train.Supervisor
