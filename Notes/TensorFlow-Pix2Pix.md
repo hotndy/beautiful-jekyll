@@ -24,16 +24,16 @@ Saver adds operations that allow us to save and restore the model’s parameters
 > saver = tf.train.Saver(max_to_keep=7, keep_checkpoint_every_n_hours=0.5)  
 
 ### checkpoints and summary  
-You save the model to checkpoints because the Variables in the model, including neural network weights and biases and the global_step counter, keep changing during the training process. The structure of the model doesn't change. The saved checkpoints allow you to load the trained model for serving and to resume training later.
+You save the model to checkpoints because the Variables in the model, including neural network weights and biases and the global_step counter, keep changing during the training process. The structure of the model doesn't change. The saved checkpoints allow you to load the trained model for serving and to resume training later.  
 
-Supervisor帮助我们处理一些事情 
-（1）自动去checkpoint加载数据或初始化数据 
-（2）自身有一个Saver，可以用来保存checkpoint 
-（3）有一个summary_computed用来保存Summary 
-所以，我们就不需要： 
-（1）手动初始化或从checkpoint中加载数据 
-（2）不需要创建Saver，使用sv内部的就可以 
-（3）不需要创建summary writer
+Supervisor帮助我们处理一些事情   
+（1）自动去checkpoint加载数据或初始化数据  
+（2）自身有一个Saver，可以用来保存checkpoint   
+（3）有一个summary_computed用来保存Summary   
+所以，我们就不需要：   
+（1）手动初始化或从checkpoint中加载数据  
+（2）不需要创建Saver，使用sv内部的就可以  
+（3）不需要创建summary writer  
 
 
 
