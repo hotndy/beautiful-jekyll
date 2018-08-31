@@ -49,3 +49,67 @@ Example
 >       e = ...  
   
 ### tf.train.Supervisor
+
+### Variable Scope
+name_scope, variable_scope目的：  
+1. 减少训练参数的个数  
+2. 区别同名变量  
+  
+为什么要共享变量？我举个简单的例子：例如，当我们研究生成对抗网络GAN的时候，判别器的任务是，如果接收到的是生成器生成的图像，判别器就尝试优化自己的网络结构来使自己输出0，如果接收到的是来自真实数据的图像，那么就尝试优化自己的网络结构来使自己输出1。也就是说，生成图像和真实图像经过判别器的时候，要共享同一套变量，所以TensorFlow引入了变量共享机制。  
+  
+变量共享主要涉及到两个函数： 
+> tf.get_variable(<name>, <shape>, <initializer>)  
+> tf.variable_scope(<scope_name>)  
+  
+tf.get_variable 和tf.Variable不同的一点是，前者拥有一个变量检查机制，会检测已经存在的变量是否设置为共享变量，如果已经存在的变量没有设置为共享变量，TensorFlow 运行到第二个拥有相同名字的变量的时候，就会报错。
+
+例如如下代码：
+```
+def my_image_filter(input_images):
+    conv1_weights = tf.Variable(tf.random_normal([5, 5, 32, 32]),
+        name="conv1_weights")
+    conv1_biases = tf.Variable(tf.zeros([32]), name="conv1_biases")
+    conv1 = tf.nn.conv2d(input_images, conv1_weights,
+        strides=[1, 1, 1, 1], padding='SAME')
+    return  tf.nn.relu(conv1 + conv1_biases)
+```
+有两个变量(Variables)conv1_weighs, conv1_biases和一个操作(Op)conv1，如果你直接调用两次，不会出什么问题，但是会生成两套变量；
+
+# First call creates one set of 2 variables.
+result1 = my_image_filter(image1)
+# Another set of 2 variables is created in the second call.
+result2 = my_image_filter(image2)
+如果把 tf.Variable 改成 tf.get_variable，直接调用两次，就会出问题了：
+
+result1 = my_image_filter(image1)
+result2 = my_image_filter(image2)
+# Raises ValueError(... conv1/weights already exists ...)
+为了解决这个问题，TensorFlow 又提出了 tf.variable_scope 函数：它的主要作用是，在一个作用域 scope 内共享一些变量，可以有如下几种用法：
+
+1）
+
+with tf.variable_scope("image_filters") as scope:
+    result1 = my_image_filter(image1)
+    scope.reuse_variables() # or 
+    #tf.get_variable_scope().reuse_variables()
+    result2 = my_image_filter(image2)
+需要注意的是：最好不要设置 reuse 标识为 False，只在需要的时候设置 reuse 标识为 True。
+
+2)
+
+with tf.variable_scope("image_filters1") as scope1:
+    result1 = my_image_filter(image1)
+with tf.variable_scope(scope1, reuse = True)
+    result2 = my_image_filter(image2)
+ 
+
+ 
+
+通常情况下，tf.variable_scope 和 tf.name_scope 配合，能画出非常漂亮的流程图，但是他们两个之间又有着细微的差别，那就是 name_scope 只能管住操作 Ops 的名字，而管不住变量 Variables 的名字，看下例：
+
+with tf.variable_scope("foo"):
+    with tf.name_scope("bar"):
+        v = tf.get_variable("v", [1])
+        x = 1.0 + v
+assert v.name == "foo/v:0"
+assert x.op.name == "foo/bar/add"
