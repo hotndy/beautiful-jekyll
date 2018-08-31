@@ -35,7 +35,7 @@ navbar-links:
 
   Resources:
     - Synthetic Rain Dataset: "projects/SPAC/SPAC-Dataset/"
-    - My Notes: "https://github.com/hotndy/myNotes/blob/master/README.md"
+    - My Notes: "https://github.com/hotndy/myNotes/blob/master/README/"
     # - Light Field Depth Estimation: "projects/LFCS/LFCS/"    
   Contact: "mycontact/" 
 
