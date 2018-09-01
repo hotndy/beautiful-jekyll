@@ -53,17 +53,18 @@ Example
 >       d = ...  
 >       e = ...  
   
-### <a name="scope"></a> Variable Scope 
+## <a name="scope"></a> Variable Scope 
 name_scope, variable_scope目的：  
 1. 减少训练参数的个数  
 2. 区别同名变量  
   
-为什么要共享变量？我举个简单的例子：例如，当我们研究生成对抗网络GAN的时候，判别器的任务是，如果接收到的是生成器生成的图像，判别器就尝试优化自己的网络结构来使自己输出0，如果接收到的是来自真实数据的图像，那么就尝试优化自己的网络结构来使自己输出1。也就是说，生成图像和真实图像经过判别器的时候，要共享同一套变量，所以TensorFlow引入了变量共享机制。  
+为什么要共享变量？我举个简单的例子：例如，当我们研究生成对抗网络GAN的时候，判别器的任务是，如果接收到的是生成器生成的图像，判别器就尝试优化自己的网络结构来使自己输出0，如果接收到的是来自真实数据的图像，那么就尝试优化自己的网络结构来使自己输出1(two calls, two graphs)。也就是说，生成图像和真实图像经过判别器的时候，要共**享**同一套变量，所以TensorFlow引入了变量共享机制。  
   
 变量共享主要涉及到两个函数： 
-> tf.get_variable(<name>, <shape>, <initializer>)  
-> tf.variable_scope(<scope_name>)  
-  
+```
+tf.get_variable(<name>, <shape>, <initializer>)  
+tf.variable_scope(<scope_name>)  
+```
 tf.get_variable 和tf.Variable不同的一点是，前者拥有一个变量检查机制，会检测已经存在的变量是否设置为共享变量，如果已经存在的变量没有设置为共享变量，TensorFlow 运行到第二个拥有相同名字的变量的时候，就会报错。
 
 例如如下代码：
