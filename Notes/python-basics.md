@@ -1,4 +1,9 @@
+---
+layout: page
+title: "Python Basics"
+---
 
+- [named tuples](#ntp)  
 
 ## <a name></a> namedtuple
 The standard tuple uses numerical indexes to access its members.
