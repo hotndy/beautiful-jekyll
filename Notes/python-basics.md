@@ -5,7 +5,7 @@ title: "Python Basics"
 
 - [named tuples](#ntp)  
 
-## <a name></a> namedtuple
+## <a name="ntp"></a> namedtuple
 The standard tuple uses numerical indexes to access its members.
 
 bob = ('Bob', 30, 'male')
