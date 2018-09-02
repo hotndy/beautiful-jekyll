@@ -50,13 +50,14 @@ for p in [ bob, jane ]:
     print '%s is a %d year old %s' % p
 ```    
 As the example illustrates, it is possible to access the fields of the namedtuple by name using dotted notation (obj.attr) as well as using the positional indexes of standard tuples.
+```python
+python collections_namedtuple_person.py
+```
+> Type of Person: <type 'type'>    
+> Representation: Person(name='Bob', age=30, gender='male')    
+> Field by name: Jane    
 
-$ python collections_namedtuple_person.py
-
-> Type of Person: <type 'type'>  
-> Representation: Person(name='Bob', age=30, gender='male')  
-> Field by name: Jane  
-
-> Fields by index:
-> Bob is a 30 year old male
-> Jane is a 29 year old female
+> Fields by index:  
+> Bob is a 30 year old male  
+> Jane is a 29 year old female  
+  
