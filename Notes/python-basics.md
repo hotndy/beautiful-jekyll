@@ -5,25 +5,26 @@ title: "Python Basics"
 
 - [named tuples](#ntp)  
 
-## <a name="ntp"></a> namedtuple
+## <a name="ntp"></a> named tuple
 The standard tuple uses numerical indexes to access its members.
-
+```python
 bob = ('Bob', 30, 'male')
 print 'Representation:', bob
-
+   
 jane = ('Jane', 29, 'female')
 print '\nField by index:', jane[0]
-
+```
+```python
 print '\nFields by index:'
 for p in [ bob, jane ]:
     print '%s is a %d year old %s' % p
+```
 This makes tuples convenient containers for simple uses.
 
 $ python collections_tuple.py
 
-Representation: ('Bob', 30, 'male')
-
-Field by index: Jane
+> Representation: ('Bob', 30, 'male')
+> Field by index: Jane
 
 Fields by index:
 Bob is a 30 year old male
