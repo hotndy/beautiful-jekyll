@@ -3,11 +3,13 @@ layout: post
 title: "Tensorflow Basics"
 ---
 
-- [Saving and restoration of Tensorflow Models - checkpoint](#ckpt)  
+- [Saving and restoration of Tensorflow Models - checkpoint](#ckpt)
+  - [What is a Tensorflow model](#what)
+  - [Saving a Tensorflow model](#saving)
   - [Importing a pre-trained model](#import)  
 
 ## <a name="ckpt"></a> Saving and restoration of Tensorflow Models - checkpoint
-### What is a Tensorflow model 
+### <a name="what"></a> What is a Tensorflow model 
 Tensorflow model primarily contains the network design or graph and values of the network parameters that we have trained. Hence, Tensorflow model has two main files:  
 * **Meta graph**: This is a protocol buffer which saves the complete Tensorflow graph; i.e. all variables, operations, collections etc. This file has .meta extension.  
 * **Checkpoint file**: This is a binary file which contains all the values of the weights, biases, gradients and all the other variables saved. This file has an extension .ckpt. However, Tensorflow has changed this from version 0.11. Now, instead of single .ckpt file, we have two files:  
@@ -16,7 +18,7 @@ Tensorflow model primarily contains the network design or graph and values of th
 
 Along with this, Tensorflow also has a file named _checkpoint_ which simply keeps a record of latest checkpoint files saved.  
 
-### Saving a Tensorflow model
+### <a name="saving"></a> Saving a Tensorflow model
 Let’s say, you are training a convolutional neural network for image classification. As a standard practice, you keep a watch on loss and accuracy numbers. Once you see that the network has converged, you can stop the training manually or you will run the training for fixed number of epochs. After the training is done, we want to save all the **variables** and **network graph** to a file for future use. So, in Tensorflow, you want to save the graph and values of all the parameters for which we shall be creating an instance of **tf.train.Saver()** class.
 ```python
 saver= tf.train.Saver()
