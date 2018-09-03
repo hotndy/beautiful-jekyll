@@ -20,3 +20,32 @@ Let’s say, you are training a convolutional neural network for image classific
 ```python
 saver= tf.train.Saver()
 ```
+Remember that **Tensorflow variables are only alive inside a session**. So, you have to save the model inside a session by calling save method on saver object you just created.
+```python
+saver.save(sess, 'my-test-model')
+```
+Here, _sess_ is the session object, while _‘my-test-model’_ is the name you want to give your model. Let’s see a complete example:
+```python
+import tensorflow as tf
+w1 = tf.Variable(tf.random_normal(shape=[2]), name='w1')
+w2 = tf.Variable(tf.random_normal(shape=[5]), name='w2')
+saver = tf.train.Saver()
+sess = tf.Session()
+sess.run(tf.global_variables_initializer())
+saver.save(sess, 'my_test_model')
+
+# This will save following files in Tensorflow v >= 0.11
+# my_test_model.data-00000-of-00001
+# my_test_model.index
+# my_test_model.meta
+# checkpoint
+```
+If we are saving the model after 1000 iterations, we shall call save by passing the step count:
+```python
+saver.save(sess, 'my_test_model',global_step=1000)
+```
+This will just append ‘-1000’ to the model name and following files will be created:  
+> my_test_model-1000.index  
+> my_test_model-1000.meta  
+> my_test_model-1000.data-00000-of-00001  
+> checkpoint  
