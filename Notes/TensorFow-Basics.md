@@ -3,9 +3,9 @@ layout: post
 title: "Tensorflow Basics"
 ---
 
-- [Saving and restoration of Tensorflow Models - ckpt](#ckpt)  
+- [Saving and restoration of Tensorflow Models - checkpoint](#ckpt)  
 
-## <a name="ckpt"></a> Saving and restoration of Tensorflow Models - ckpt
+## <a name="ckpt"></a> Saving and restoration of Tensorflow Models - checkpoint
 
 Tensorflow model primarily contains the network design or graph and values of the network parameters that we have trained. Hence, Tensorflow model has two main files:  
 * **Meta graph**: This is a protocol buffer which saves the complete Tensorflow graph; i.e. all variables, operations, collections etc. This file has .meta extension.  
