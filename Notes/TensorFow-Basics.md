@@ -3,6 +3,7 @@ layout: post
 title: "Tensorflow Basics"
 ---
 
+### [Showing and Evluating Tensor Values](#tval)
 ### [Saving and restoration of Tensorflow Models - checkpoint](#ckpt)
   - [What is a Tensorflow model](#what)
   - [Saving a Tensorflow model](#saving)
@@ -10,6 +11,18 @@ title: "Tensorflow Basics"
   - [Working with restored models](#working) 
     - [VGG Example](#VGG)
   
+
+## <a name="tval"></a> Showing and Evluating Tensor Values  
+The easiest[A] way to evaluate the actual value of a Tensor object is to pass it to the Session.run() method, or call Tensor.eval() when you have a default session (i.e. in a with tf.Session(): block, or see below). In general[B], you cannot print the value of a tensor without running some code in a session.
+
+If you are experimenting with the programming model, and want an easy way to evaluate tensors, the tf.InteractiveSession lets you open a session at the start of your program, and then use that session for all Tensor.eval() (and Operation.run()) calls. This can be easier in an interactive setting, such as the shell or an IPython notebook, when it's tedious to pass around a Session object everywhere.
+
+This might seem silly for such a small expression, but one of the key ideas in Tensorflow is deferred execution: it's very cheap to build a large and complex expression, and when you want to evaluate it, the back-end (to which you connect with a Session) is able to schedule its execution more efficiently (e.g. executing independent parts in parallel and using GPUs).
+
+[A]: To print the value of a tensor without returning it to your Python program, you can use the tf.Print() operator, as Andrzej suggests in another answer. Note that you still need to run part of the graph to see the output of this op, which is printed to standard output. If you're running distributed TensorFlow, tf.Print() will print its output to the standard output of the task where that op runs. This means that if you use https://colab.research.google.com for example, or any other Jupyter Notebook, then you will not see the output of tf.Print() in the notebook; in that case refer to this answer on how to get it to print still.
+
+[B]: You might be able to use the experimental tf.contrib.util.constant_value() function to get the value of a constant tensor, but it isn't intended for general use, and it isn't defined for many operators.
+
 ## <a name="ckpt"></a> Saving and restoration of Tensorflow Models - checkpoint
 ### <a name="what"></a> What is a Tensorflow model 
 Tensorflow model primarily contains the network design or graph and values of the network parameters that we have trained. Hence, Tensorflow model has two main files:  
