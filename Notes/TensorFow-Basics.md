@@ -71,7 +71,7 @@ saver.save(sess, 'my_test_model', global_step=1000)
 ```
 This can be used to save specific part of Tensorflow graphs when required.
 
-### <a name="import"><\a>Importing a pre-trained model:
+### <a name="import"></a>Importing a pre-trained model:
 If you want to use someone else’s pre-trained model for fine-tuning, there are two things you need to do:
 
 a) Create the network:
