@@ -3,8 +3,8 @@ layout: post
 title: "Tensorflow Basics"
 ---
 
-## [Saving and restoration of Tensorflow Models - checkpoint](#ckpt)
-### [What is a Tensorflow model](#what)
+### [Saving and restoration of Tensorflow Models - checkpoint](#ckpt)
+  - [What is a Tensorflow model](#what)
   - [Saving a Tensorflow model](#saving)
   - [Importing a pre-trained model](#import)  
   - [Working with restored models](#working) 
