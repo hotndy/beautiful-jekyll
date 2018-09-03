@@ -3,8 +3,8 @@ layout: post
 title: "Tensorflow Basics"
 ---
 
-### [Showing and Evluating Tensor Values](#tval)
-### [Saving and restoration of Tensorflow Models - checkpoint](#ckpt)
+[1. Showing and Evluating Tensor Values](#tval)
+[2. Saving and restoration of Tensorflow Models - checkpoint](#ckpt)
   - [What is a Tensorflow model](#what)
   - [Saving a Tensorflow model](#saving)
   - [Importing a pre-trained model](#import)  
