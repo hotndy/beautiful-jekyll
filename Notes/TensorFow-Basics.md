@@ -13,4 +13,10 @@ Tensorflow model primarily contains the network design or graph and values of th
 > mymodel.data-00000-of-00001  
 > mymodel.index  
 
-Along with this, Tensorflow also has a file named _checkpoint_ which simply keeps a record of latest checkpoint files saved.
+Along with this, Tensorflow also has a file named _checkpoint_ which simply keeps a record of latest checkpoint files saved.  
+
+### Saving a Tensorflow model
+Let’s say, you are training a convolutional neural network for image classification. As a standard practice, you keep a watch on loss and accuracy numbers. Once you see that the network has converged, you can stop the training manually or you will run the training for fixed number of epochs. After the training is done, we want to save all the **variables** and **network graph** to a file for future use. So, in Tensorflow, you want to save the graph and values of all the parameters for which we shall be creating an instance of **tf.train.Saver()** class.
+```python
+saver= tf.train.Saver()
+```
