@@ -1,6 +1,7 @@
 ---
-layout= post
-title= "Tensorflow Queueing and Threading"
+layout: post
+title: "Tensorflow Queueing and Threading"
+---
 
 - [Working with restored models](#working)   
     
