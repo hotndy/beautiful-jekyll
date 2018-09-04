@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: "Tensorflow Queueing and Threading"
 ---
 <a name="top"></a>
