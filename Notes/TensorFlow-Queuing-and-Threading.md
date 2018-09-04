@@ -274,7 +274,7 @@ This output isn’t very interesting – but it shows you that the whole queuing
 In the above explanation, for illustrative purposes, I’ve actually shown you the long way of creating filename and random batch shuffle queues. TensorFlow has created a couple of **helper functions** which reduce the amount of code we need to implement these queues.  
 [[back to top]](#top)
 
-## <a name="string"></a>  The string_input_producer and shuffle_batch
+## <a name="string"></a>  The `string_input_producer` and `shuffle_batch`
 
 There are two queue helpers in TensorFlow which basically replicate the functionality of my custom functions which utilize FIFOQueue and RandomShuffleQueue.  These functions are called string_input_producer which takes a list of filenames and creates a FIFOQueue with enqueuing implicitely provided, and shuffle_batch which creates a RandomShuffleQueue with enqueuing and batch-sized dequeuing already provided.  In my main program (cifar_shuffle_batch) you can replace my cifar_filename_queue and cifar_shuffle_batch_queue functions with calls to string_input_producer and shuffle_batch respectively, like so:
 
