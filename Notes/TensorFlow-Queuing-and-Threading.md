@@ -129,6 +129,7 @@ The first two lines create a **generic Coordinator** object and the second start
 > This is how many items are left in q: [3][1.0848273]  
 > This is how many items are left in q: [3][1.0323733]  
 > This is how many items are left in q: [3][-0.03232909]  
+
 The first thing to notice about the above is that the printing of outputs is all over the place i.e. not in a linear order. This is because of the **asynchronous, nonlinear, running of the thread and enqueuing operations**.  The second thing to notice is that our dummy inputs are of size 5, while our queue only has a capacity of 3. In other words, when we run the enqueue_many operation we, in a sense, overflow the queue. You’d think that this would result in the overflowed values being discarded (or an exception being raised), but if you look at the flow of outputs carefully, you can see that these values are simply held in “stasis” until they have room to be loaded. This is a pretty robust way for TensorFlow to handle things.
 
 Ok, so that’s a good introduction to the main concepts of queues and threading in TensorFlow. Now let’s look at using these objects in a more practical example.
