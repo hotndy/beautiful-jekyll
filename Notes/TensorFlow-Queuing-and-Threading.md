@@ -25,6 +25,7 @@ What are TensorFlow queues exactly? They are **data storage objects which can be
  
 ## <a name="fifo"></a> The FIFOQueue – first in, first out
 The illustration below, from the TensorFlow website,  shows a FIFOQueue in action:
+![](/Notes/Imgs/IncremeterFifoQueue.gif)
 
 TensorFlow queuing - FIFOqueue
 A FIFOQueue in action
