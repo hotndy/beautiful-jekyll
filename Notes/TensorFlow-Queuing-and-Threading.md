@@ -276,7 +276,7 @@ In the above explanation, for illustrative purposes, I’ve actually shown you t
 
 ## <a name="string"></a>  The `string_input_producer` and `shuffle_batch`
 
-There are two queue helpers in TensorFlow which basically replicate the functionality of my custom functions which utilize FIFOQueue and RandomShuffleQueue.  These functions are called string_input_producer which takes a list of filenames and creates a FIFOQueue with enqueuing implicitely provided, and shuffle_batch which creates a RandomShuffleQueue with enqueuing and batch-sized dequeuing already provided.  In my main program (cifar_shuffle_batch) you can replace my cifar_filename_queue and cifar_shuffle_batch_queue functions with calls to string_input_producer and shuffle_batch respectively, like so:
+There are two queue helpers in TensorFlow which basically replicate the functionality of my custom functions which utilize **FIFOQueue**  and `RandomShuffleQueue`. These functions are called string_input_producer which takes a list of filenames and creates a FIFOQueue with enqueuing implicitely provided, and shuffle_batch which creates a RandomShuffleQueue with enqueuing and batch-sized dequeuing already provided.  In my main program (cifar_shuffle_batch) you can replace my cifar_filename_queue and cifar_shuffle_batch_queue functions with calls to string_input_producer and shuffle_batch respectively, like so:
 
 # file_q = cifar_filename_queue(filename_list)
 file_q = tf.train.string_input_producer(filename_list)
