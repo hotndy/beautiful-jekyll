@@ -24,15 +24,13 @@ Here data is fed into the final training operation via the _feed_dict_ argument.
 What are TensorFlow queues exactly? They are **data storage objects which can be loaded and de-loaded with information asynchronously using threads**. This allows us to stream data into our training algorithms more seamlessly, as loading and de-loading of data can be performed at the same time (or when one thread is blocking) – with our queue being “topped up” when required with new data to ensure a steady stream of data. Following are different types of TensorFlow queues.
  
 ## <a name="fifo"></a> The FIFOQueue – first in, first out
-The illustration below, from the TensorFlow website,  shows a FIFOQueue in action:
-![](/Notes/Imgs/IncremeterFifoQueue.gif)
-
-TensorFlow queuing - FIFOqueue
-A FIFOQueue in action
-Here is what is happening in the gif above – first a FIFOQueue object is created with a capacity of 3 and a data type = “float”.  An enqueue_many operation is then performed on the queue – this basically loads up the queue to capacity with the vector [0, 0, 0].  Next, the code creates a dequeue operation – where the first value to enter the queue is unloaded.  The next operation simply adds 1 to the dequeued value.  The last operation adds this incremented number back to the top of the FIFOQueue to “top it up” – making sure it doesn’t run out of values to dequeue.  These operations are then run and you can see the result – a kind of slowly incrementing counter.
+<p align="center">
+<img src="/Notes/Imgs/IncremeterFifoQueue.gif" width="480px"/>
+</p>
+Here is what is happening in the gif above – first a FIFOQueue object is created with a capacity of 3 and a data type = “float”. An enqueue_many operation is then performed on the queue – this basically loads up the queue to capacity with the vector [0, 0, 0].  Next, the code creates a dequeue operation – where the first value to enter the queue is unloaded. The next operation simply adds 1 to the dequeued value. The last operation adds this incremented number back to the top of the FIFOQueue to “top it up” – making sure it doesn’t run out of values to dequeue. These operations are then run and you can see the result – a kind of slowly incrementing counter.  
 
 Let’s have another look at how this works by introducing some real TensorFlow code:
-
+```python
 dummy_input = tf.random_normal([3], mean=0, stddev=1)
 dummy_input = tf.Print(dummy_input, data=[dummy_input],
                            message='New dummy inputs have been created: ', summarize=6)
@@ -42,6 +40,7 @@ data = q.dequeue()
 data = tf.Print(data, data=[q.size()], message='This is how many items are left in q: ')
 # create a fake graph that we can call upon
 fg = data + 1
+```
 In this code example, I’ve created, I first create a random normal tensor, of size 3, and then I create a printing operation so we can see what values have been randomly selected.  After that, I set up a FIFOQueue, with capacity = 3 as in the example above.  I enqueue all three values of the random tensor in the enqueue_op.  Then I immediately attempt to dequeue a value from q and assign it to data.  Another print operation follows and then I create basically a fake graph, where I simply add 1 to the dequeued data variable.  This step is required so TensorFlow knows that it needs to execute all the preceding operations which lead up to producing data.  Next, we start up a session and run:
 
 with tf.Session() as sess:
