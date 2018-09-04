@@ -26,7 +26,7 @@ What are TensorFlow queues exactly? They are **data storage objects which can be
  
 ## <a name="fifo"></a> The FIFOQueue – first in, first out
 <p align="center">
-<img src="/Notes/Imgs/IncremeterFifoQueue.gif" width="480px"/>
+<img src="/Notes/Imgs/IncremeterFifoQueue.gif" width="600px"/>
 </p>
 Here is what is happening in the gif above – first a FIFOQueue object is created with a capacity of 3 and a data type = “float”. An enqueue_many operation is then performed on the queue – this basically loads up the queue to capacity with the vector [0, 0, 0].  Next, the code creates a dequeue operation – where the first value to enter the queue is unloaded. The next operation simply adds 1 to the dequeued value. The last operation adds this incremented number back to the top of the FIFOQueue to “top it up” – making sure it doesn’t run out of values to dequeue. These operations are then run and you can see the result – a kind of slowly incrementing counter.  
 
@@ -133,7 +133,13 @@ The first two lines create a **generic Coordinator** object and the second start
 The first thing to notice about the above is that the printing of outputs is all over the place i.e. not in a linear order. This is because of the **asynchronous, nonlinear, running of the thread and enqueuing operations**.  The second thing to notice is that our dummy inputs are of size 5, while our queue only has a capacity of 3. In other words, when we run the enqueue_many operation we, in a sense, overflow the queue. You’d think that this would result in the overflowed values being discarded (or an exception being raised), but if you look at the flow of outputs carefully, you can see that these values are simply held in “stasis” until they have room to be loaded. This is a pretty robust way for TensorFlow to handle things.
 
 Ok, so that’s a good introduction to the main concepts of queues and threading in TensorFlow. Now let’s look at using these objects in a more practical example.
-    
+
+
+<p align="center">
+<img src="/Notes/Imgs/AnimatedFileQueues.giff" width="600px"/>
+</p>
+
+
 ## <a name="thread"></a> Working with restored models
 **QueueRunner**: When TensorFlow is reading the input, it needs to maintain multiple queues for it. The queue serves all the workers that are responsible for executing the training step. We use a queue because we want to have the inputs ready for the workers to operate on. If you don't have a queue, you will be blocked on I/O and performance will degrade.
 
