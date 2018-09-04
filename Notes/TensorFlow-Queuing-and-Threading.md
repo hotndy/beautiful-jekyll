@@ -146,7 +146,8 @@ The **CIFAR-10** dataset is a series of labeled images which contain objects suc
 
 <p align="center">
 <img src="/Notes/Imgs/AnimatedFileQueues.gif" width="600px"/>
-</p>  
+</p> 
+
 [[back to top]](#top) 
 
 ## <a name="thread"></a> Working with restored models
