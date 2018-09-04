@@ -136,7 +136,7 @@ Ok, so that’s a good introduction to the main concepts of queues and threading
 
 
 <p align="center">
-<img src="/Notes/Imgs/AnimatedFileQueues.giff" width="600px"/>
+<img src="/Notes/Imgs/AnimatedFileQueues.gif" width="600px"/>
 </p>
 
 
