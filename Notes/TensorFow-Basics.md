@@ -2,7 +2,7 @@
 layout: post
 title: "Tensorflow Basics"
 ---
-
+- [Tensorflow Queueing and Threading](#thread)
 - [Showing and Evluating Tensor Values](#tval)  
 - [Saving and restoration of Tensorflow Models - checkpoint](#ckpt)  
   - [What is a Tensorflow model](#what)  
@@ -10,6 +10,8 @@ title: "Tensorflow Basics"
   - [Importing a pre-trained model](#import)    
   - [Working with restored models](#working)   
     - [VGG Example](#VGG)  
+    
+## <a name="thread"></a> Tensorflow Queueing and Threading
     
 ## <a name="tval"></a> Showing and Evluating Tensor Values  
 The easiest way to evaluate the actual value of a Tensor object is to pass it to the **Session.run()** method, or call **Tensor.eval()** when you have a default session (i.e. in a with tf.Session(): block). **In general, you cannot print the value of a tensor without running some code in a session**.
