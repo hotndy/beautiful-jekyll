@@ -7,6 +7,8 @@ title: "Tensorflow Queueing and Threading"
 - [The FIFOQueue – first in, first out](#fifo)  
 - [QueueRunners and the Coordinator](#quco)
 - [A more practical example – reading the CIFAR-10 dataset](#CIFAR-10)
+### <a name="fnq"></a> The filename queue
+### <a name="flr"></a> The FixedLengthRecordReader
 
 One of the great things about TensorFlow is its ability to **handle multiple threads and therefore allow asynchronous operations**.  If we have large datasets this can significantly speed up the training process of our models. This functionality is especially handy when reading, pre-processing and extracting in mini-batches our training data.   
 
@@ -149,6 +151,64 @@ The **CIFAR-10** dataset is a series of labeled images which contain objects suc
 </p> 
 
 [[back to top]](#top) 
+  
+The main flow of the program looks like this:
+```python
+def cifar_shuffle_batch():
+    batch_size = 128
+    num_threads = 16
+    # create a list of all our filenames
+    filename_list = [data_path + 'data_batch_{}.bin'.format(i + 1) for i in range(5)]
+    # create a filename queue
+    file_q = cifar_filename_queue(filename_list)
+    # read the data - this contains a FixedLengthRecordReader object which handles the
+    # de-queueing of the files.  It returns a processed image and label, with shapes
+    # ready for a convolutional neural network
+    image, label = read_data(file_q)
+    # setup minimum number of examples that can remain in the queue after dequeuing before blocking
+    # occurs (i.e. enqueuing is forced) - the higher the number the better the mixing but
+    # longer initial load time
+    min_after_dequeue = 10000
+    # setup the capacity of the queue - this is based on recommendations by TensorFlow to ensure
+    # good mixing
+    capacity = min_after_dequeue + (num_threads + 1) * batch_size
+    image_batch, label_batch = cifar_shuffle_queue_batch(image, label, batch_size, num_threads)
+    # now run the training
+    cifar_run(image_batch, label_batch)
+```
+### <a name="fnq"></a> The filename queue
+First, create a _filename list_ to pull in the 5 binary data files which comprise the **CIFAR-10** data set. Then we run the `cifar_filename_queue()`:
+```python
+def cifar_filename_queue(filename_list):
+    # convert the list to a tensor
+    string_tensor = tf.convert_to_tensor(filename_list, dtype=tf.string)
+    # randomize the tensor
+    tf.random_shuffle(string_tensor)
+    # create the queue
+    fq = tf.FIFOQueue(capacity=10, dtypes=tf.string)
+    # create our enqueue_op for this q
+    fq_enqueue_op = fq.enqueue_many([string_tensor])
+    # create a QueueRunner and add to queue runner list
+    # we only need one thread for this simple queue
+    tf.train.add_queue_runner(tf.train.QueueRunner(fq, [fq_enqueue_op] * 1))
+    return fq
+```
+The first thing that is performed in the above function is to **convert the filename_list to a tensor**. Then we randomly shuffle the list and create a @**capacity = 10 FIFOQueue**. We then enqueue **fq#** with our tensor of randomly shuffled file names and add a queue runner. This is all pretty straightforward and produces a randomly shuffled queue of filenames to dequeue from. We only need one thread to perform this operation, as it is pretty simple. We return the filename queue, fq, from the function.  
+  
+Next up in the main flow of our program is the read_data function.  
+[[back to top]](#top)
+### <a name="flr"></a> The FixedLengthRecordReader
+
+The **read_data** function takes the filename queue, dequeues file names and extracts the image and label data from the **CIFAR-10** data set. Most of the function deals with preprocessing the image data. However, there is a special TensorFlow object that we want to pay attention to:
+```python
+reader = tf.FixedLengthRecordReader(record_bytes=record_bytes)
+result.key, value = reader.read(file_q)
+```
+The @**FixedLengthRecordReader** is a TensorFlow reader which is especially useful for reading binary files, where each record or row is a fixed number of bytes. Previously in **read_data** the number of bytes per record or data file row is calculated and stored in **record_bytes**. Of particular note is that this reader also implicitly handles the dequeuing operation from file_q (our filename queue). So we don’t have to worry about explicitly dequeuing from our filename queue. **The reader will also parse the files it dequeues and return the image data**. The rest of the **read_data** function deals with shaping up the image and label data from the raw binary information. Note that the **read_data** function returns a single image and label record, of size (24, 24, 3) and (1), respectively.  The image size, (24, 24, 3), represents a 24 x 24 pixel image, with an RGB depth of 3.  
+
+The next step in the main flow of the program is to setup the minimum number of examples in the upcoming **RandomShuffleQueue**.
+[[back to top]](#top)
+
 
 ## <a name="thread"></a> Working with restored models
 **QueueRunner**: When TensorFlow is reading the input, it needs to maintain multiple queues for it. The queue serves all the workers that are responsible for executing the training step. We use a queue because we want to have the inputs ready for the workers to operate on. If you don't have a queue, you will be blocked on I/O and performance will degrade.
