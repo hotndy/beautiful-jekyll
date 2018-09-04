@@ -23,7 +23,7 @@ sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
 Here data is fed into the final training operation via the _feed_dict_ argument. TensorFlow, in its performance guide, **specifically discourages the use of the feed_dict method**. It’s great for tutorials if you want to focus on core TensorFlow functionality, but not so good for overall performance.  
 
 What are TensorFlow queues exactly? They are **data storage objects which can be loaded and de-loaded with information asynchronously using threads**. This allows us to stream data into our training algorithms more seamlessly, as loading and de-loading of data can be performed at the same time (or when one thread is blocking) – with our queue being “topped up” when required with new data to ensure a steady stream of data. Following are different types of TensorFlow queues.
- 
+[[back to top]](#top)
 ## <a name="fifo"></a> The FIFOQueue – first in, first out
 <p align="center">
 <img src="/Notes/Imgs/IncremeterFifoQueue.gif" width="600px"/>
