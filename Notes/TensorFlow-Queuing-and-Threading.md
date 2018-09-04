@@ -6,7 +6,7 @@ title: "Tensorflow Queueing and Threading"
 - [TensorFlow queuing and threads – introductory concepts](#intro)   
 - [The FIFOQueue – first in, first out](#fifo)  
 - [QueueRunners and the Coordinator](#quco)
-
+- [A more practical example – reading the CIFAR-10 dataset](#CIFAR-10)
 
 One of the great things about TensorFlow is its ability to **handle multiple threads and therefore allow asynchronous operations**.  If we have large datasets this can significantly speed up the training process of our models. This functionality is especially handy when reading, pre-processing and extracting in mini-batches our training data.   
 
@@ -134,7 +134,16 @@ The first thing to notice about the above is that the printing of outputs is all
 
 Ok, so that’s a good introduction to the main concepts of queues and threading in TensorFlow. Now let’s look at using these objects in a more practical example.
 
+## <a name="CIFAR-10"><\a> A more practical example – reading the CIFAR-10 dataset
+The CIFAR-10 dataset is a series of labeled images which contain objects such as cars, planes, cats, dogs etc.  It is a frequently used benchmark for image classification tasks.  It is a large dataset (166MB) and is a prime example of where a good data streaming queuing routine is needed for high performance.  In the following example, I am going to show how to read in this data using a FIFOQueue and create data-batches using another queue object called a RandomShuffleQueue.  To learn more about batching, have a look at my Stochastic Gradient Descent tutorial.  Included in the code example is a number of steps required to process the images, but I am not going to concentrate on these steps in this tutorial – that’s fodder for a future post.  Rather, I will focus on the queuing aspects.  The code will include a number of steps:
 
+Create a list of filenames which hold the CIFAR-10 data
+Create a FIFOQueue to hold the randomly shuffled filenames, and associated enqueuing
+Dequeue files and extract image data
+Perform image processing
+Enqueue processed image data into a RandomShuffleQueue
+Dequeue data batches for classifier training (the classifier training won’t be covered in this tutorial – that’s for a future post)
+This process will closely resemble the following gif, again from the TensorFlow site:
 <p align="center">
 <img src="/Notes/Imgs/AnimatedFileQueues.gif" width="600px"/>
 </p>
