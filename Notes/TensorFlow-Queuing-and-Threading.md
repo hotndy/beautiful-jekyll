@@ -62,6 +62,7 @@ All that is performed in the code above is running the enqueue_many operation (e
 > This is how many items are left in q: [3]  
 > This is how many items are left in q: [2]  
 > This is how many items are left in q: [1]  
+
 Once the output gets to the point above you’ll actually have to **terminate the program as it is blocked**. Now, this isn’t very useful.  What we really want to happen is for our little program to **reload or enqueue more values whenever our queue is empty or is about to become empty**. We could fix this by explicitly running our enqueue_op again in the code above to reload our queue with values.  However, for large, more realistic programs, this will become unwieldy. Thankfully, TensorFlow has a solution.       
 
 
