@@ -5,6 +5,7 @@ title: "Tensorflow Queueing and Threading"
 
 - [TensorFlow queuing and threads – introductory concepts](#intro)   
 - [The FIFOQueue – first in, first out](#fifo)  
+- [QueueRunners and the Coordinator](#quco)
 
 
 One of the great things about TensorFlow is its ability to **handle multiple threads and therefore allow asynchronous operations**.  If we have large datasets this can significantly speed up the training process of our models. This functionality is especially handy when reading, pre-processing and extracting in mini-batches our training data.   
@@ -65,7 +66,65 @@ All that is performed in the code above is running the enqueue_many operation (e
 
 Once the output gets to the point above you’ll actually have to **terminate the program as it is blocked**. Now, this isn’t very useful.  What we really want to happen is for our little program to **reload or enqueue more values whenever our queue is empty or is about to become empty**. We could fix this by explicitly running our enqueue_op again in the code above to reload our queue with values.  However, for large, more realistic programs, this will become unwieldy. Thankfully, TensorFlow has a solution.       
 
+## <a name=“quco”></a> QueueRunners and the Coordinator
+The first object that TensorFlow has for us is the QueueRunner object.  A QueueRunner will control the asynchronous execution of enqueue operations to ensure that our queues never run dry.  Not only that, but it can create multiple threads of enqueue operations, all of which it will handle in an asynchronous fashion.  This makes things easy for us.  We have to add all our queue runners, after we’ve created them, to the GraphKeys collection called QUEUE_RUNNERS.  This is a collection of all the queue runners, and adding our runners to this collection allows TensorFlow to include them when constructing its computational graph (for more information on computational graphs check out my TensorFlow tutorial).  This is what the first half of our previous code example now looks like after incorporating these concepts:
 
+dummy_input = tf.random_normal([5], mean=0, stddev=1)
+dummy_input = tf.Print(dummy_input, data=[dummy_input],
+                           message='New dummy inputs have been created: ', summarize=6)
+q = tf.FIFOQueue(capacity=3, dtypes=tf.float32)
+enqueue_op = q.enqueue_many(dummy_input)
+# now setup a queue runner to handle enqueue_op outside of the main thread asynchronously
+qr = tf.train.QueueRunner(q, [enqueue_op] * 1)
+tf.train.add_queue_runner(qr)
+
+data = q.dequeue()
+data = tf.Print(data, data=[q.size(), data], message='This is how many items are left in q: ')
+# create a fake graph that we can call upon
+fg = data + 1
+The first change is to increase the size of dummy_input – more on this later.  The most important change is the qr = tf.train.QueueRunner(q, [enqueue_op] * 1)  operation.  The first argument in this definition is the queue we want to run – in this case, it is the q assigned to the creation of our FIFOQueue object.  The next argument is a list argument, and this specifies how many enqueue operation threads we want to create.  In this case, my “* 1″ is not required, but it is meant to be illustrative to show that I am just creating a single enqueuing thread which will run asynchronously with the main thread of the program.  If I wanted to create, say, 10 threads, this line would look like:
+
+qr = tf.train.QueueRunner(q, [enqueue_op] * 10)
+The next addition is the add_queue_runner operation which adds our queue runner (qr) to the QUEUE_RUNNERS collection.
+
+At this point, you may think that we are all set – but not quite.  Finally, we have to add a TensorFlow object called a Coordinator.  A coordinator object helps to make sure that all the threads we create stop together – this is important at any point in our program where we want to bring all the multiple threads together and rejoin the main thread (usually at the end of the program).  It is also important if an exception occurs on one of the threads – we want this exception broadcast to all of the threads so that they all stop.  More on the Coordinator object can be found here – in our code, we will be implementing it rather naively.  The session part of our example now looks like this:
+
+with tf.Session() as sess:
+    coord = tf.train.Coordinator()
+    threads = tf.train.start_queue_runners(coord=coord)
+    # now dequeue a few times, and we should see the number of items
+    # in the queue decrease
+    sess.run(fg)
+    sess.run(fg)
+    sess.run(fg)
+    # previously the main thread blocked / hung at this point, as it was waiting
+    # for the queue to be filled.  However, it won't this time around, as we
+    # now have a queue runner on another thread making sure the queue is
+    # filled asynchronously
+    sess.run(fg)
+    sess.run(fg)
+    sess.run(fg)
+    # this will print, but not necessarily after the 6th call of sess.run(fg)
+    # due to the asynchronous operations
+    print("We're here!")
+    # we have to request all threads now stop, then we can join the queue runner
+    # thread back to the main thread and finish up
+    coord.request_stop()
+    coord.join(threads)
+The first two lines create a generic Coordinator object and the second starts our queue runners, specifying our coordinator object which will handle the stopping of the threads.  We now can run sess.run(fg) as many times as we like, with the queue runners now ensuring that the FIFOQueue always has data in it when we need it – it will no longer hang or block.  Finally, once we are done we ask the threads to stop operation (coord.request_stop()) and then we ask the coordinator to join the threads back into the main program thread (coord.join(threads)).  The output looks like this:
+
+New dummy inputs have been created: [-0.81459045 -1.9739552 -0.9398123 1.0848273 1.0323733]
+This is how many items are left in q: [0][-0.81459045]
+This is how many items are left in q: [3][-1.9739552]
+New dummy inputs have been created: [-0.03232909 -0.34122062 0.85883951 -0.95554483 1.1082178]
+This is how many items are left in q: [3][-0.9398123]
+We're here!
+This is how many items are left in q: [3][1.0848273]
+This is how many items are left in q: [3][1.0323733]
+This is how many items are left in q: [3][-0.03232909]
+The first thing to notice about the above is that the printing of outputs is all over the place i.e. not in a linear order.  This is because of the asynchronous, nonlinear, running of the thread and enqueuing operations.  The second thing to notice is that our dummy inputs are of size 5, while our queue only has a capacity of 3.  In other words, when we run the enqueue_many operation we, in a sense, overflow the queue.  You’d think that this would result in the overflowed values being discarded (or an exception being raised), but if you look at the flow of outputs carefully, you can see that these values are simply held in “stasis” until they have room to be loaded.  This is a pretty robust way for TensorFlow to handle things.
+
+Ok, so that’s a good introduction to the main concepts of queues and threading in TensorFlow.  Now let’s look at using these objects in a more practical example.
     
 ## <a name="thread"></a> Working with restored models
 **QueueRunner**: When TensorFlow is reading the input, it needs to maintain multiple queues for it. The queue serves all the workers that are responsible for executing the training step. We use a queue because we want to have the inputs ready for the workers to operate on. If you don't have a queue, you will be blocked on I/O and performance will degrade.
