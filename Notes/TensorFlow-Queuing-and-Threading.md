@@ -22,8 +22,8 @@ sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
 ```
 Here data is fed into the final training operation via the _feed_dict_ argument. TensorFlow, in its performance guide, **specifically discourages the use of the feed_dict method**. It’s great for tutorials if you want to focus on core TensorFlow functionality, but not so good for overall performance.  
 
-What are TensorFlow queues exactly? They are **data storage objects which can be loaded and de-loaded with information asynchronously using threads**. This allows us to stream data into our training algorithms more seamlessly, as loading and de-loading of data can be performed at the same time (or when one thread is blocking) – with our queue being “topped up” when required with new data to ensure a steady stream of data. Following are different types of TensorFlow queues.
-[[back to top]](#top)
+What are TensorFlow queues exactly? They are **data storage objects which can be loaded and de-loaded with information asynchronously using threads**. This allows us to stream data into our training algorithms more seamlessly, as loading and de-loading of data can be performed at the same time (or when one thread is blocking) – with our queue being “topped up” when required with new data to ensure a steady stream of data. Following are different types of TensorFlow queues.  
+[[back to top]](#top) 
 ## <a name="fifo"></a> The FIFOQueue – first in, first out
 <p align="center">
 <img src="/Notes/Imgs/IncremeterFifoQueue.gif" width="600px"/>
@@ -64,8 +64,8 @@ All that is performed in the code above is running the enqueue_many operation (e
 > This is how many items are left in q: [2]  
 > This is how many items are left in q: [1]  
 
-Once the output gets to the point above you’ll actually have to **terminate the program as it is blocked**. Now, this isn’t very useful.  What we really want to happen is for our little program to **reload or enqueue more values whenever our queue is empty or is about to become empty**. We could fix this by explicitly running our enqueue_op again in the code above to reload our queue with values.  However, for large, more realistic programs, this will become unwieldy. Thankfully, TensorFlow has a solution.         
-[back to top](#top)
+Once the output gets to the point above you’ll actually have to **terminate the program as it is blocked**. Now, this isn’t very useful.  What we really want to happen is for our little program to **reload or enqueue more values whenever our queue is empty or is about to become empty**. We could fix this by explicitly running our enqueue_op again in the code above to reload our queue with values.  However, for large, more realistic programs, this will become unwieldy. Thankfully, TensorFlow has a solution.   
+[[back to top]](#top)
 ## <a name="quco"></a> QueueRunners and the Coordinator
 
 The first object that TensorFlow has for us is the _QueueRunner_ object. A _QueueRunner_ will **control the asynchronous execution of enqueue operations to ensure that our queues never run dry**. Not only that, but it can create multiple threads of enqueue operations, all of which it will handle in an asynchronous fashion. 
@@ -146,8 +146,8 @@ The **CIFAR-10** dataset is a series of labeled images which contain objects suc
 
 <p align="center">
 <img src="/Notes/Imgs/AnimatedFileQueues.gif" width="600px"/>
-</p>
-[back to top](#top)  
+</p>  
+[[back to top]](#top) 
 
 ## <a name="thread"></a> Working with restored models
 **QueueRunner**: When TensorFlow is reading the input, it needs to maintain multiple queues for it. The queue serves all the workers that are responsible for executing the training step. We use a queue because we want to have the inputs ready for the workers to operate on. If you don't have a queue, you will be blocked on I/O and performance will degrade.
