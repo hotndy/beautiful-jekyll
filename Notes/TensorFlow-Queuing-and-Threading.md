@@ -4,15 +4,15 @@ title: "Tensorflow Queueing and Threading"
 ---
 <a name="top"></a>
 - [TensorFlow queuing and threads – introductory concepts](#intro)   
-- [The FIFOQueue – first in, first out](#fifo)  
-- [QueueRunners and the Coordinator](#quco)
+- [The `FIFOQueue` – first in, first out](#fifo)  
+- [`QueueRunners` and the Coordinator](#quco)
 - [A more practical example – reading the CIFAR-10 dataset](#CIFAR-10)
   - [The filename queue](#fnq)
-  - [The FixedLengthRecordReader](#flr)
-  - [The minimum number of examples in the RandomShuffleQueue](#minimum)
-  - [The RandomShuffleQueue](#random)
+  - [The `FixedLengthRecordReader`](#flr)
+  - [The minimum number of examples in the `RandomShuffleQueue`](#minimum)
+  - [The `RandomShuffleQueue`](#random)
   - [Running the operations](#running)
-- [The string_input_producer and shuffle_batch](#string)
+- [The `string_input_producer` and `shuffle_batch`](#string)
 
 One of the great things about TensorFlow is its ability to **handle multiple threads and therefore allow asynchronous operations**.  If we have large datasets this can significantly speed up the training process of our models. This functionality is especially handy when reading, pre-processing and extracting in mini-batches our training data.   
 
@@ -30,7 +30,7 @@ Here data is fed into the final training operation via the _feed_dict_ argument.
 
 What are TensorFlow queues exactly? They are **data storage objects which can be loaded and de-loaded with information asynchronously using threads**. This allows us to stream data into our training algorithms more seamlessly, as loading and de-loading of data can be performed at the same time (or when one thread is blocking) – with our queue being “topped up” when required with new data to ensure a steady stream of data. Following are different types of TensorFlow queues.  
 [[back to top]](#top) 
-## <a name="fifo"></a> The FIFOQueue – first in, first out
+## <a name="fifo"></a> The `FIFOQueue` – first in, first out
 <p align="center">
 <img src="/Notes/Imgs/IncremeterFifoQueue.gif" width="600px"/>
 </p>
@@ -75,7 +75,7 @@ Once the output gets to the point above you’ll actually have to **terminate th
 ## <a name="quco"></a> QueueRunners and the Coordinator
 
 The first object that TensorFlow has for us is the _QueueRunner_ object. A _QueueRunner_ will **control the asynchronous execution of enqueue operations to ensure that our queues never run dry**. Not only that, but it can create multiple threads of enqueue operations, all of which it will handle in an asynchronous fashion. 
-This makes things easy for us. We have to add all our queue runners, after we’ve created them, to the **GraphKeys collection** called **QUEUE_RUNNERS**. This is a collection of all the queue runners, and adding our runners to this collection allows TensorFlow to include them when constructing its computational graph.  
+This makes things easy for us. We have to add all our queue runners, after we’ve created them, to the **GraphKeys collection** called `QUEUE_RUNNERS`. This is a collection of all the queue runners, and adding our runners to this collection allows TensorFlow to include them when constructing its computational graph.  
 This is what the first half of our previous code example now looks like after incorporating these concepts:
 ```python
 dummy_input = tf.random_normal([5], mean=0, stddev=1)
@@ -98,7 +98,7 @@ The first change is to increase the size of dummy_input – more on this later. 
 ```python
 qr = tf.train.QueueRunner(q, [enqueue_op] * 10)
 ```
-The next addition is the `add_queue_runner` operation which adds our queue runner (qr) to the **QUEUE_RUNNERS** collection.
+The next addition is the `add_queue_runner` operation which adds our queue runner (qr) to the `QUEUE_RUNNERS` collection.
 
 At this point, you may think that we are all set – but not quite. Finally, we have to add a TensorFlow object called a Coordinator. A coordinator object **helps to make sure that all the threads we create stop together** – this is important at any point in our program where we want to bring all the multiple threads together and rejoin the main thread (usually at the end of the program). It is also important if an exception occurs on one of the threads – we want this exception broadcast to all of the threads so that they all stop. The session part of our example now looks like this:
 ```python
@@ -142,12 +142,12 @@ Ok, so that’s a good introduction to the main concepts of queues and threading
 [[back to top]](#top) 
 ## <a name="CIFAR-10"></a> A more practical example – reading the CIFAR-10 dataset
 
-The **CIFAR-10** dataset is a series of labeled images which contain objects such as cars, planes, cats, dogs etc. It is a frequently used benchmark for image classification tasks. It is a large dataset (166MB) and is a prime example of where a good data streaming queuing routine is needed for high performance. In the following example, I am going to show how to read in this data using a **FIFOQueue** and create data-batches using another queue object called a S**RandomShuffleQueue**. The steps are:  
+The **CIFAR-10** dataset is a series of labeled images which contain objects such as cars, planes, cats, dogs etc. It is a frequently used benchmark for image classification tasks. It is a large dataset (166MB) and is a prime example of where a good data streaming queuing routine is needed for high performance. In the following example, I am going to show how to read in this data using a `FIFOQueue` and create data-batches using another queue object called a `RandomShuffleQueue`. The steps are:  
 - Create a list of filenames which hold the **CIFAR-10** data
-- Create a **FIFOQueue** to hold the randomly shuffled filenames, and associated enqueuing  
+- Create a `FIFOQueue` to hold the randomly shuffled filenames, and associated enqueuing  
 - Dequeue files and extract image data  
 - Perform image processing  
-- Enqueue processed image data into a **RandomShuffleQueue**
+- Enqueue processed image data into a `RandomShuffleQueue`
 - Dequeue data batches for classifier training  
 
 <p align="center">
@@ -197,25 +197,26 @@ def cifar_filename_queue(filename_list):
     tf.train.add_queue_runner(tf.train.QueueRunner(fq, [fq_enqueue_op] * 1))
     return fq
 ```
-The first thing that is performed in the above function is to **convert the filename_list to a tensor**. Then we randomly shuffle the list and create a @**capacity = 10 FIFOQueue**. We then enqueue **fq#** with our tensor of randomly shuffled file names and add a queue runner. This is all pretty straightforward and produces a randomly shuffled queue of filenames to dequeue from. We only need one thread to perform this operation, as it is pretty simple. We return the filename queue, fq, from the function.  
+The first thing that is performed in the above function is to **convert the filename_list to a tensor**. Then we randomly shuffle the list and create a **capacity = 10 FIFOQueue**. We then enqueue **fq** with our tensor of randomly shuffled file names and add a queue runner. This is all pretty straightforward and produces a randomly shuffled queue of filenames to dequeue from. We only need one thread to perform this operation, as it is pretty simple. We return the filename queue, fq, from the function.  
   
 Next up in the main flow of our program is the read_data function.  
 [[back to top]](#top)
-### <a name="flr"></a> The FixedLengthRecordReader
 
-The **read_data** function takes the filename queue, dequeues file names and extracts the image and label data from the **CIFAR-10** data set. Most of the function deals with preprocessing the image data. However, there is a special TensorFlow object that we want to pay attention to:
+### <a name="flr"></a> The `FixedLengthRecordReader`
+
+The `read_data` function takes the filename queue, dequeues file names and extracts the image and label data from the **CIFAR-10** data set. Most of the function deals with preprocessing the image data. However, there is a special TensorFlow object that we want to pay attention to:
 ```python
 reader = tf.FixedLengthRecordReader(record_bytes=record_bytes)
 result.key, value = reader.read(file_q)
 ```
-The @**FixedLengthRecordReader** is a TensorFlow reader which is especially useful for reading binary files, where each record or row is a fixed number of bytes. Previously in **read_data** the number of bytes per record or data file row is calculated and stored in **record_bytes**. Of particular note is that this reader also implicitly handles the dequeuing operation from file_q (our filename queue). So we don’t have to worry about explicitly dequeuing from our filename queue. **The reader will also parse the files it dequeues and return the image data**. The rest of the **read_data** function deals with shaping up the image and label data from the raw binary information. Note that the **read_data** function returns a single image and label record, of size (24, 24, 3) and (1), respectively.  The image size, (24, 24, 3), represents a 24 x 24 pixel image, with an RGB depth of 3.  
+The `FixedLengthRecordReader` is a TensorFlow reader which is especially useful for reading binary files, where each record or row is a fixed number of bytes. Previously in `read_data` the number of bytes per record or data file row is calculated and stored in **record_bytes**. Of particular note is that this reader also implicitly handles the dequeuing operation from file_q (our filename queue). So we don’t have to worry about explicitly dequeuing from our filename queue. **The reader will also parse the files it dequeues and return the image data**. The rest of the `read_data` function deals with shaping up the image and label data from the raw binary information. Note that the `read_data` function returns a single image and label record, of size (24, 24, 3) and (1), respectively.  The image size, (24, 24, 3), represents a 24 x 24 pixel image, with an RGB depth of 3.  
 
 The next step in the main flow of the program is to setup the minimum number of examples in the upcoming **RandomShuffleQueue**.  
 [[back to top]](#top)  
 
-### <a name="minimum"></a> The minimum number of examples in the RandomShuffleQueue  
+### <a name="minimum"></a> The minimum number of examples in the `RandomShuffleQueue`  
 
-When we want to extract randomized batch data from a queue which is fed by a queue of filenames, we want to make sure that the data is truly randomized across the data set. To ensure this occurs, we want new data flowing into the randomized queue regularly. TensorFlow handles this by including an argument for the **RandomShuffleQueue** called **min_after_dequeue**. **If, after a dequeuing operation, the number of examples or samples in the queue falls below this value it will block any further dequeuing until more samples are added to the queue**. In other words, it will force an **enqueuing** operation. TensorFlow has some things to say about what our queue capacity and **min_after_dequeue** values should be to ensure good mixing when extracting random batch samples in their documentation. In our case, we will follow their recommendations:
+When we want to extract randomized batch data from a queue which is fed by a queue of filenames, we want to make sure that the data is truly randomized across the data set. To ensure this occurs, we want new data flowing into the randomized queue regularly. TensorFlow handles this by including an argument for the `RandomShuffleQueue` called `min_after_dequeue`. **If, after a dequeuing operation, the number of examples or samples in the queue falls below this value it will block any further dequeuing until more samples are added to the queue**. In other words, it will force an `enqueuing` operation. TensorFlow has some things to say about what our queue capacity and `min_after_dequeue` values should be to ensure good mixing when extracting random batch samples in their documentation. In our case, we will follow their recommendations:
 ```python
 # setup minimum number of examples that can remain in the queue after dequeuing before blocking
 # occurs (i.e. enqueuing is forced) - the higher the number the better the mixing but
@@ -227,9 +228,9 @@ capacity = min_after_dequeue + (threads + 1) * batch_size
 ```  
 [[back to top]](#top)  
 
-### <a name="random"></a> The RandomShuffleQueue
+### <a name="random"></a> The `RandomShuffleQueue`
 
-We now want to setup our **RandomShuffleQueue** which enables us to extract randomized batch data which can then be fed into our convolutional neural network or some other training graph. The **RandomShuffleQueue** is similar to the **FIFOQueue**, in that it involves the same sort of enqueuing and dequeuing operations.  The only real difference is that the RandomShuffleQueue dequeues elements in a random manner. This is obviously useful when we are training our neural networks using mini-batches. The implementation of this functionality is in my function **cifar_shuffle_queue_batch**, which I reproduce below:
+We now want to setup our `RandomShuffleQueue`which enables us to extract randomized batch data which can then be fed into our convolutional neural network or some other training graph. The `RandomShuffleQueue` is similar to the `FIFOQueue`, in that it involves the same sort of enqueuing and dequeuing operations.  The only real difference is that the RandomShuffleQueue dequeues elements in a random manner. This is obviously useful when we are training our neural networks using mini-batches. The implementation of this functionality is in my function `cifar_shuffle_queue_batch`, which I reproduce below:
 ```python
 def cifar_shuffle_queue_batch(image, label, batch_size, capacity, min_after_dequeue, threads):
     tensor_list = [image, label]
@@ -244,7 +245,7 @@ def cifar_shuffle_queue_batch(image, label, batch_size, capacity, min_after_dequ
     image_batch, label_batch = q.dequeue_many(batch_size)
     return image_batch, label_batch
 ```
-We first create a variable called _tensor\_list_ which is simply a list of the image and label data – this will be the data which is enqueued to the *RandomShuffleQueue*. We then specify the data types and tensor sizes which match this data and is required as input to the **RandomShuffleQueue** definition. Because of the large volumes of data, we setup 16 threads for this queue. The enqueuing and adding to the **QUEUE_RUNNERS** collection operations are things we have seen before. In the final line of the function, we perform a D**dequeue_many** operation and the number of examples we dequeue is equal to the batch size we desire for our training. Finally, the image batches and label batches are returned as a tuple.  
+We first create a variable called _tensor\_list_ which is simply a list of the image and label data – this will be the data which is enqueued to the `RandomShuffleQueue`. We then specify the data types and tensor sizes which match this data and is required as input to the `RandomShuffleQueue` definition. Because of the large volumes of data, we setup 16 threads for this queue. The enqueuing and adding to the `QUEUE_RUNNERS` collection operations are things we have seen before. In the final line of the function, we perform a `dequeue_many` operation and the number of examples we dequeue is equal to the batch size we desire for our training. Finally, the image batches and label batches are returned as a tuple.  
 All that is left now is to specify the session which runs our operations.    
 [[back to top]](#top)  
 
@@ -262,7 +263,7 @@ def cifar_run(image, label):
         coord.request_stop()
         coord.join(threads)
  ```
-In this function, all I do is run the operations which were passed into this function – _image_ and _label_.  Remember that to execute these operations, the **dequeue_many** operation must be run for the **RandomShuffleQueue** along with all the preceding operations in the computational graph (i.e. pre-processing, file name queue etc.). Running these operations returns the actual batch data, and I then print the shape of these batches. I perform 5 batch extractions, but one could perform an indefinite number of these extractions, with the enqueuing and dequeuing all being taken care of via the queue runners.  The output looks like this:  
+In this function, all I do is run the operations which were passed into this function – _image_ and _label_.  Remember that to execute these operations, the `dequeue_many` operation must be run for the `RandomShuffleQueue` along with all the preceding operations in the computational graph (i.e. pre-processing, file name queue etc.). Running these operations returns the actual batch data, and I then print the shape of these batches. I perform 5 batch extractions, but one could perform an indefinite number of these extractions, with the enqueuing and dequeuing all being taken care of via the queue runners.  The output looks like this:  
 > (128, 24, 24, 3) (128, 1)  
 > (128, 24, 24, 3) (128, 1)  
 > (128, 24, 24, 3) (128, 1)  
@@ -276,20 +277,21 @@ In the above explanation, for illustrative purposes, I’ve actually shown you t
 
 ## <a name="string"></a>  The `string_input_producer` and `shuffle_batch`
 
-There are two queue helpers in TensorFlow which basically replicate the functionality of my custom functions which utilize `FIFOQueue` and `RandomShuffleQueue`. These functions are called `pythonstring_input_producer` which takes a list of filenames and creates a `FIFOQueue` with **enqueuing implicitely provided**, and `shuffle_batch` which creates a `RandomShuffleQueue` with **enqueuing and batch-sized dequeuing already provided**. In my main program (cifar_shuffle_batch) you can replace my `cifar_filename_queue` and `cifar_shuffle_batch_queue` functions with calls to `string_input_producer` and `shuffle_batch` respectively, like so:
-
+There are two queue helpers in TensorFlow which basically replicate the functionality of my custom functions which utilize `FIFOQueue` and `RandomShuffleQueue`. These functions are called `string_input_producer` which takes a list of filenames and creates a `FIFOQueue` with **enqueuing implicitely provided**, and `shuffle_batch` which creates a `RandomShuffleQueue` with **enqueuing and batch-sized dequeuing already provided**. In my main program (cifar_shuffle_batch) you can replace my `cifar_filename_queue` and `cifar_shuffle_batch_queue` functions with calls to `string_input_producer` and `shuffle_batch` respectively, like so:
+```python
 # file_q = cifar_filename_queue(filename_list)
 file_q = tf.train.string_input_producer(filename_list)
+```
 and:
-
+```python
 # image_batch, label_batch = cifar_shuffle_queue_batch(image, label, batch_size, num_threads)
 image_batch, label_batch = tf.train.shuffle_batch([image, label], batch_size, capacity, min_after_dequeue,
                                                       num_threads=num_threads)
-By running the script (at the Github repository here) with these replacements, you will get the same results as before.
-
-We have now covered how TensorFlow queuing and threading works.  I hope you now feel confident to implement these concepts in your TensorFlow programs, which will allow you to build high-performance TensorFlow training algorithms.  As always, have fun.
-
+```
+  
 ## <a name="thread"></a> Working with restored models
 **QueueRunner**: When TensorFlow is reading the input, it needs to maintain multiple queues for it. The queue serves all the workers that are responsible for executing the training step. We use a queue because we want to have the inputs ready for the workers to operate on. If you don't have a queue, you will be blocked on I/O and performance will degrade.
 
 **Coordindator**: This is part of tf.train.Supervisor. It's necessary because you need a controller to maintain the set of threads (know when main thread should terminate, request stopping of sub-threads, etc).
+
+
