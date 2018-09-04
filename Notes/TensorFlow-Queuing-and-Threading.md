@@ -12,7 +12,7 @@ One of the great things about TensorFlow is its ability to **handle multiple thr
 
 The particular queuing operations/objects we will be looking at are FIFOQueue, RandomShuffleQueue, QueueRunner, Coordinator, string_input_producer and shuffle_batch, but the concepts that I will introduce are common to the multitude of queuing and threading operations available in TensorFlow.
  
-## <a name="intro"></a> TensorFlow queuing and threads – introductory concepts [back to top](#top)
+## <a name="intro"></a> TensorFlow queuing and threads – introductory concepts
 
 Threading involves multiple tasks running asynchronously – that is when one thread is blocked another thread gets to run. When we have multiple CPUs, we can also have multi-threading which allows different threads to run at the same time. Unfortunately, threading is notoriously difficult to manage, especially in Python. Thankfully, TensorFlow has come to the rescue and provided us means of including threading in our input data processing.    
 
@@ -64,8 +64,8 @@ All that is performed in the code above is running the enqueue_many operation (e
 > This is how many items are left in q: [2]  
 > This is how many items are left in q: [1]  
 
-Once the output gets to the point above you’ll actually have to **terminate the program as it is blocked**. Now, this isn’t very useful.  What we really want to happen is for our little program to **reload or enqueue more values whenever our queue is empty or is about to become empty**. We could fix this by explicitly running our enqueue_op again in the code above to reload our queue with values.  However, for large, more realistic programs, this will become unwieldy. Thankfully, TensorFlow has a solution.       
-
+Once the output gets to the point above you’ll actually have to **terminate the program as it is blocked**. Now, this isn’t very useful.  What we really want to happen is for our little program to **reload or enqueue more values whenever our queue is empty or is about to become empty**. We could fix this by explicitly running our enqueue_op again in the code above to reload our queue with values.  However, for large, more realistic programs, this will become unwieldy. Thankfully, TensorFlow has a solution.         
+[back to top](#top)
 ## <a name="quco"></a> QueueRunners and the Coordinator
 
 The first object that TensorFlow has for us is the _QueueRunner_ object. A _QueueRunner_ will **control the asynchronous execution of enqueue operations to ensure that our queues never run dry**. Not only that, but it can create multiple threads of enqueue operations, all of which it will handle in an asynchronous fashion. 
@@ -132,8 +132,8 @@ The first two lines create a **generic Coordinator** object and the second start
 
 The first thing to notice about the above is that the printing of outputs is all over the place i.e. not in a linear order. This is because of the **asynchronous, nonlinear, running of the thread and enqueuing operations**.  The second thing to notice is that our dummy inputs are of size 5, while our queue only has a capacity of 3. In other words, when we run the enqueue_many operation we, in a sense, overflow the queue. You’d think that this would result in the overflowed values being discarded (or an exception being raised), but if you look at the flow of outputs carefully, you can see that these values are simply held in “stasis” until they have room to be loaded. This is a pretty robust way for TensorFlow to handle things.
 
-Ok, so that’s a good introduction to the main concepts of queues and threading in TensorFlow. Now let’s look at using these objects in a more practical example.
-
+Ok, so that’s a good introduction to the main concepts of queues and threading in TensorFlow. Now let’s look at using these objects in a more practical example.  
+[back to top](#top)  
 ## <a name="CIFAR-10"></a> A more practical example – reading the CIFAR-10 dataset
 
 The **CIFAR-10** dataset is a series of labeled images which contain objects such as cars, planes, cats, dogs etc. It is a frequently used benchmark for image classification tasks. It is a large dataset (166MB) and is a prime example of where a good data streaming queuing routine is needed for high performance. In the following example, I am going to show how to read in this data using a **FIFOQueue** and create data-batches using another queue object called a S**RandomShuffleQueue**. The steps are:  
@@ -147,7 +147,7 @@ The **CIFAR-10** dataset is a series of labeled images which contain objects suc
 <p align="center">
 <img src="/Notes/Imgs/AnimatedFileQueues.gif" width="600px"/>
 </p>
-
+[back to top](#top)  
 
 ## <a name="thread"></a> Working with restored models
 **QueueRunner**: When TensorFlow is reading the input, it needs to maintain multiple queues for it. The queue serves all the workers that are responsible for executing the training step. We use a queue because we want to have the inputs ready for the workers to operate on. If you don't have a queue, you will be blocked on I/O and performance will degrade.
