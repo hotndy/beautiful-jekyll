@@ -12,7 +12,10 @@ title: "Tensorflow Basics"
     - [VGG Example](#VGG)  
     
 ## <a name="thread"></a> Tensorflow Queueing and Threading
-    
+**QueueRunner**: When TensorFlow is reading the input, it needs to maintain multiple queues for it. The queue serves all the workers that are responsible for executing the training step. We use a queue because we want to have the inputs ready for the workers to operate on. If you don't have a queue, you will be blocked on I/O and performance will degrade.
+
+**Coordindator**: This is part of tf.train.Supervisor. It's necessary because you need a controller to maintain the set of threads (know when main thread should terminate, request stopping of sub-threads, etc).
+
 ## <a name="tval"></a> Showing and Evluating Tensor Values  
 The easiest way to evaluate the actual value of a Tensor object is to pass it to the **Session.run()** method, or call **Tensor.eval()** when you have a default session (i.e. in a with tf.Session(): block). **In general, you cannot print the value of a tensor without running some code in a session**.
 
