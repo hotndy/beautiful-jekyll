@@ -2,7 +2,7 @@
 layout: post
 title: "Tensorflow Queueing and Threading"
 ---
-
+<a name="top"></a>
 - [TensorFlow queuing and threads – introductory concepts](#intro)   
 - [The FIFOQueue – first in, first out](#fifo)  
 - [QueueRunners and the Coordinator](#quco)
@@ -12,7 +12,7 @@ One of the great things about TensorFlow is its ability to **handle multiple thr
 
 The particular queuing operations/objects we will be looking at are FIFOQueue, RandomShuffleQueue, QueueRunner, Coordinator, string_input_producer and shuffle_batch, but the concepts that I will introduce are common to the multitude of queuing and threading operations available in TensorFlow.
  
-## <a name="intro"></a> TensorFlow queuing and threads – introductory concepts
+## <a name="intro"></a> TensorFlow queuing and threads – introductory concepts [back to top](#top)
 
 Threading involves multiple tasks running asynchronously – that is when one thread is blocked another thread gets to run. When we have multiple CPUs, we can also have multi-threading which allows different threads to run at the same time. Unfortunately, threading is notoriously difficult to manage, especially in Python. Thankfully, TensorFlow has come to the rescue and provided us means of including threading in our input data processing.    
 
