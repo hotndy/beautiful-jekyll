@@ -10,6 +10,7 @@ title: "Tensorflow Queueing and Threading"
   - [The filename queue](#fnq)
   - [The FixedLengthRecordReader](#flr)
   - [The minimum number of examples in the RandomShuffleQueue](#minimum)
+  - [The RandomShuffleQueue](#random)
 
 One of the great things about TensorFlow is its ability to **handle multiple threads and therefore allow asynchronous operations**.  If we have large datasets this can significantly speed up the training process of our models. This functionality is especially handy when reading, pre-processing and extracting in mini-batches our training data.   
 
@@ -210,9 +211,10 @@ The @**FixedLengthRecordReader** is a TensorFlow reader which is especially usef
 The next step in the main flow of the program is to setup the minimum number of examples in the upcoming **RandomShuffleQueue**.  
 [[back to top]](#top)  
 
-### <a name="minimum"></a> The minimum number of examples in the RandomShuffleQueue
-When we want to extract randomized batch data from a queue which is fed by a queue of filenames, we want to make sure that the data is truly randomized across the data set.  To ensure this occurs, we want new data flowing into the randomized queue regularly.  TensorFlow handles this by including an argument for the RandomShuffleQueue called min_after_dequeue.  If, after a dequeuing operation, the number of examples or samples in the queue falls below this value it will block any further dequeuing until more samples are added to the queue.  In other words, it will force an enqueuing operation.  TensorFlow has some things to say about what our queue capacity and min_after_dequeue values should be to ensure good mixing when extracting random batch samples in their documentation.  In our case, we will follow their recommendations:
+### <a name="minimum"></a> The minimum number of examples in the RandomShuffleQueue  
 
+When we want to extract randomized batch data from a queue which is fed by a queue of filenames, we want to make sure that the data is truly randomized across the data set. To ensure this occurs, we want new data flowing into the randomized queue regularly. TensorFlow handles this by including an argument for the **RandomShuffleQueue** called **min_after_dequeue**. **If, after a dequeuing operation, the number of examples or samples in the queue falls below this value it will block any further dequeuing until more samples are added to the queue**. In other words, it will force an **enqueuing** operation. TensorFlow has some things to say about what our queue capacity and **min_after_dequeue** values should be to ensure good mixing when extracting random batch samples in their documentation. In our case, we will follow their recommendations:
+```python
 # setup minimum number of examples that can remain in the queue after dequeuing before blocking
 # occurs (i.e. enqueuing is forced) - the higher the number the better the mixing but
 # longer initial load time
@@ -220,9 +222,13 @@ min_after_dequeue = 10000
 # setup the capacity of the queue - this is based on recommendations by TensorFlow to ensure
 # good mixing
 capacity = min_after_dequeue + (threads + 1) * batch_size
-The RandomShuffleQueue
-We now want to setup our RandomShuffleQueue which enables us to extract randomized batch data which can then be fed into our convolutional neural network or some other training graph.  The RandomShuffleQueue is similar to the FIFOQueue, in that it involves the same sort of enqueuing and dequeuing operations.  The only real difference is that the RandomShuffleQueue dequeues elements in a random manner.  This is obviously useful when we are training our neural networks using mini-batches.  The implementation of this functionality is in my function cifar_shuffle_queue_batch, which I reproduce below:
+```  
+[[back to top]](#top)  
 
+### <a name="random"></a> The RandomShuffleQueue
+
+We now want to setup our **RandomShuffleQueue** which enables us to extract randomized batch data which can then be fed into our convolutional neural network or some other training graph. The **RandomShuffleQueue** is similar to the **FIFOQueue**, in that it involves the same sort of enqueuing and dequeuing operations.  The only real difference is that the RandomShuffleQueue dequeues elements in a random manner. This is obviously useful when we are training our neural networks using mini-batches. The implementation of this functionality is in my function **cifar_shuffle_queue_batch**, which I reproduce below:
+```python
 def cifar_shuffle_queue_batch(image, label, batch_size, capacity, min_after_dequeue, threads):
     tensor_list = [image, label]
     dtypes = [tf.float32, tf.int32]
@@ -235,7 +241,8 @@ def cifar_shuffle_queue_batch(image, label, batch_size, capacity, min_after_dequ
     # now extract the batch
     image_batch, label_batch = q.dequeue_many(batch_size)
     return image_batch, label_batch
-We first create a variable called tensor_list which is simply a list of the image and label data – this will be the data which is enqueued to the RandomShuffleQueue.  We then specify the data types and tensor sizes which match this data and is required as input to the RandomShuffleQueue definition.  Because of the large volumes of data, we setup 16 threads for this queue.  The enqueuing and adding to the QUEUE_RUNNERS collection operations are things we have seen before.  In the final line of the function, we perform a dequeue_many operation and the number of examples we dequeue is equal to the batch size we desire for our training.  Finally, the image batches and label batches are returned as a tuple.
+```
+We first create a variable called _tensor\_list_ which is simply a list of the image and label data – this will be the data which is enqueued to the RandomShuffleQueue.  We then specify the data types and tensor sizes which match this data and is required as input to the RandomShuffleQueue definition.  Because of the large volumes of data, we setup 16 threads for this queue.  The enqueuing and adding to the QUEUE_RUNNERS collection operations are things we have seen before.  In the final line of the function, we perform a dequeue_many operation and the number of examples we dequeue is equal to the batch size we desire for our training.  Finally, the image batches and label batches are returned as a tuple.
 
 All that is left now is to specify the session which runs our operations.
 
