@@ -41,8 +41,8 @@ data = tf.Print(data, data=[q.size()], message='This is how many items are left 
 # create a fake graph that we can call upon
 fg = data + 1
 ```
-In this code example, I’ve created, I first create a random normal tensor, of size 3, and then I create a printing operation so we can see what values have been randomly selected.  After that, I set up a FIFOQueue, with capacity = 3 as in the example above.  I enqueue all three values of the random tensor in the enqueue_op.  Then I immediately attempt to dequeue a value from q and assign it to data.  Another print operation follows and then I create basically a fake graph, where I simply add 1 to the dequeued data variable.  This step is required so TensorFlow knows that it needs to execute all the preceding operations which lead up to producing data.  Next, we start up a session and run:
-
+In this code example, I’ve created, I first create a random normal tensor, of size 3, and then I create a printing operation so we can see what values have been randomly selected. After that, I set up a FIFOQueue, with capacity = 3 as in the example above. I enqueue all three values of the random tensor in the enqueue_op. Then I immediately attempt to dequeue a value from q and assign it to data. Another print operation follows and then I create basically a fake graph, where I simply add 1 to the dequeued data variable. This step is required so TensorFlow knows that it needs to execute all the preceding operations which lead up to producing data. Next, we start up a session and run:
+```python
 with tf.Session() as sess:
     # first load up the queue
     sess.run(enqueue_op)
@@ -56,14 +56,15 @@ with tf.Session() as sess:
     sess.run(fg)
     # this will never print:
     print("We're here!")
-All that is performed in the code above is running the enqueue_many operation (enqueue_op) which loads up our queue to capacity, and then we run the fake graph operation, which involves emptying our queue of values, one at a time.  After we’ve run this operation a few times the queue will be empty – if we try and run the operation again, the main thread of the program will hang or block – this is because it will be waiting for another operation to be run to put more values in the queue.  As such, the final print statement is never run.  The output looks like this:
+```
+All that is performed in the code above is running the enqueue_many operation (enqueue_op) which loads up our queue to capacity, and then we run the fake graph operation, which involves emptying our queue of values, one at a time.  After we’ve run this operation a few times the queue will be empty – if we try and run the operation again, the main thread of the program will hang or block – this is because it will be waiting for another operation to be run to put more values in the queue.  As such, the final print statement is never run.  The output looks like this:  
+> New dummy inputs have been created: [0.73847228 0.086355612 0.56138796]  
+> This is how many items are left in q: [3]  
+> This is how many items are left in q: [2]  
+> This is how many items are left in q: [1]  
+Once the output gets to the point above you’ll actually have to **terminate the program as it is blocked**. Now, this isn’t very useful.  What we really want to happen is for our little program to **reload or enqueue more values whenever our queue is empty or is about to become empty**. We could fix this by explicitly running our enqueue_op again in the code above to reload our queue with values.  However, for large, more realistic programs, this will become unwieldy. Thankfully, TensorFlow has a solution.       
 
-New dummy inputs have been created: [0.73847228 0.086355612 0.56138796]
-This is how many items are left in q: [3]
-This is how many items are left in q: [2]
-This is how many items are left in q: [1]
-Once the output gets to the point above you’ll actually have to terminate the program as it is blocked. Now, this isn’t very useful.  What we really want to happen is for our little program to reload or enqueue more values whenever our queue is empty or is about to become empty.  We could fix this by explicitly running our enqueue_op again in the code above to reload our queue with values.  However, for large, more realistic programs, this will become unwieldy.  Thankfully, TensorFlow has a solution.       
-    
+
     
 ## <a name="thread"></a> Working with restored models
 **QueueRunner**: When TensorFlow is reading the input, it needs to maintain multiple queues for it. The queue serves all the workers that are responsible for executing the training step. We use a queue because we want to have the inputs ready for the workers to operate on. If you don't have a queue, you will be blocked on I/O and performance will degrade.
