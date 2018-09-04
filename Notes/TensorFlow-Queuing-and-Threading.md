@@ -66,7 +66,7 @@ All that is performed in the code above is running the enqueue_many operation (e
 
 Once the output gets to the point above you’ll actually have to **terminate the program as it is blocked**. Now, this isn’t very useful.  What we really want to happen is for our little program to **reload or enqueue more values whenever our queue is empty or is about to become empty**. We could fix this by explicitly running our enqueue_op again in the code above to reload our queue with values.  However, for large, more realistic programs, this will become unwieldy. Thankfully, TensorFlow has a solution.       
 
-## <a name=“quco”></a> QueueRunners and the Coordinator
+## <a name="quco"></a> QueueRunners and the Coordinator
 The first object that TensorFlow has for us is the QueueRunner object.  A QueueRunner will control the asynchronous execution of enqueue operations to ensure that our queues never run dry.  Not only that, but it can create multiple threads of enqueue operations, all of which it will handle in an asynchronous fashion.  This makes things easy for us.  We have to add all our queue runners, after we’ve created them, to the GraphKeys collection called QUEUE_RUNNERS.  This is a collection of all the queue runners, and adding our runners to this collection allows TensorFlow to include them when constructing its computational graph (for more information on computational graphs check out my TensorFlow tutorial).  This is what the first half of our previous code example now looks like after incorporating these concepts:
 
 dummy_input = tf.random_normal([5], mean=0, stddev=1)
