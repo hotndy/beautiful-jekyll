@@ -287,8 +287,9 @@ and:
 # image_batch, label_batch = cifar_shuffle_queue_batch(image, label, batch_size, num_threads)
 image_batch, label_batch = tf.train.shuffle_batch([image, label], batch_size, capacity, min_after_dequeue,
                                                       num_threads=num_threads)
-```
-  
+```  
+[[back to top]](#top)
+
 ## <a name="thread"></a> Working with restored models
 **QueueRunner**: When TensorFlow is reading the input, it needs to maintain multiple queues for it. The queue serves all the workers that are responsible for executing the training step. We use a queue because we want to have the inputs ready for the workers to operate on. If you don't have a queue, you will be blocked on I/O and performance will degrade.
 
