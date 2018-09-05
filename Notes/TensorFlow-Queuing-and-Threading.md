@@ -297,16 +297,10 @@ image_batch, label_batch = tf.train.shuffle_batch([image, label], batch_size, ca
 **Coordindator**: This is part of tf.train.Supervisor. It's necessary because you need a controller to maintain the set of threads (know when main thread should terminate, request stopping of sub-threads, etc).
 
 ## <a name="pair"></a> Reading 2 Files at the same time 
-The answer contains two parts:
 
-Part 1: How to read files pair by pair using TensorFlow's queue
-The solution is simple:
-
-Use 2 queue to store two set of files. Note that the two set should be ordered in the same way.
-Do some preprocessing respectively using dequeue.
-Combine two preprocessed tensor into one list and pass the list to shuffle_batch
-Code here:
-
+### Procedure 1: How to read files pair by pair using TensorFlow's queue
+Use **2 queues** to store two set of files. Note that the two set should be ordered in the same way. Do some preprocessing respectively using dequeue. Combine two preprocessed tensor into one list and pass the list to `shuffle_batch`
+```python
 base_names = ['file1', 'file2']
 base_tensor = tf.convert_to_tensor(base_names)
 image_name_queue = tf.train.string_input_producer(
@@ -333,18 +327,20 @@ batch = tf.train.shuffle_batch([processed_image, label], 10, 100, 100)
 # print batch
 queue_threads = queue_runner.start_queue_runners()
 print(sess.run(batch))
-Part 2: Queue, QueueRunner, Coordinator and helper functions
+```
+### Procedure 2: Queue, QueueRunner, Coordinator and helper functions
 Queue is really a queue (seems meaningless). A queue has two method: enqueue and dequeue. The input of enqueue is Tensor (well, you can enqueue normal data, but it will be converted to Tensor internally). The return value of dequeue is a Tensor. So you can make pipeline of queues like this:
-
+```python
 q1 = data_flow_ops.FIFOQueue(32, tf.int)
 q2 = data_flow_ops.FIFOQueue(32, tf.int)
 enq1 = q1.enqueue([1,2,3,4,5])
 v1 = q1.dequeue()
 enq2 = q2.enqueue(v1)
+```
 The benefit of using queue in TensorFlow is to asynchronously load data, which will improve performance and save memory. The code above is not runnable, because there is no thread running those operations. QueueRunner is designed to describe how to enqueue data in parallel. So the parameter of initializing QueueRunner is an enqueue operation (the output of enqueue).
 
 After setting up all the QueueRunners, you have to start all the threads. One way is to start them when creating them:
-
+```python
 enqueue_threads = qr.create_threads(sess, coord=coord, start=True)
 or, you can start all threads after all the setting up works done:
 
@@ -353,8 +349,9 @@ queue_runner.add_queue_runner(queue_runner.QueueRunner(q, [enq]))
 
 # start all queue runners
 queue_threads = queue_runner.start_queue_runners()
-When all the threads started, you have to decide when to exit. Coordinator is here to do this. Coordinator is like a shared flag between all the running threads. if one of them finished or run into error, it will call coord.request_stop(), then all the thread will get True when calling coord.should_stop(). So the pattern of using Coordinator is:
-
+```
+When all the threads started, you have to decide when to exit. Coordinator is here to do this. Coordinator is like a shared flag between all the running threads. if one of them finished or run into error, it will call `coord.request_stop()`, then all the thread will get True when calling coord.should_stop(). So the pattern of using Coordinator is:
+```python 
 coord = tf.train.Coordinator()
 
 for step in range(1000000):
@@ -364,3 +361,4 @@ for step in range(1000000):
 
 coord.request_stop()
 coord.join(enqueue_threads)
+```
