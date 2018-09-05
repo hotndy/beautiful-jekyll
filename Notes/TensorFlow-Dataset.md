@@ -110,7 +110,7 @@ The zip combination of the two datasets (dx, dy) can be seen in the line where d
 > (array([3, 4, 5]), array([4, 5, 6]))  
 > (array([6, 7, 8]), array([7, 8, 9]))  
 > (array([0, 1, 2]), array([1, 2, 3]))  
-
+  
 and so on. As you can observe, the batching takes place appropriately within the zipped together datasets i.e. 3 items from dx, 3 items from dy. As stated above, this is handy for combining input data and matching labels.  
 
 Note, the re-initialization if statement on the last two lines is a bit unwieldy, we can actually get rid of it by replacing the dcomb dataset creation line with the following:  
