@@ -13,7 +13,6 @@ title: "Tensorflow Queueing and Threading"
   - [The `RandomShuffleQueue`](#random)
   - [Running the operations](#running)
 - [The `string_input_producer` and `shuffle_batch`](#string)
-- [Example: Read 2 Files at the same ime](#pair)
 
 One of the great things about TensorFlow is its ability to **handle multiple threads and therefore allow asynchronous operations**.  If we have large datasets this can significantly speed up the training process of our models. This functionality is especially handy when reading, pre-processing and extracting in mini-batches our training data.   
 
@@ -295,70 +294,3 @@ image_batch, label_batch = tf.train.shuffle_batch([image, label], batch_size, ca
 **QueueRunner**: When TensorFlow is reading the input, it needs to maintain multiple queues for it. The queue serves all the workers that are responsible for executing the training step. We use a queue because we want to have the inputs ready for the workers to operate on. If you don't have a queue, you will be blocked on I/O and performance will degrade.
 
 **Coordindator**: This is part of tf.train.Supervisor. It's necessary because you need a controller to maintain the set of threads (know when main thread should terminate, request stopping of sub-threads, etc).
-
-## <a name="pair"></a> Reading 2 Files at the same time 
-
-### Procedure 1: How to read files pair by pair using TensorFlow's queue
-Use **2 queues** to store two set of files. Note that the two set should be ordered in the same way. Do some preprocessing respectively using dequeue. Combine two preprocessed tensor into one list and pass the list to `shuffle_batch`
-```python
-base_names = ['file1', 'file2']
-base_tensor = tf.convert_to_tensor(base_names)
-image_name_queue = tf.train.string_input_producer(
-  tensor + '.png',
-  shuffle=False # Note: must set shuffle to False
-)
-label_queue = tf.train.string_input_producer(
-  tensor + '.lable.txt',
-  shuffle=False # Note: must set shuffle to False
-)
-
-# use reader to read file
-image_reader = tf.WholeFileReader()
-image_key, image_raw = image_reader.read(image_name_queue)
-image = tf.image.decode_png(image_raw)
-label_reader = tf.WholeFileReader()
-label_key, label_raw = label_reader.read(label_queue)
-label = tf.image.decode_raw(label_raw)
-
-# preprocess image
-processed_image = tf.image.per_image_whitening(image)
-batch = tf.train.shuffle_batch([processed_image, label], 10, 100, 100)
-
-# print batch
-queue_threads = queue_runner.start_queue_runners()
-print(sess.run(batch))
-```
-### Procedure 2: Queue, QueueRunner, Coordinator and helper functions
-Queue is really a queue (seems meaningless). A queue has two method: enqueue and dequeue. The input of enqueue is Tensor (well, you can enqueue normal data, but it will be converted to Tensor internally). The return value of dequeue is a Tensor. So you can make pipeline of queues like this:
-```python
-q1 = data_flow_ops.FIFOQueue(32, tf.int)
-q2 = data_flow_ops.FIFOQueue(32, tf.int)
-enq1 = q1.enqueue([1,2,3,4,5])
-v1 = q1.dequeue()
-enq2 = q2.enqueue(v1)
-```
-The benefit of using queue in TensorFlow is to asynchronously load data, which will improve performance and save memory. The code above is not runnable, because there is no thread running those operations. QueueRunner is designed to describe how to enqueue data in parallel. So the parameter of initializing QueueRunner is an enqueue operation (the output of enqueue).
-
-After setting up all the QueueRunners, you have to start all the threads. One way is to start them when creating them:
-```python
-enqueue_threads = qr.create_threads(sess, coord=coord, start=True)
-or, you can start all threads after all the setting up works done:
-
-# add queue runner
-queue_runner.add_queue_runner(queue_runner.QueueRunner(q, [enq]))
-
-# start all queue runners
-queue_threads = queue_runner.start_queue_runners()
-```
-When all the threads started, you have to decide when to exit. Coordinator is here to do this. Coordinator is like a shared flag between all the running threads. if one of them finished or run into error, it will call `coord.request_stop()`, then all the thread will get True when calling coord.should_stop(). So the pattern of using Coordinator is:
-```python 
-coord = tf.train.Coordinator()
-
-for step in range(1000000):
-  if coord.should_stop():
-    break
-  print(sess.run(print_op))
-
-coord.request_stop()
-coord.join(enqueue_threads)
-```
