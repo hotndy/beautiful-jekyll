@@ -1,4 +1,7 @@
-layout: pages
+---
+layout: page
+title: "Understanding Cross-Entropy Losses"
+---
 
 L=−[ylog y^+(1−y)log (1−y^)]
 
