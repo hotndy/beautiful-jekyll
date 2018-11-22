@@ -12,7 +12,7 @@ We investigate the challenge of synthesizing dense light fields based on very sp
 
 <p align='center'>
 <img src="https://hotndy.github.io/projects/Extrapolation/workshop-1.gif" width="300px"/>
-<img src="https://hotndy.github.io/projects/LFRain/N1CARderain.gif" width="300px"/>
+<img src="https://hotndy.github.io/projects/Extrapolation/workshop-2.5x.gif" width="300px"/>
 </p>
 
 
