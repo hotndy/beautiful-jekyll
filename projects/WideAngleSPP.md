@@ -21,6 +21,6 @@ Input references _Workshop_ (3 views)------------------------------camera baseli
 </p>
 
 <table class="image">
-<caption align="bottom">{{ include.description }}</caption>
+<caption align="bottom">{Hello hello}</caption>
 <tr><td><img src="https://hotndy.github.io/projects/Extrapolation/workshop-1.gif" width="500px"/></td></tr>
 </table>
