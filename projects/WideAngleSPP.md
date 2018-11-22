@@ -30,9 +30,9 @@ extended 7.5x by our PCOC model </figcaption></figure></p>
   <img src="https://hotndy.github.io/projects/Extrapolation/art-gallery-5x.gif" width="300px">
 <figcaption> Input references "Workshop" (3 views)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Camera baseline extended 2.5x by our PCOC model
+Baseline extended 2.5x
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-extended 5x by our PCOC model
+Baseline extended 5x
 </figcaption>
 </figure></p>
   
@@ -42,9 +42,9 @@ extended 5x by our PCOC model
   <img src="https://hotndy.github.io/projects/Extrapolation/bikes-5x.gif" width="300px">
 <figcaption> Input references "Workshop" (3 views)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Camera baseline extended 2.5x by our PCOC model
+Baseline extended 2.5x
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-extended 5x by our PCOC model
+Baseline extended 5x
 </figcaption>
 </figure></p>
 
