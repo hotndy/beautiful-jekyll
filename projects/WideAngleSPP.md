@@ -11,7 +11,7 @@ resourcelink:
 We investigate the challenge of synthesizing dense light fields based on very sparse inputs. With a coarse-to-fine spatial-angular clue modeling, high quality views could be reconstructed that out-performs state-of-the-art methods.  
 
 <p align='center'>
-<img src="https://hotndy.github.io/projects/LFRain/N1CARrain.gif" width="300px"/>
+<img src="https://hotndy.github.io/projects/WideAngle/workshop-1.gif" width="300px"/>
 <img src="https://hotndy.github.io/projects/LFRain/N1CARderain.gif" width="300px"/>
 </p>
 
