@@ -13,7 +13,9 @@ We investigate the challenge of synthesizing dense light fields based on very sp
 <p align='center'><figure class="image">
 <img src="https://hotndy.github.io/projects/Extrapolation/workshop-1.gif" width="400px">
 <img src="https://hotndy.github.io/projects/Extrapolation/workshop-2.5x.gif" width="400px">
-<figcaption> Input references "Workshop" (3 views)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;camera baseline extended 2.5x by our PCOC model
+<figcaption> Input references "Workshop" (3 views)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+camera baseline extended 2.5x by our PCOC model
 </figcaption></figure></p>
 
 <p align='center'>
