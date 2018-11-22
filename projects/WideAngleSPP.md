@@ -10,10 +10,10 @@ resourcelink:
 ---
 We investigate the challenge of synthesizing dense light fields based on very sparse inputs. With a coarse-to-fine spatial-angular clue modeling, high quality views could be reconstructed that out-performs state-of-the-art methods.  
 
-<figure class="image" align='center'>
+<p align='center'><figure class="image">
 <img src="https://hotndy.github.io/projects/Extrapolation/workshop-1.gif" width="500px">
 <figcaption> Input references "Workshop" (3 views)
-</figcaption></figure>
+</figcaption></figure></p>
 
 <p align='center'>
 <img src="https://hotndy.github.io/projects/Extrapolation/workshop-1.gif" width="500px"/>
