@@ -18,10 +18,12 @@ We investigate the challenge of synthesizing dense light fields based on very sp
 Camera baseline extended 2.5x by our PCOC model
 <img src="https://hotndy.github.io/projects/Extrapolation/workshop-5x.gif" width="460px">
 <img src="https://hotndy.github.io/projects/Extrapolation/workshop-7.5x.gif" width="460px">
-<figcaption> Camera baseline extended 5x by our PCOC model
+<figcaption> 
+Camera baseline extended 5x by our PCOC model
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 extended 7.5x by our PCOC model
-</figcaption></figure></p>
+</figcaption>
+</figure></p>
 
 
 
