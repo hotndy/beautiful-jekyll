@@ -36,14 +36,14 @@ extended 5x by our PCOC model
 </figure></p>
   
 <p align='center'><figure class="image">
-<img src="https://hotndy.github.io/projects/Extrapolation/workshop-1.gif" width="260px">
-<img src="https://hotndy.github.io/projects/Extrapolation/workshop-2.5x.gif" width="260px">
-  <img src="https://hotndy.github.io/projects/Extrapolation/workshop-5x.gif" width="260px">
+<img src="https://hotndy.github.io/projects/Extrapolation/bikes-1.gif" width="300px">
+<img src="https://hotndy.github.io/projects/Extrapolation/bikes-2.5x.gif" width="300px">
+  <img src="https://hotndy.github.io/projects/Extrapolation/bikes-5x.gif" width="300px">
 <figcaption> Input references "Workshop" (3 views)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Camera baseline extended 2.5x by our PCOC model
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Camera baseline extended 5x by our PCOC model
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+extended 5x by our PCOC model
 </figcaption>
 </figure></p>
 
