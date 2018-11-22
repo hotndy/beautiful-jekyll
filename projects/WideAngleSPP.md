@@ -14,7 +14,7 @@ We investigate the challenge of synthesizing dense light fields based on very sp
 <img src="https://hotndy.github.io/projects/Extrapolation/workshop-1.gif" width="500px"/>
 <img src="https://hotndy.github.io/projects/Extrapolation/workshop-2.5x.gif" width="500px"/>
 </p>
-Input references (3 views)                        camera baseline extended 2.5x from our model
+Input references (3 views)---------------------------------camera baseline extended 2.5x from our model
 
 <p align="center">
 <img src="https://hotndy.github.io/projects/LFAngularSP/LFS_teaser.png" width="500px"/>
