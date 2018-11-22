@@ -24,9 +24,9 @@ Camera baseline extended 5x by our PCOC model
 extended 7.5x by our PCOC model </figcaption></figure></p>
 
 <p align='center'><figure class="image">
-<img src="https://hotndy.github.io/projects/Extrapolation/art-gallery-1.gif" width="260px">
-<img src="https://hotndy.github.io/projects/Extrapolation/art-gallery-2.5x.gif" width="260px">
-  <img src="https://hotndy.github.io/projects/Extrapolation/art-gallery-5x.gif" width="260px">
+<img src="https://hotndy.github.io/projects/Extrapolation/art-gallery-1.gif" width="300px">
+<img src="https://hotndy.github.io/projects/Extrapolation/art-gallery-2.5x.gif" width="300px">
+  <img src="https://hotndy.github.io/projects/Extrapolation/art-gallery-5x.gif" width="300px">
 <figcaption> Input references "Workshop" (3 views)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Camera baseline extended 2.5x by our PCOC model
