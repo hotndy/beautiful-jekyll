@@ -23,5 +23,5 @@ Input references _Workshop_ (3 views)------------------------------camera baseli
 
 <figure class="image">
 <img src="https://hotndy.github.io/projects/Extrapolation/workshop-1.gif" width="500px">
-<figcaption> Input references _Workshop_ (3 views)
+<figcaption> Input references "Workshop" (3 views)
 </figcaption></figure>
