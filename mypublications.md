@@ -12,7 +12,7 @@ show-avatar: false
 * **Jie Chen**,  Cheen-Hau Tan, Junhui Hou, Lap-Pui. Chau, and He Li, "Robust Video Content Alignment and Compensation for Clear Vision Through the Rain,'' under review in _IEEE Transactions on Pattern Analysis and Machine Intelligence_ **(IEEE TPAMI)**. [[pdf](https://arxiv.org/abs/1804.09555)]
 
 #### _peer-reviewed_ 
-* Henry W. F. Yeung, Junhui Hou, Xiaoming Chen, **Jie Chen**, Zhibo Chen, and Yuk Ying Chung, "Light Field Spatial Super-Resolution Using Deep Spatial-Angular Interleaved CNN,'' acceptef by _IEEE Transactions on Image Processing_ **(IEEE TIP)**.  
+* Henry W. F. Yeung, Junhui Hou, Xiaoming Chen, **Jie Chen**, Zhibo Chen, and Yuk Ying Chung, "Light Field Spatial Super-Resolution Using Deep Spatial-Angular Interleaved CNN,'' accepted by _IEEE Transactions on Image Processing_ **(IEEE TIP)**.  
 * **Jie Chen**, Junhui Hou, and Lap-Pui. Chau, "Light Field Denoising via Anisotropic Parallax Analysis in a CNN Framework,'' _IEEE Signal Processing Letters_ **(IEEE SPL)**, vol. 25, no. 9, pp. 1403-1407, 2018. [[pdf](https://arxiv.org/abs/1805.12358)\] [[code](https://github.com/hotndy/APA-LFDenoising)] 
 * Yun Ni, **Jie Chen**, and Lap-Pui Chau, "Reflection Removal On Single Light Field Capture With Focus Manipulation,'' accepted by _IEEE Transactions on Computational Imaging_ **(IEEE TCI)**. [[pdf](https://ieeexplore.ieee.org/document/8421062/)]
 * **Jie Chen**, Junhui Hou, Yun Ni, and Lap-Pui. Chau, "Accurate Light Field Depth Estimation with Superpixel Regularization over Partially Occluded Regions,'' _IEEE Transactions on Image Processing_ **(IEEE TIP)**, vol. 27, no. 10, pp. 4889-4900, 2018. [[pdf](https://arxiv.org/abs/1708.01964)] [[code](https://github.com/hotndy/LFDepth_POBR)]    
