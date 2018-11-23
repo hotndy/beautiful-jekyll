@@ -11,7 +11,10 @@ resourcelink:
 
 The challenge of super-resulving a low-resolution wide-angle image (WAL) based on another high-resolution  arrow angle reference (NAH) lies in the following aspects:
 - The dense correspondence betweent he WAL and the NAH. This part is essential for transfer of high resolution contents from NAH to WAL. We have some previous work on dense correspondence matching [1], which is highly relevent to this issue.
-> * **Jie Chen**, Junhui Hou, Yun Ni, and Lap-Pui. Chau, "Accurate Light Field Depth Estimation with Superpixel Regularization over Partially Occluded Regions,'' _IEEE Transactions on Image Processing_ **(IEEE TIP)**, vol. 27, no. 10, pp. 4889-4900, 2018. [[pdf](https://arxiv.org/abs/1708.01964)] [[code](https://github.com/hotndy/LFDepth_POBR)]
+> Jie Chen, Junhui Hou, Yun Ni, and Lap-Pui. Chau, "Accurate Light Field Depth Estimation with Superpixel Regularization over Partially Occluded Regions,'' _IEEE Transactions on Image Processing_ **(IEEE TIP)**, vol. 27, no. 10, pp. 4889-4900, 2018. [[pdf](https://arxiv.org/abs/1708.01964)] [[code](https://github.com/hotndy/LFDepth_POBR)]
+  
+- With a camera pose estimation that linkes the positions of the WAL and the NAH, we can use the positional gride as guide for super-resolution operations. This is highly similar to light field spatial super-resolution on which topic we have some prior research.
+> * Henry W. F. Yeung, Junhui Hou, Xiaoming Chen, Jie Chen, Zhibo Chen, and Yuk Ying Chung, "Light Field Spatial Super-Resolution Using Deep Spatial-Angular Interleaved CNN,'' acceptef by _IEEE Transactions on Image Processing_ **(IEEE TIP)**.  
 
 
 We investigate the challenge of synthesizing dense light fields based on very sparse inputs. With a coarse-to-fine spatial-angular clue modeling, high quality views could be reconstructed that out-performs state-of-the-art methods.  
