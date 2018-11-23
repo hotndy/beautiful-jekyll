@@ -55,17 +55,3 @@ Baseline extended 2.5x
 Baseline extended 5x
 </figcaption>
 </figure></p>
-
-
-
-
-
-
-
-
-<p align="center">
-<img src="https://hotndy.github.io/projects/LFAngularSP/LFS_teaser.png" width="500px"/>
-</p>
-
-
-
