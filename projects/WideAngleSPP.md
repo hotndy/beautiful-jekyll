@@ -14,10 +14,9 @@ The challenge of super-resulving a low-resolution wide-angle image (WAL) based o
 > Jie Chen, Junhui Hou, Yun Ni, and Lap-Pui. Chau, "Accurate Light Field Depth Estimation with Superpixel Regularization over Partially Occluded Regions,'' _IEEE Transactions on Image Processing_ **(IEEE TIP)**, vol. 27, no. 10, pp. 4889-4900, 2018. [[pdf](https://arxiv.org/abs/1708.01964)] [[code](https://github.com/hotndy/LFDepth_POBR)]
   
 - With a camera pose estimation that linkes the positions of the WAL and the NAH, we can use the positional gride as guide for super-resolution operations. This is highly similar to light field spatial super-resolution on which topic we have some prior research.
-> * Henry W. F. Yeung, Junhui Hou, Xiaoming Chen, Jie Chen, Zhibo Chen, and Yuk Ying Chung, "Light Field Spatial Super-Resolution Using Deep Spatial-Angular Interleaved CNN,'' acceptef by _IEEE Transactions on Image Processing_ **(IEEE TIP)**.  
+> Henry W. F. Yeung, Junhui Hou, Xiaoming Chen, Jie Chen, Zhibo Chen, and Yuk Ying Chung, "Light Field Spatial Super-Resolution Using Deep Spatial-Angular Interleaved CNN,'' acceptef by _IEEE Transactions on Image Processing_ **(IEEE TIP)**.  
 
-
-We investigate the challenge of synthesizing dense light fields based on very sparse inputs. With a coarse-to-fine spatial-angular clue modeling, high quality views could be reconstructed that out-performs state-of-the-art methods.  
+- The major challenge we face for this problem however, is the extrapolation of high frequency conetents from liminted angle of view, and the propagation of it to wider angles. We have some current on-going research, which is currently under review process of a CV publication venue. The solution we proposed was called a **Stratified Labelling for Surface Consistent Parallax Correction and Occlusion Prediction**, which uses a Generative Adversarial Network (GAN) to extend the camera baseline up to 10 times wider, based on the given narrow baseline references as input. We show some preliminary results here. In these results, we used a narrow baselined 3 captures to render the scene's appearance that is from a wider baseline angle. (Currently, this problem set up is a little different from WAL super-resolution based on NAH, however the solution can be largely similar.)
 
 <p align='center'><figure class="image">
 <img src="https://hotndy.github.io/projects/Extrapolation/workshop-1.gif" width="460px">
