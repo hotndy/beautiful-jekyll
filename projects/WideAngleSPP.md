@@ -10,7 +10,7 @@ resourcelink:
 ---
 
 The challenge of super-resolving a low-resolution wide-angle image (WAL) based on another high-resolution  arrow angle reference (NAH) lies in the following aspects:
-- The dense correspondence betweent he WAL and the NAH. This part is essential for transfer of high resolution contents from NAH to WAL. We have some previous work on dense correspondence matching [1], which is highly relevent to this issue.
+- The dense correspondence betweent he WAL and the NAH. This part is essential for transfer of high resolution contents from NAH to WAL. We have some previous work on dense correspondence matching, which is highly relevent to this sub-problem.
 > Jie Chen, Junhui Hou, Yun Ni, and Lap-Pui. Chau, "Accurate Light Field Depth Estimation with Superpixel Regularization over Partially Occluded Regions,'' _IEEE Transactions on Image Processing_ **(IEEE TIP)**, vol. 27, no. 10, pp. 4889-4900, 2018. [[pdf](https://arxiv.org/abs/1708.01964)] [[code](https://github.com/hotndy/LFDepth_POBR)]
   
 - With a camera pose estimation that linkes the positions of the WAL and the NAH, we can use the grid postions as guide for super-resolution operations. This is highly similar to light field spatial super-resolution on which topic we have some prior research.
